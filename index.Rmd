@@ -1,5 +1,6 @@
 ---
-title: "Speed and Distance"
+title: "index.Rmd"
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
