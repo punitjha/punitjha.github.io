@@ -1,28 +1,21 @@
 ---
-title: "index.Rmd"
+title: "Punit K. Jha"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+<!-- ![](lol_me.jpg) -->
 
-## R Markdown
+<img src="passport_size.jpg" style="width:20%; margin-right: 5px" align="right">
+\vspace{500cm}
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Welcome to my website! Thanks for your interest. I am a fifth-year Ph.D. candidate in the Department of Chemistry at the [Univeristy of Illinois at Urbana-Champaign](https://chemistry.illinois.edu/). I work in theoretical and computational chemistry. My reserach is based on finite-temperature many-body perturbation theory at [Prof. So Hirata's](http://faculty.scs.illinois.edu/hirata/members.html) laboratory. I have successfully published [four reserach publications](https://scholar.google.com/citations?user=XmN4PKgAAAAJ&hl=en) so far, and currently work on using machine learning and deep learning methods to try to solve problems in chemistry. I am also looking for jobs in industry and postdoctoral postitions in academia.
 
-```{r cars}
-summary(cars)
-```
+### Quick Intro
+- Ph.D. in Chemistry, University of Illinois at Urbana-Champaign (Expected August 2021)
+- Integrated M. Sc., National Institute of Science Education and Research, Bhubaneswar, India (May 2016)
+- Hobbies - reading, climbing, bouldering, cooking
+- Languages- English, Hindi, Odiya, Maithili
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### Resume/Short CV   
+A short CV is attached [here](https://drive.google.com/file/d/1c7XvyByIYHKudD7lvY1sppcg_X3SsrqU/view?usp=sharing).

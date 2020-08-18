@@ -1,12 +1,27 @@
-name: "cars"
+name: "Punit K Jha"
 output_dir: "docs"
 navbar:
- title: "Cars"
  left:
    - text: "Home"
      href: index.html
-   - text: "Speed and Distance"
-     href: speed-and-distance.html
-output:
-html_document:
-theme: cosm
+   - text: "About"
+     href: about.html
+   - text: "Projects"
+     href: projects.html
+   - text: "Resources"
+     href: resources.html
+ right:
+   - icon: fa-envelope fa-lg
+     href: contact.html
+   - icon: fa-github fa-lg
+     href: https://github.com/punitjha
+   - icon: fa-twitter fa-lg
+     href: https://twitter.com/punit_chem?lang=en
+   - icon: fa-linkedin fa-lg
+     href: https://www.linkedin.com/in/punit-kumar-jha-aa518886/
+   - icon:  fa-graduation-cap fa-lg
+     href: https://scholar.google.com/citations?user=XmN4PKgAAAAJ&hl=en
+output: 
+ html_document:
+  theme: cosmo
+  highlight: textmate
