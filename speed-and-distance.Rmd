@@ -1,5 +1,5 @@
 ---
-title: "punit_website"
+title: "Punit K. Jha"
 author: "Punit"
 date: "8/17/2020"
 output: html_document
@@ -8,6 +8,7 @@ knit: (function(input_file, encoding) {
   rmarkdown::render(input_file,
  encoding=encoding,
  output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+ 
 ---
 
 ```{r setup, include=FALSE}
