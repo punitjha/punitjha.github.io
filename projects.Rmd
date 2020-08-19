@@ -12,10 +12,36 @@ output: html_document
     
 ***
 ### Summer Internships and Research Projects
-- **University of Illinois at Urbana-Champaign, Urbana-Champaign, IL.**
-  - **Ph.D. Student and Teaching Assistant, Aug 2016 - Present** 
-  More details [here](https://punitjha.github.io/phd_project.html).
-  <!--     - Finite-temperature many-body perturbation theory (FT-MBPT): FT-MBPT is a theory to calculate the thermodynamic parameters of the grand canonical system at a given temperature.  -->
+1. **University of Illinois at Urbana-Champaign, Urbana-Champaign, IL.**
+    -  Ph.D. Student and Teaching Assistant, Aug 2016 - Present 
+    More details [here](https://punitjha.github.io/phd_project.html).
+  
+      
+2. **National Institute of Science Education and Research, Bhubaneswar, India.**
+    - M. Sc. Research Project, Aug 2014 - June 2016.
+    More details [here](https://punitjha.github.io/msc_project.html). 
+
+  
+3. **University of Calgary, Calgary, Canada.**
+    - Undergraduate Summer Intern, May 2015 - Aug 2015.
+      More details [here](https://punitjha.github.io/calgary.html).
+  
+4. **Indian Institute of Technology- Bombay, Mumbai, India.**
+     - Undergraduate Summer Intern, May 2014 - Aug 2014
+      More details [here](https://punitjha.github.io/iit_b.html).
+         
+      
+5.  **National Institute of Science Education and Research, Bhubaneswar, India.**
+    - M. Sc. Research Project, Aug 2014 - June 2016.
+    - Diagonal suppressed constant time Correlation Spectroscopy (COSY): Worked on a novel NMR pulse sequence to achieve diagonal suppressed COSY (correlation spectroscopy) spectra with high sensitivity and absorptive cross peak line-shapes.             
+    - Carried out simulations and  product operator  calculations for 2, 3, and 4 spin systems using the novel NMR pulse sequence.
+    - Implemented various optimization strategies for the pulse sequence that included the addition of water suppression module, removing axial and multiple quantum peaks by using gradient fields, etc. 
+  - **Skills Acquired:**
+          Acquired programming skills to program in the TopSpin 2.1 programming language and  learned to how to perform 1D, 2D NMR experiments on a 400 MHz spectrometer.
+             
+             
+             
+<!--     - Finite-temperature many-body perturbation theory (FT-MBPT): FT-MBPT is a theory to calculate the thermodynamic parameters of the grand canonical system at a given temperature.  -->
   <!--     - I implemented the $\lambda$-variation method to  calculate the $n$th-order corrections to grand potential and internal energy using the FT-MBPT formalism which showed it is mathematically inconsistent and does not conserve charge.  -->
   <!--     - Derived the correct analytic formulas for FT-MBPT using another ansatz wherein charge was conserved. -->
   <!--     Implemented the FT-MBPT in a canonical ensemble and derived semi-analytic formulas. -->
@@ -27,10 +53,11 @@ output: html_document
   <!--         Acquired knowledge of \textit{ab initio} and DFT electronic structure methods. Learned about machine learning algorithms. Learned to program in Python and enhanced           my programming skills in C++ and FORTRAN. -->
 
   <!-- ---     -->
-      
-- **National Institute of Science Education and Research, Bhubaneswar, India.**
-  - M. Sc. Research Project, Aug 2014 - June 2016.
-    More details [here](https://punitjha.github.io/msc_project.html). 
+  
+  
+  
+  
+  
   <!--   - Diagonal suppressed constant time Correlation Spectroscopy (COSY): Worked on a novel NMR pulse sequence to achieve diagonal suppressed COSY (correlation spectroscopy) spectra with high sensitivity and absorptive cross peak line-shapes.              -->
   <!--   - Carried out simulations and  product operator  calculations for 2, 3, and 4 spin systems using the novel NMR pulse sequence. -->
   <!--   - Implemented various optimization strategies for the pulse sequence that included the addition of water suppression module, removing axial and multiple quantum peaks by using gradient fields, etc.  -->
@@ -39,33 +66,20 @@ output: html_document
 
   <!-- ---     -->
   
-- **University of Calgary, Calgary, Canada.**
-  - Undergraduate Summer Intern, May 2015 - Aug 2015.
-   More details [here](https://punitjha.github.io/calgary.html). 
-      - Dynamics of gas-hydrate nucleation: Wrote C++  codes to study the probability distribution of lifetime of gas hydrate cages in the molecular dynamics simulation of  incipient hydrates starting from a CH\textsubscript{4}/H\textsubscript{2}S bubble in liquid H\textsubscript{2}O in a 3D box.
-      - Studied the effect of the different guest gas molecules on the lifetime of these cages. }
-  - **Skills Acquired:**
-          Learned about the object-oriented programming features of C++ and its data structures. I also learned the skills
-required to create memory-efficient C++ codes.
-
-  ---    
   
-- **Indian Institute of Technology- Bombay, Mumbai, India.**
-    - Undergraduate Summer Intern, May 2014 - Aug 2014
-    More details [here](https://punitjha.github.io/iit_b.html).
-        - Quantum reactive flux theory: Studied the quantum analog of classical non-Markovian Kramers' equation and the phase space distribution function formulation of the method of reactive flux in the memory friction regime. Analyzed quantum Kramers' equation for energy diffusion and barrier crossing dynamics in the high-friction regime.
-    - **Skills Acquired:**
-          Acquired skills to use Mathematica for solving integrals and numerical analysis. Learned mathematical methods in physics.
-    
-     ---    
-      
-- **National Institute of Science Education and Research, Bhubaneswar, India.**
-  - M. Sc. Research Project, Aug 2014 - June 2016.
-    - Diagonal suppressed constant time Correlation Spectroscopy (COSY): Worked on a novel NMR pulse sequence to achieve diagonal suppressed COSY (correlation spectroscopy) spectra with high sensitivity and absorptive cross peak line-shapes.             
-    - Carried out simulations and  product operator  calculations for 2, 3, and 4 spin systems using the novel NMR pulse sequence.
-    - Implemented various optimization strategies for the pulse sequence that included the addition of water suppression module, removing axial and multiple quantum peaks by using gradient fields, etc. 
-  - **Skills Acquired:**
-          Acquired programming skills to program in the TopSpin 2.1 programming language and  learned to how to perform 1D, 2D NMR experiments on a 400 MHz spectrometer.
-             
+   <!-- - Quantum reactive flux theory: Studied the quantum analog of classical non-Markovian Kramers' equation and the phase space distribution function formulation of the method of reactive flux in the memory friction regime. Analyzed quantum Kramers' equation for energy diffusion and barrier crossing dynamics in the high-friction regime. -->
+   <!--  - **Skills Acquired:** -->
+   <!--        Acquired skills to use Mathematica for solving integrals and numerical analysis. Learned mathematical methods in physics. -->
 
+   <!--   ---   -->
+   
+<!--      -->
+<!--       - Dynamics of gas-hydrate nucleation: Wrote C++  codes to study the probability distribution of lifetime of gas hydrate cages in the molecular dynamics simulation of  incipient hydrates starting from a CH\textsubscript{4}/H\textsubscript{2}S bubble in liquid H\textsubscript{2}O in a 3D box. -->
+<!--       - Studied the effect of the different guest gas molecules on the lifetime of these cages. } -->
+<!--   - **Skills Acquired:** -->
+<!--           Learned about the object-oriented programming features of C++ and its data structures. I also learned the skills -->
+<!-- required to create memory-efficient C++ codes. -->
+
+<!--   ---   -->
+  
  

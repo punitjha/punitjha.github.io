@@ -1,7 +1,5 @@
 ---
-title: "iit_b"
-author: "Punit"
-date: "8/18/2020"
+title: "Summer Internship"
 output: html_document
 ---
 - **Indian Institute of Technology- Bombay, Mumbai, India.**
