@@ -1,0 +1,11 @@
+---
+title: "iit_b"
+author: "Punit"
+date: "8/18/2020"
+output: html_document
+---
+- **Indian Institute of Technology- Bombay, Mumbai, India.**
+    - Undergraduate Summer Intern, May 2014 - Aug 2014
+        - Quantum reactive flux theory: Studied the quantum analog of classical non-Markovian Kramers' equation and the phase space distribution function formulation of the method of reactive flux in the memory friction regime. Analyzed quantum Kramers' equation for energy diffusion and barrier crossing dynamics in the high-friction regime.
+    - **Skills Acquired:**
+          Acquired skills to use Mathematica for solving integrals and numerical analysis. Learned mathematical methods in physics.

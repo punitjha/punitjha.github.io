@@ -1,0 +1,12 @@
+---
+title: "Calgary"
+author: "Punit"
+date: "8/18/2020"
+output: html_document
+- **University of Calgary, Calgary, Canada.**
+  - Undergraduate Summer Intern, May 2015 - Aug 2015.
+      - Dynamics of gas-hydrate nucleation: Wrote C++  codes to study the probability distribution of lifetime of gas hydrate cages in the molecular dynamics simulation of  incipient hydrates starting from a CH\textsubscript{4}/H\textsubscript{2}S bubble in liquid H\textsubscript{2}O in a 3D box.
+      - Studied the effect of the different guest gas molecules on the lifetime of these cages. }
+  - **Skills Acquired:**
+          Learned about the object-oriented programming features of C++ and its data structures. I also learned the skills
+required to create memory-efficient C++ codes.

@@ -1,0 +1,13 @@
+---
+title: "M. Sc. Project"
+output: html_document
+---
+- **National Institute of Science Education and Research, Bhubaneswar, India.**
+  - M. Sc. Research Project, Aug 2014 - June 2016.
+    - Diagonal suppressed constant time Correlation Spectroscopy (COSY): Worked on a novel NMR pulse sequence to achieve diagonal suppressed COSY (correlation spectroscopy) spectra with high sensitivity and absorptive cross peak line-shapes.             
+    - Carried out simulations and  product operator  calculations for 2, 3, and 4 spin systems using the novel NMR pulse sequence.
+    - Implemented various optimization strategies for the pulse sequence that included the addition of water suppression module, removing axial and multiple quantum peaks by using gradient fields, etc. 
+  - **Skills Acquired:**
+          Acquired programming skills to program in the TopSpin 2.1 programming language and  learned to how to perform 1D, 2D NMR experiments on a 400 MHz spectrometer.
+          
+  ---    
