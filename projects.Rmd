@@ -13,7 +13,7 @@ output: html_document
 ***
 ### Summer Internships and Research Projects
 1. **University of Illinois at Urbana-Champaign, Urbana-Champaign, IL.**
-    -  Ph.D. Student and Teaching Assistant, Aug 2016 - Present 
+    -  Ph.D. Student and Teaching Assistant, Aug 2016 - Present. 
     More details [here](https://punitjha.github.io/phd_project.html).
   
       
@@ -27,17 +27,17 @@ output: html_document
       More details [here](https://punitjha.github.io/calgary.html).
   
 4. **Indian Institute of Technology- Bombay, Mumbai, India.**
-     - Undergraduate Summer Intern, May 2014 - Aug 2014
+     - Undergraduate Summer Intern, May 2014 - Aug 2014.
       More details [here](https://punitjha.github.io/iit_b.html).
          
       
 5.  **National Institute of Science Education and Research, Bhubaneswar, India.**
-    - M. Sc. Research Project, Aug 2014 - June 2016.
-    - Diagonal suppressed constant time Correlation Spectroscopy (COSY): Worked on a novel NMR pulse sequence to achieve diagonal suppressed COSY (correlation spectroscopy) spectra with high sensitivity and absorptive cross peak line-shapes.             
-    - Carried out simulations and  product operator  calculations for 2, 3, and 4 spin systems using the novel NMR pulse sequence.
-    - Implemented various optimization strategies for the pulse sequence that included the addition of water suppression module, removing axial and multiple quantum peaks by using gradient fields, etc. 
-  - **Skills Acquired:**
-          Acquired programming skills to program in the TopSpin 2.1 programming language and  learned to how to perform 1D, 2D NMR experiments on a 400 MHz spectrometer.
+    - Undergraduate Summer Intern, May 2013 - Aug 2013.
+    More details [here](https://punitjha.github.io/niser_summer.html).
+    
+  <!--   - Reactive molecular dynamics of hydrocarbon dissociation on Ni surface: Carried out reactive dynamics simulations of the adsorption and decomposition of CH\textsubscript{4} molecules interacting with a Ni(100) surface. Studied the temperature dependence of chemisorption of CH\textsubscript{4} by breakage of C-H bonds that leads to the formation of CH\textsubscript{3} and H radical on a Ni(100) surface. -->
+  <!-- - **Skills Acquired:** -->
+  <!--         Learned rogramming in FORTRAN 90 and how to carry out quantum mechanical simulations using ReaxFF. -->
              
              
              
