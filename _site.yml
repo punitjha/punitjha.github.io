@@ -4,11 +4,11 @@ navbar:
  left:
    - text: "Home"
      href: index.html
-   - text: "About"
+   - text: "Career"
      href: about.html
    - text: "Projects"
      href: projects.html
-   - text: "Resources"
+   - text: "Links"
      href: resources.html
  right:
    - icon: fa-envelope fa-lg

@@ -1,37 +1,61 @@
 ---
 title: "Research Projects"
-output: html_document
+output:
+   html_document:
+     toc: true
 ---
 
 ***
-### Machine Learning and Programming Projects
+## Machine Learning and Programming Projects
+***
+### Original Reserach Proposal
 
-- Anomaly Detection:Implemented an anomaly detection algorithm for computer serves  based on Gaussian model.
-- Recommender Systems: Implemented the collaborative filtering learning algorithm for a dataset of movie ratings.
-- Ad Hoc Information Retrieval System: Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.
+University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present. 
+    
+More details [here](https://punitjha.github.io/phd_project.html).
+
+***
+
+### Machine Learning.
+
+1. **Anomaly Detection**:
+    - Implemented an anomaly detection algorithm for computer serves  based on Gaussian model.
+  
+2. **Recommender Systems**: 
+    - Implemented the collaborative filtering learning algorithm for a dataset of movie ratings.
+
+3. **Ad Hoc Information Retrieval System**: 
+    - Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.
+    
+### Natural Language Processing Projects
+
+
+### Text Analysis Projects
     
 ***
-### Summer Internships and Research Projects
-1. **Ph.D. Reserach Project.** 
-    -  University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present. 
-    - More details [here](https://punitjha.github.io/phd_project.html).
-  
-      
-2. **M. Sc. Research Project.**
-    - National Institute of Science Education and Research, Bhubaneswar, India, Aug 2014 - June 2016.
-    - More details [here](https://punitjha.github.io/msc_project.html). 
+## Chemistry Research Projects and Summer Internships
+### Ph.D. Reserach Project 
+-  University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present. 
+- More details [here](https://punitjha.github.io/phd_project.html).
+    
 
-  
-3. **Undergraduate Summer Intern.**
+    
+      
+### M. Sc. Research Project
+- National Institute of Science Education and Research, Bhubaneswar, India, Aug 2014 - June 2016.
+- More details [here](https://punitjha.github.io/msc_project.html). 
+
+### Reserach Summer Interships
+1. **Undergraduate Summer Intern- 2015**
     -  University of Calgary, Calgary, Canada, May 2015 - Aug 2015.
     -  More details [here](https://punitjha.github.io/calgary.html).
   
-4. **Undergraduate Summer Intern.**
+2. **Undergraduate Summer Intern- 2014**
      - Indian Institute of Technology- Bombay, Mumbai, India, May 2014 - Aug 2014.
      - More details [here](https://punitjha.github.io/iit_b.html).
          
       
-5.  **Undergraduate Summer Intern.** 
+3.  **Undergraduate Summer Intern- 2013** 
      - National Institute of Science Education and Research, Bhubaneswar, India, May 2013 - Aug 2013.
      - More details [here](https://punitjha.github.io/niser_summer.html).
     
