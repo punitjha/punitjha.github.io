@@ -16,7 +16,7 @@ More details [here](https://punitjha.github.io/phd_project.html).
 
 ***
 
-### Machine Learning.
+### Machine Learning
 
 1. **Anomaly Detection**:
     - Implemented an anomaly detection algorithm for computer serves  based on Gaussian model.
