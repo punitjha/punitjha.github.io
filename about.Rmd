@@ -28,10 +28,10 @@ You can checkout my Google Scholar profile [here](https://scholar.google.com/cit
 
 ***  
 ### List of Publications
-- **S. Hirata and Punit  K. Jha**, Finite-temperature many-body perturbation theory in the grand canonical ensemble,  J. Chem. Phy., **153**, 014103, 2020.
-- **Punit K. Jha and S. Hirata**, Finite-temperature many-body perturbation theory in the canonical ensemble, Phys. Rev. E, **101**, 022106, 2020.
-- **S. Hirata and Punit K. Jha**, Converging finite-temperature many-body perturbation theory in the grand canonical ensemble that conserves the average number, Annu. Rep. Comput. Chem., **15**, 17-37, 2019.
-- **Punit K. Jha and S. Hirata**, Numerical evidence invalidating finite-temperature many-body perturbation theory, Annu. Rep. Comput. Chem., **15**, 3-15, 2019.
+- **S. Hirata and Punit  K. Jha**, Finite-temperature many-body perturbation theory in the grand canonical ensemble,  J. Chem. Phy., **153**, 014103, 2020. ([arXiv](https://arxiv.org/abs/2003.05540))
+- **Punit K. Jha and S. Hirata**, Finite-temperature many-body perturbation theory in the canonical ensemble, Phys. Rev. E, **101**, 022106, 2020.([arXiv](https://arxiv.org/abs/1910.07628))
+- **S. Hirata and Punit K. Jha**, Converging finite-temperature many-body perturbation theory in the grand canonical ensemble that conserves the average number, Annu. Rep. Comput. Chem., **15**, 17-37, 2019.([arXiv](https://arxiv.org/abs/1812.07088))
+- **Punit K. Jha and S. Hirata**, Numerical evidence invalidating finite-temperature many-body perturbation theory, Annu. Rep. Comput. Chem., **15**, 3-15, 2019.([arXiv](https://arxiv.org/abs/1809.10316))
 
 ***
 
