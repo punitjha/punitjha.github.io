@@ -1,16 +1,176 @@
 ---
 title: "Ph.D. Project"
 output: html_document
+bibliography: prl.bib
 ---
 - **University of Illinois at Urbana-Champaign, Urbana-Champaign, IL.**
   - **Ph.D. Student and Teaching Assistant, Aug 2016 - Present**
+  - **Summary**:
       - Finite-temperature many-body perturbation theory (FT-MBPT): FT-MBPT is a theory to calculate the thermodynamic parameters of the grand canonical system at a given temperature. 
       - I implemented the $\lambda$-variation method to  calculate the $n$th-order corrections to grand potential and internal energy using the FT-MBPT formalism which showed it is mathematically inconsistent and does not conserve charge. 
       - Derived the correct analytic formulas for FT-MBPT using another ansatz wherein charge was conserved.
       Implemented the FT-MBPT in a canonical ensemble and derived semi-analytic formulas.
-  - **Original Research Proposal (ORP)**
-        - Developed an ORP on the problem of inclusion of long-range (electrostatic) interactions in machine learning algorithms. Analyzed different neural network schemes,            especially deep high-dimensional neural networks (HDNNs), and whether they can efficiently learn and predict molecular charges learned from various charge partitioning schemes.
-      - Studied different charge partitioning schemes like Hirshfeld, Charge Model 5, Merz-Singh-Kollman, and Natural Bonding Orbital methods used in molecular dynamics              simulations.
-      - Proposed modifications to mathematical formulation and structure of HDNNs to be able to better predict  molecular charges, computational cost for implementing the            project, potential  setbacks, and alternate plans for the project.
   - **Skills Acquired:**
-          Acquired knowledge of \textit{ab initio} and DFT electronic structure methods. Learned about machine learning algorithms. Learned to program in Python and enhanced           my programming skills in C++ and FORTRAN.
+          Acquired knowledge of \textit{ab initio} and DFT electronic structure methods. Learned about machine learning algorithms. Learned to program in Python and enhanced my programming skills in C++ and FORTRAN.
+          
+
+## Detailed Summary
+
+
+Finite-temperature many-body perturbation theory (FT-MBPT) is discussed
+extensively in textbooks [@fetter2003quantum; @bla86] and is a
+well-established theory for studying the thermodynamic properties of
+molecules at finite-temperatures in the context of a grand canonical
+ensemble. It is a perturbation theory to calculate the $n$th-order
+perturbation correction to the grand canonical partition function
+($\Xi$) expanded in the orders of interaction ($\lambda$). The
+corresponding $n$th order perturbation corrections to grand potential,
+$\Omega$, or internal energy, $U$, can then be obtained by taking the
+natural log of the grand partition function, $\ln \Xi$, and using the
+relations 
+$$\begin{aligned}
+\Omega^{(n)} &= -\frac{1}{\beta}\ln \Xi^{(n)}, \\
+U^{(n)} &= - \frac{\partial}{\partial \beta} \ln \Xi^{(n)} + \mu ^{(n)} \bar{N},\end{aligned}$$
+where $\beta=(k_b T)^{-1}$, $\mu$ is the chemical potential and
+$\bar{N}$ is the average number of electrons and the superscript $n$
+stands for the order of perturbation correction. An in-depth theoretical
+analysis and initial numerical calculations based on the
+$\lambda$-variation method (explained later) revealed that the textbook
+FT-MBPT, which has been in use for nearly half a century, fails to
+follow a fundamental law of physics called conservation of charge. This
+is because in the textbook formalism chemical potential of the electrons
+is fixed while allowing the average number of electrons to fluctuate
+when the perturbation is introduced in the system. This leads to the
+system becoming massively charged when perturbed from initially being
+neutral in the unperturbed state. As the temperature increases, the
+system turns into a charged plasma that does not obey the laws of
+thermodynamics. Since the textbook FT-MBPT suffered from this serious
+drawback the question then arose, "Can a correct FT-MBPT be derived that
+conserves charge? What are the correct values of $n$th-order
+perturbation correction to $\Omega$ or $U$?\".
+
+**A resolution of this fundamental question in physics was required.**
+We came up with a new ansatz wherein $\mu$ was expanded in a Taylor
+series expansion while the $\bar{N}$ was fixed and carried out exact
+numerical calculations to answer this question definitively.
+Numerically, the $n$th-order perturbation correction $X^{(n)}$ to a
+quantity $X$, is defined as the $n$th derivative with respect to
+$\lambda$ of the same quantity, calculated with an exact method (thermal
+full configuration interaction), using a perturbation-scaled
+Hamiltonian, $\hat{H}_0 + \lambda V$ [@Kou2014; @Hirata2017]
+
+$$\begin{aligned}
+X^{(n)} = \frac{1}{n!} \left.\frac{\partial^nX}{\partial \lambda^n}\right|_{\lambda=0}. \label{lambda}\end{aligned}$$
+
+We call it the $\lambda$-variation method. *Our numerical results for
+the first-, second- and third-order perturbation corrections to grand
+potential and internal energy, provided for the first time benchmark
+results for the correct FT-MBPT using our new ansatz that conserved
+charge* [@jha]. I presented this work at the prestigious 59th Sanibel
+Symposium and was awarded the IBM-Zerner award for the year 2019.
+
+Using the benchmark results as a guiding tool, we derived the correct
+sum-over-states (SoS) formulas written in terms of the energy
+corrections according to the Hirschfelder--Certain degenerate
+perturbation theory (HCPT) [@hc_dpt] and reduced analytical formulas for
+the first- and second-order corrections to $\Omega$, $U$ and $\mu$
+[@so_jha; @so_jha_grand]. Both the SoS and analytical formulas reproduce
+the benchmark data numerically exactly as can be seen from Table
+[1](#tab:1){reference-type="ref" reference="tab:1"}. The reduced
+analytical formulas for the first-order correction to $\mu$, $\Omega$
+and $U$ are
+
+where $p$ runs over all spin-orbitals spanned by the basis set,
+$f_i^- \; \text{and} \; f_j^+$ are the Fermi--Dirac occupancy and
+vacancy functions, respectively,
+$\Delta F_{pq}  = H^{core}_{pq} + \sum\limits_r\braket{pr||qr} - \delta_{p,q} \epsilon_p$
+is the temperature shift in the thermal Fock matrix, and
+$\braket{ij||ij}$ denotes an anti-symmetrized two-electron integral. The
+second-order correction to $\Omega$ is given as
+
+where $D = 0$ and $D \neq 0$ indicate that the summation is limited to
+the summands of which the denominator of the parent term
+($\epsilon_r + \epsilon_s + \epsilon_p + \epsilon_q \; \text{or} \; \epsilon_q - \epsilon_p$)
+is nonzero and zero, respectively. For second-order correction to $\mu$
+and $U$ please refer to Ref. [@so_jha_grand].
+
+width=1.0,center
+
+::: {#tab:1}
+  Order                                                                                  
+  ------- ----------- ---------- ---------- ---------- ----------- ---------- ---------- ---------
+          Benchmark   Textbook   Analytic   SoS        Benchmark   Textbook   Analytic   SoS
+  0       -55.6365    -55.6365   -55.6365   -55.6365   0.2722      0.2722     0.2722     0.2722
+  1       -45.2684    -46.0203   -45.2684   -45.2684   -0.0752     0          -0.0752    -0.0752
+  2       -2.5815     -0.2689    -0.2689    -2.5815    0.2320      0          0.2320     0.2320
+
+  : Grand potential and chemical potential (in $E$~h~) for a gas of
+  hydrogen fluoride molecules in the grand canonical ensemble at $10^5$
+  K in the STO-3G basis set
+:::
+
+[\[tab:1\]]{#tab:1 label="tab:1"}
+
+The textbook description of finite-temperature many-body perturbation
+was limited to the grand canonical ensemble only so we adapted the
+$\lambda$-variation method to the canonical ensemble and numerically
+obtained the zeroth- through third-order many-body perturbation
+corrections to the electronic Helmholtz energy, internal energy, and
+entropy in the canonical ensemble in a wide range of temperature
+[@so_jha_canonical]. Sum-over-states analytical formulae for up to the
+third-order corrections to these properties were also derived as
+analytical $\lambda$-derivatives. My first project as a Ph.D. researcher
+questioned the generally accepted conceptions of finite-temperature
+perturbation theory as presented in standard textbooks and expanded it
+to a previously unexplored canonical ensemble. Following the successful
+completion of the first project, I am now working on the convergence of
+machine learning (ML) and deep learning (DL) methods with physics and
+chemistry principles for precise mapping and prediction of material
+structure and properties.
+
+Even with rapid advances in fast computing, GPU hardware, and cloud
+computing technologies along with the availability of large molecular
+datasets, ML methods have still not been able to have a profound
+positive impact on materials discovery like they had on engineering
+applications such as computer vision. After years of work, ML methods
+have not done very well in modeling even basic tasks such as accurately
+describing the energy of systems with long-range interactions among
+heterogeneous molecules. It raises questions about the conventional
+approach by using complex ML or DL structures and large quantities of
+data to solve a chemical problem. Current ML methods are not capable of
+extrapolating very well beyond the datasets they are trained to truly
+learn the physics and chemistry of molecules unless we couple these
+methods with (i) "boosting algorithms\" integrating correct physics and
+chemistry into ML models; (ii) appropriate molecular representation of
+the training data; (iii) the choice of relevant data in the training set
+e.g. using data from failed experiments; and (iv) the correct physical
+quantity or parameter which leads to the lowest prediction error by ML
+models.
+
+An interesting project emerges from case (iv) in the above list about
+choosing the correct physical quantity to model. In the problem of
+accurately calculating the total energy of atoms for systems with
+long-range electrostatic interactions a common approach is to obtain
+environment-dependent charges from ML algorithms that are then used in
+an Ewald summation procedure to calculate the long-range part of
+interaction energy. For the ML algorithms to learn to predict charges
+reference atomic charges must be fed into the algorithm but extraction
+of these charges from *ab initio* calculations is always ambiguous and
+atomic charges are not observables or target quantities, but merely
+computational intermediates. Instead of total energy, a very innovative
+approach suggested by some authors was to learn and predict
+electronegativity, first of all the environment-dependent
+electronegativity of a molecule is predicted by ML models from which
+atomic charges can be obtained unambiguously by a charge equilibration
+process. These atomic charges can then be used to calculate atomic
+energies and yield more precise results than the direct total energy
+approach. My Ph.D. training during the first project on *ab initio* and
+density function theory simulations will allow me not only to choose
+more suitable chemical characteristics to minimize learning and
+prediction errors by ML models, but also to formulate the complex
+underlying mathematical equations that will connect chemical properties
+such as electronegativity with ML methods. I have been coding for the
+last 7 years during my M.Sc. and Ph.D. studies in different programming
+languages and have taken courses on GPU programming, parallel
+programming, and data structures which will help me translate my
+equations into efficient codes.
