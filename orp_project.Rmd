@@ -1,0 +1,16 @@
+---
+title: "Original Research Proposal"
+output: html_document
+bibliography: prl.bib
+---
+- **University of Illinois at Urbana-Champaign, Urbana-Champaign, IL.**
+  - **Ph.D. Student and Teaching Assistant, Aug 2016 - Present**
+  - **Summary**:
+     - Developed an ORP on the problem of inclusion of long-range (electrostatic) interactions in machine learning algorithms. Analyzed different neural network schemes, especially deep high-dimensional neural networks (HDNNs), and whether they can efficiently learn and predict molecular charges learned from various charge partitioning schemes.
+     - Studied different charge partitioning schemes like Hirshfeld, Charge Model 5, Merz-Singh-Kollman, and Natural Bonding Orbital methods used in molecular dynamics simulations.
+     - Proposed modifications to the existing mathematical formulation and structure of HDNNs to be able to better predict  molecular charges, the computational cost for implementing the project, potential  setbacks, and alternate plans for the project.
+          
+
+## Detailed Summary
+
+ - Please find the details of my ORP report  [here](https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing). 

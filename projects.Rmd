@@ -12,7 +12,7 @@ output:
 
 University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present. 
     
-More details [here](https://punitjha.github.io/phd_project.html).
+More details [here](https://punitjha.github.io/orp_project.html).
 
 ***
 

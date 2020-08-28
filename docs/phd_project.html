@@ -13,6 +13,7 @@
 
 <title>Ph.D. Project</title>
 
+<script src="site_libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -346,115 +347,9 @@ $(document).ready(function () {
 </ul>
 <div id="detailed-summary" class="section level2">
 <h2>Detailed Summary</h2>
-<p>Finite-temperature many-body perturbation theory (FT-MBPT) is discussed extensively in textbooks <span class="citation">(Fetter and Walecka 2003; Blaizot and Ripka 1986)</span> and is a well-established theory for studying the thermodynamic properties of molecules at finite-temperatures in the context of a grand canonical ensemble. It is a perturbation theory to calculate the <span class="math inline">\(n\)</span>th-order perturbation correction to the grand canonical partition function (<span class="math inline">\(\Xi\)</span>) expanded in the orders of interaction (<span class="math inline">\(\lambda\)</span>). The corresponding <span class="math inline">\(n\)</span>th order perturbation corrections to grand potential, <span class="math inline">\(\Omega\)</span>, or internal energy, <span class="math inline">\(U\)</span>, can then be obtained by taking the natural log of the grand partition function, <span class="math inline">\(\ln \Xi\)</span>, and using the relations <span class="math display">\[\begin{aligned}
-\Omega^{(n)} &amp;= -\frac{1}{\beta}\ln \Xi^{(n)}, \\
-U^{(n)} &amp;= - \frac{\partial}{\partial \beta} \ln \Xi^{(n)} + \mu ^{(n)} \bar{N},\end{aligned}\]</span> where <span class="math inline">\(\beta=(k_b T)^{-1}\)</span>, <span class="math inline">\(\mu\)</span> is the chemical potential and <span class="math inline">\(\bar{N}\)</span> is the average number of electrons and the superscript <span class="math inline">\(n\)</span> stands for the order of perturbation correction. An in-depth theoretical analysis and initial numerical calculations based on the <span class="math inline">\(\lambda\)</span>-variation method (explained later) revealed that the textbook FT-MBPT, which has been in use for nearly half a century, fails to follow a fundamental law of physics called conservation of charge. This is because in the textbook formalism chemical potential of the electrons is fixed while allowing the average number of electrons to fluctuate when the perturbation is introduced in the system. This leads to the system becoming massively charged when perturbed from initially being neutral in the unperturbed state. As the temperature increases, the system turns into a charged plasma that does not obey the laws of thermodynamics. Since the textbook FT-MBPT suffered from this serious drawback the question then arose, "Can a correct FT-MBPT be derived that conserves charge? What are the correct values of <span class="math inline">\(n\)</span>th-order perturbation correction to <span class="math inline">\(\Omega\)</span> or <span class="math inline">\(U\)</span>?".</p>
-<p><strong>A resolution of this fundamental question in physics was required.</strong> We came up with a new ansatz wherein <span class="math inline">\(\mu\)</span> was expanded in a Taylor series expansion while the <span class="math inline">\(\bar{N}\)</span> was fixed and carried out exact numerical calculations to answer this question definitively. Numerically, the <span class="math inline">\(n\)</span>th-order perturbation correction <span class="math inline">\(X^{(n)}\)</span> to a quantity <span class="math inline">\(X\)</span>, is defined as the <span class="math inline">\(n\)</span>th derivative with respect to <span class="math inline">\(\lambda\)</span> of the same quantity, calculated with an exact method (thermal full configuration interaction), using a perturbation-scaled Hamiltonian, <span class="math inline">\(\hat{H}_0 + \lambda V\)</span> <span class="citation">(Kou and Hirata 2014; Hirata et al. 2017)</span></p>
-<p><span class="math display">\[\begin{aligned}
-X^{(n)} = \frac{1}{n!} \left.\frac{\partial^nX}{\partial \lambda^n}\right|_{\lambda=0}. \label{lambda}\end{aligned}\]</span></p>
-<p>We call it the <span class="math inline">\(\lambda\)</span>-variation method. <em>Our numerical results for the first-, second- and third-order perturbation corrections to grand potential and internal energy, provided for the first time benchmark results for the correct FT-MBPT using our new ansatz that conserved charge</em> <span class="citation">(Jha and Hirata 2019)</span>. I presented this work at the prestigious 59th Sanibel Symposium and was awarded the IBM-Zerner award for the year 2019.</p>
-<p>Using the benchmark results as a guiding tool, we derived the correct sum-over-states (SoS) formulas written in terms of the energy corrections according to the Hirschfelder–Certain degenerate perturbation theory (HCPT) <span class="citation">(Hirschfelder and Certain 1974)</span> and reduced analytical formulas for the first- and second-order corrections to <span class="math inline">\(\Omega\)</span>, <span class="math inline">\(U\)</span> and <span class="math inline">\(\mu\)</span> <span class="citation">(Hirata and Jha 2019, 2020)</span>. Both the SoS and analytical formulas reproduce the benchmark data numerically exactly as can be seen from Table <a href="#tab:1" reference-type="ref" reference="tab:1">1</a>. The reduced analytical formulas for the first-order correction to <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\Omega\)</span> and <span class="math inline">\(U\)</span> are</p>
-<p>where <span class="math inline">\(p\)</span> runs over all spin-orbitals spanned by the basis set, <span class="math inline">\(f_i^- \; \text{and} \; f_j^+\)</span> are the Fermi–Dirac occupancy and vacancy functions, respectively, <span class="math inline">\(\Delta F_{pq} = H^{core}_{pq} + \sum\limits_r\braket{pr||qr} - \delta_{p,q} \epsilon_p\)</span> is the temperature shift in the thermal Fock matrix, and <span class="math inline">\(\braket{ij||ij}\)</span> denotes an anti-symmetrized two-electron integral. The second-order correction to <span class="math inline">\(\Omega\)</span> is given as</p>
-<p>where <span class="math inline">\(D = 0\)</span> and <span class="math inline">\(D \neq 0\)</span> indicate that the summation is limited to the summands of which the denominator of the parent term (<span class="math inline">\(\epsilon_r + \epsilon_s + \epsilon_p + \epsilon_q \; \text{or} \; \epsilon_q - \epsilon_p\)</span>) is nonzero and zero, respectively. For second-order correction to <span class="math inline">\(\mu\)</span> and <span class="math inline">\(U\)</span> please refer to Ref. <span class="citation">(Hirata and Jha 2020)</span>.</p>
-<p>width=1.0,center</p>
-<div id="tab:1">
-<table>
-<caption>Grand potential and chemical potential (in <span class="math inline">\(E\)</span><sub>h</sub>) for a gas of hydrogen fluoride molecules in the grand canonical ensemble at <span class="math inline">\(10^5\)</span> K in the STO-3G basis set</caption>
-<thead>
-<tr class="header">
-<th align="left">Order</th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-<td>Benchmark</td>
-<td>Textbook</td>
-<td>Analytic</td>
-<td>SoS</td>
-<td>Benchmark</td>
-<td>Textbook</td>
-<td>Analytic</td>
-<td>SoS</td>
-</tr>
-<tr class="even">
-<td align="left">0</td>
-<td>-55.6365</td>
-<td>-55.6365</td>
-<td>-55.6365</td>
-<td>-55.6365</td>
-<td>0.2722</td>
-<td>0.2722</td>
-<td>0.2722</td>
-<td>0.2722</td>
-</tr>
-<tr class="odd">
-<td align="left">1</td>
-<td>-45.2684</td>
-<td>-46.0203</td>
-<td>-45.2684</td>
-<td>-45.2684</td>
-<td>-0.0752</td>
-<td>0</td>
-<td>-0.0752</td>
-<td>-0.0752</td>
-</tr>
-<tr class="even">
-<td align="left">2</td>
-<td>-2.5815</td>
-<td>-0.2689</td>
-<td>-0.2689</td>
-<td>-2.5815</td>
-<td>0.2320</td>
-<td>0</td>
-<td>0.2320</td>
-<td>0.2320</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><span id="tab:1" label="tab:1"><span class="math display">\[tab:1\]</span></span></p>
-<p>The textbook description of finite-temperature many-body perturbation was limited to the grand canonical ensemble only so we adapted the <span class="math inline">\(\lambda\)</span>-variation method to the canonical ensemble and numerically obtained the zeroth- through third-order many-body perturbation corrections to the electronic Helmholtz energy, internal energy, and entropy in the canonical ensemble in a wide range of temperature <span class="citation">(Jha and Hirata 2020)</span>. Sum-over-states analytical formulae for up to the third-order corrections to these properties were also derived as analytical <span class="math inline">\(\lambda\)</span>-derivatives. My first project as a Ph.D. researcher questioned the generally accepted conceptions of finite-temperature perturbation theory as presented in standard textbooks and expanded it to a previously unexplored canonical ensemble. Following the successful completion of the first project, I am now working on the convergence of machine learning (ML) and deep learning (DL) methods with physics and chemistry principles for precise mapping and prediction of material structure and properties.</p>
-<p>Even with rapid advances in fast computing, GPU hardware, and cloud computing technologies along with the availability of large molecular datasets, ML methods have still not been able to have a profound positive impact on materials discovery like they had on engineering applications such as computer vision. After years of work, ML methods have not done very well in modeling even basic tasks such as accurately describing the energy of systems with long-range interactions among heterogeneous molecules. It raises questions about the conventional approach by using complex ML or DL structures and large quantities of data to solve a chemical problem. Current ML methods are not capable of extrapolating very well beyond the datasets they are trained to truly learn the physics and chemistry of molecules unless we couple these methods with (i) "boosting algorithms" integrating correct physics and chemistry into ML models; (ii) appropriate molecular representation of the training data; (iii) the choice of relevant data in the training set e.g. using data from failed experiments; and (iv) the correct physical quantity or parameter which leads to the lowest prediction error by ML models.</p>
-<p>An interesting project emerges from case (iv) in the above list about choosing the correct physical quantity to model. In the problem of accurately calculating the total energy of atoms for systems with long-range electrostatic interactions a common approach is to obtain environment-dependent charges from ML algorithms that are then used in an Ewald summation procedure to calculate the long-range part of interaction energy. For the ML algorithms to learn to predict charges reference atomic charges must be fed into the algorithm but extraction of these charges from <em>ab initio</em> calculations is always ambiguous and atomic charges are not observables or target quantities, but merely computational intermediates. Instead of total energy, a very innovative approach suggested by some authors was to learn and predict electronegativity, first of all the environment-dependent electronegativity of a molecule is predicted by ML models from which atomic charges can be obtained unambiguously by a charge equilibration process. These atomic charges can then be used to calculate atomic energies and yield more precise results than the direct total energy approach. My Ph.D. training during the first project on <em>ab initio</em> and density function theory simulations will allow me not only to choose more suitable chemical characteristics to minimize learning and prediction errors by ML models, but also to formulate the complex underlying mathematical equations that will connect chemical properties such as electronegativity with ML methods. I have been coding for the last 7 years during my M.Sc. and Ph.D. studies in different programming languages and have taken courses on GPU programming, parallel programming, and data structures which will help me translate my equations into efficient codes.</p>
-<div id="refs" class="references">
-<div id="ref-bla86">
-<p>Blaizot, J. P., and G. Ripka. 1986. <em>Quantum Theory of Finite Systems</em>. Massachusetts: MIT Press.</p>
-</div>
-<div id="ref-fetter2003quantum">
-<p>Fetter, A. L., and J. D. Walecka. 2003. <em>Quantum Theory of Many-Particle Systems</em>. Dover, New York. <a href="https://books.google.com/books?id=0wekf1s83b0C">https://books.google.com/books?id=0wekf1s83b0C</a>.</p>
-</div>
-<div id="ref-so_jha">
-<p>Hirata, S., and P. K. Jha. 2019. <em>Annu. Rep. Comput. Chem.</em> 15: 17–37.</p>
-</div>
-<div id="ref-so_jha_grand">
-<p>———. 2020. <em>J. Chem. Phy</em> 153: 014103.</p>
-</div>
-<div id="ref-Hirata2017">
-<p>Hirata, So, Alexander E. Doran, Peter J. Knowles, and J. V. Ortiz. 2017. <em>J. Chem. Phys.</em> 147 (4): 77–84. <a href="https://doi.org/10.1063/1.4994837">https://doi.org/10.1063/1.4994837</a>.</p>
-</div>
-<div id="ref-hc_dpt">
-<p>Hirschfelder, Joseph O., and Phillip R. Certain. 1974. <em>J. Chem. Phys.</em> 60 (3): 1118–37. <a href="%20%0A%20%20%20%20%20%20%20%20https://doi.org/10.1063/1.1681123">
-        https://doi.org/10.1063/1.1681123</a>.</p>
-</div>
-<div id="ref-jha">
-<p>Jha, P. K., and S. Hirata. 2019. <em>Annu. Rep. Comput. Chem.</em> 15: 3–15.</p>
-</div>
-<div id="ref-so_jha_canonical">
-<p>———. 2020. <em>Phys. Rev. E</em> 101: 022106.</p>
-</div>
-<div id="ref-Kou2014">
-<p>Kou, Zhuangfei, and So Hirata. 2014. <em>Theor. Chem. Acc.</em> 133 (6): 1487. <a href="https://doi.org/10.1007/s00214-014-1487-4">https://doi.org/10.1007/s00214-014-1487-4</a>.</p>
-</div>
-</div>
+<ul>
+<li>Please find the details of my Ph.D. project <a href="https://drive.google.com/file/d/1gYTqQoy4uCIJNqHBbMloC61JV3wZPn6w/view?usp=sharing">here</a>.</li>
+</ul>
 </div>
 
 
