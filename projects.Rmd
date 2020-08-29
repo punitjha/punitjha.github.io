@@ -27,8 +27,9 @@ output:
      - This project was a part of the Machine learning class by Andrew Ng on Coursera.
     - More details of the project can be found in this repository [here](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex8)
 
+***
 ### Lab Coding Assignments  
- 1. ECE 365: Data Science and Engineering.
+ 1. **ECE 365: Data Science and Engineering.**
     - **Part-I: Machine Learning**
       - k-Nearest Neighbors, Bayes Classifiers, and Linear Discriminant Analysis. [[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb)
       - Naive Bayes, Logistic Regression, and Support Vector Machines. [[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab3_vvv/punit2_lab3.ipynb)
@@ -53,7 +54,7 @@ output:
 [[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-4/punit2_lab4.ipynb)
    
    
- 2. Machine Learning by Andrew Ng (Coursera)
+ 2. **Machine Learning by Andrew Ng (Coursera)**
     - Intro to Octave, Linear regression with one variable, Gradient Descent, and Linear regression with multiple variables.[[Link]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex1/ex1)
     - Logistic Regression, Regularized logistic regression, and Plotting the decision boundary. [[Link]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex2/ex2)
     - Multi-class Classification/ One-vs-all Classification and Neural Networks. [[Link]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex3/ex3)
@@ -64,15 +65,14 @@ output:
     - K-means Clustering and Image compression with K-means.
 [[Link]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex7/ex7)
 
-
+3. **Coming Soon Assignments from:**
+    -  **CS 446: Machine Learning: Theory  (Ongoing)**
+    -  **CS 447: Natural Language Processing (Ongoing)**
+    -  **CS 498: Intro. to Deep Learning (Ongoing)**
+    -  **Data Mining Specialization  - UIUC Coursera (Ongoing)**
+    -  **Cloud Computing Specialization  - UIUC Coursera (Ongoing)**
     
-<!-- ### Natural Language Processing Projects -->
-
-
-<!-- ### Text Analysis Projects -->
-    
-    
-    
+***    
     
 ### Programming Projects
 
@@ -86,21 +86,16 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
    - Parallel programming machine project on dense matrix-matrix multiplication and cache performance.
    - Please find the details [here](https://drive.google.com/file/d/1IvqxqR6E6_CINKB8OunAmBpQvYcb_nPo/view?usp=sharing)
    - Codes [here](https://github.com/punitjha/CS_420_MPs)
-
 3. **Utilization of  multi-core CPU using OpenMP and MPI to implement a dense matrix-matrix multiply (MM) routine and understanding the performance behavior.**
     - Usage of PAPI to measure cache misses and to analyze the performance.
     - Please find the details [here](https://drive.google.com/file/d/1yYzdTwtnV8-4xoFCRmFnWe275Ny0dOx9/view?usp=sharing)
     - Codes [here](https://github.com/punitjha/CS_420_MPs)
-
-
-
-
 4. **Utilization of  multi-core CPU using OpenMP and a GPU using OpenACC to implement a matrix-multiply routine for multiplying a band matrix by a dense matrix.**
    - Investigation of the performance impact of varying the band and matrix size.
    - Please find the details [here](https://drive.google.com/file/d/1Pb781ThU_9EG2uDTm1NB4uaETlWU7GH4/view?usp=sharing)
    - Codes [here](https://github.com/punitjha/CS_420_MPs)
-
-
+   
+***
 ### Chemistry Programming Projects
 
 1. **Programming projects for [CHEM 548: Molecular Electronic Structure Advanced Quantum Chemistry & Numerical Methods.](http://faculty.scs.illinois.edu/hirata/education.html)**
@@ -136,18 +131,20 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
 
 ***
 ## **Chemistry Research Projects and Summer Internships**
+***
 ### Ph.D. Research Project 
   - Research conducted at the University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present. 
      - **Topic**: Finite-temperature many-body perturbation theory.
      - More details [here](https://punitjha.github.io/phd_project.html).
     
-
+***
     
       
 ### M. Sc. Research Project
 - Research conducted at the National Institute of Science Education and Research, Bhubaneswar, India, Aug 2014 - June 2016.
     - **Topic**: Diagonal suppressed constant time Correlation Spectroscopy (COSY).
     - More details [here](https://punitjha.github.io/msc_project.html). 
+***
 
 ### Research Summer Internships
 1. **Undergraduate Summer Intern- 2015**
@@ -165,7 +162,8 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
      - Research conducted at the National Institute of Science Education and Research, Bhubaneswar, India, May 2013 - Aug 2013.
          - **Topic**: Reactive molecular dynamics of hydrocarbon dissociation on Ni surface.
          - More details [here](https://punitjha.github.io/niser_summer.html).
-    
+          
+***    
   <!--   - Reactive molecular dynamics of hydrocarbon dissociation on Ni surface: Carried out reactive dynamics simulations of the adsorption and decomposition of CH\textsubscript{4} molecules interacting with a Ni(100) surface. Studied the temperature dependence of chemisorption of CH\textsubscript{4} by breakage of C-H bonds that leads to the formation of CH\textsubscript{3} and H radical on a Ni(100) surface. -->
   <!-- - **Skills Acquired:** -->
   <!--         Learned rogramming in FORTRAN 90 and how to carry out quantum mechanical simulations using ReaxFF. -->
