@@ -66,20 +66,32 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
 ### Chemistry Programming Projects
 
 1. **Programming projects for [CHEM 548: Molecular Electronic Structure Advanced Quantum Chemistry & Numerical Methods.](http://faculty.scs.illinois.edu/hirata/education.html)**
-  - Third Project
-    - Hückel and Su-Schrieffer-Heeger band structures for 1D and 2D solids.
-    - The report can be found [here](https://drive.google.com/file/d/13CjQVDkpwSTJEk4sAuKDva8kw8z89CHt/view?usp=sharing)
-    - Codes can be found [here](https://github.com/punitjha/CHEM_548_Project_3)
-  - Second Project
-    - Wave packet propagation, phase and group velocities, Ehrenfest theorem, convolution theorem, path integrals.
-    - The report can be found [here](https://drive.google.com/file/d/1_XcSwoqlycy-i354jd4TW_kfLtEWTs8P/view?usp=sharing)
-    - Codes can be found [here](https://github.com/punitjha/CHEM_548_Project_2)
-  - First Project
-    - Time-dependent perturbation theory and spectroscopy.
-    - The report can be found [here](https://drive.google.com/file/d/1zz3pD4KzFYVm5nen6yhf8u-hqnGXjfF5/view?usp=sharing)
-    - Codes can be found [here](https://github.com/punitjha/CHEM_548_Project_1)
+   - Third Project
+     - Hückel and Su-Schrieffer-Heeger band structures for 1D and 2D solids.
+     - The report can be found [here](https://drive.google.com/file/d/13CjQVDkpwSTJEk4sAuKDva8kw8z89CHt/view?usp=sharing)
+     - Codes can be found [here](https://github.com/punitjha/CHEM_548_Project_3)
+   - Second Project
+     - Wave packet propagation, phase and group velocities, Ehrenfest theorem, convolution theorem, path integrals.
+     - The report can be found [here](https://drive.google.com/file/d/1_XcSwoqlycy-i354jd4TW_kfLtEWTs8P/view?usp=sharing)
+     - Codes can be found [here](https://github.com/punitjha/CHEM_548_Project_2)
+   - First Project
+     - Time-dependent perturbation theory and spectroscopy.
+     - The report can be found [here](https://drive.google.com/file/d/1zz3pD4KzFYVm5nen6yhf8u-hqnGXjfF5/view?usp=sharing)
+     - Codes can be found [here](https://github.com/punitjha/CHEM_548_Project_1)
 
- 
+2. **Electronic structure theory programming projects. ** 
+   - Molecular Geometry Analysis.
+     - Instructions  can be found  [here](https://drive.google.com/file/d/1ucsnJL2St-DKmW5cs6o_3M0TKxbly09p/view?usp=sharing)
+     - Codes can be found [here](https://github.com/punitjha/Crawdad_Project_4)
+   - Harmonic Vibrational Analysis.
+     - Instructions  can be found  [here](https://drive.google.com/file/d/1rTu-TCD8vZMX0CsE9NFp1brANDxAqt5x/view?usp=sharing)
+     - Codes can be found [here](https://github.com/punitjha/Crawdad_Project_3)
+   - The Hartree-Fock Self-Consistent Field Method
+     - Instructions  can be found  [here](https://drive.google.com/file/d/1sIRmEjvBEmPc7N1bsYVXyuu1kVwnSsYz/view?usp=sharing)
+     - Codes can be found [here](https://github.com/punitjha/Crawdad_Project_2)
+   - The Second-Order Moller-Plesset Perturbation Theory (MP2) Energy
+     - Instructions  can be found  [here](https://drive.google.com/file/d/1zDiOA2GHTFlNxmCZSjk4dJDEQ-xe4-4x/view?usp=sharing)
+     - Codes can be found [here](https://github.com/punitjha/Crawdad_Project_1)
 
 
 
