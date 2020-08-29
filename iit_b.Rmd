@@ -7,3 +7,8 @@ output: html_document
         - Quantum reactive flux theory: Studied the quantum analog of classical non-Markovian Kramers' equation and the phase space distribution function formulation of the method of reactive flux in the memory friction regime. Analyzed quantum Kramers' equation for energy diffusion and barrier crossing dynamics in the high-friction regime.
     - **Skills Acquired:**
           Acquired skills to use Mathematica for solving integrals and numerical analysis. Learned mathematical methods in physics.
+
+
+## Detailed Summary
+
+ - Please find the details of my Ph.D. project [here](https://drive.google.com/file/d/18vyhZyboItNs39KKBfo4zmLSpDAPb646/view?usp=sharing). 

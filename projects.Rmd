@@ -9,10 +9,8 @@ output:
 ## Machine Learning and Programming Projects
 ***
 ### Original Reserach Proposal
-
-University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present. 
-    
-More details [here](https://punitjha.github.io/orp_project.html).
+  - **On the inclusion of long-range interactions among molecules in machine learning modles**
+  - More details [here](https://punitjha.github.io/orp_project.html).
 
 ***
 
@@ -20,21 +18,54 @@ More details [here](https://punitjha.github.io/orp_project.html).
 
 1. **Anomaly Detection**:
     - Implemented an anomaly detection algorithm for computer serves  based on Gaussian model.
-  
+    
 2. **Recommender Systems**: 
     - Implemented the collaborative filtering learning algorithm for a dataset of movie ratings.
 
 3. **Ad Hoc Information Retrieval System**: 
     - Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.
+    - This project was a part of the ECE 365
     
-### Natural Language Processing Projects
+<!-- ### Natural Language Processing Projects -->
 
 
-### Text Analysis Projects
+<!-- ### Text Analysis Projects -->
     
+    
+    
+    
+### Programming Projects
+
+
+1.  **Design and Implementations of Parallel OpenMP and MPI LU factorization : Application to Finite Difference Method.**
+     - In this project, I with my group presented  six different OpenMP and
+MPI based parallel algorithms for the LU factorization of dense matrices.
+     - Please find the details [here](https://drive.google.com/file/d/1I17RTZGtopQQOAkk9z2MUyQEGYWmYsRN/view?usp=sharing)
+     - Codes [here](https://github.com/punitjha/CS_420_Project)
+2. **Optimization of a dense matrix-matrix multiplication routine and understanding its performance behavior.** 
+   - Parallel programming machine project on dense matrix-matrix multiplication and cache performance.
+   - Please find the details [here](https://drive.google.com/file/d/1IvqxqR6E6_CINKB8OunAmBpQvYcb_nPo/view?usp=sharing)
+   - Codes [here](https://github.com/punitjha/CS_420_MPs)
+
+3. **Utilization of  multi-core CPU using OpenMP and MPI to implement a dense matrix-matrix multiply (MM) routine and understanding the performance behavior.**
+    - Usage of PAPI to measure cache misses and to analyze the performance
+based.
+    - Please find the details [here](https://drive.google.com/file/d/1yYzdTwtnV8-4xoFCRmFnWe275Ny0dOx9/view?usp=sharing)
+    - Codes [here](https://github.com/punitjha/CS_420_MPs)
+
+
+
+4. **Utilization of  multi-core CPU using OpenMP and a GPU using OpenACC to implement a matrix-multiply routine for multiplying a band matrix by a dense matrix.**
+   - Investigation of the performance impact of varying the band and matrix size.
+   - Please find the details [here](https://drive.google.com/file/d/1Pb781ThU_9EG2uDTm1NB4uaETlWU7GH4/view?usp=sharing)
+   - Codes [here](https://github.com/punitjha/CS_420_MPs)
+
+
+
+
 ***
 ## Chemistry Research Projects and Summer Internships
-### Ph.D. Reserach Project 
+### Ph.D. Research Project 
 -  University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present. 
 - More details [here](https://punitjha.github.io/phd_project.html).
     
@@ -45,7 +76,7 @@ More details [here](https://punitjha.github.io/orp_project.html).
 - National Institute of Science Education and Research, Bhubaneswar, India, Aug 2014 - June 2016.
 - More details [here](https://punitjha.github.io/msc_project.html). 
 
-### Reserach Summer Interships
+### Research Summer Internships
 1. **Undergraduate Summer Intern- 2015**
     -  University of Calgary, Calgary, Canada, May 2015 - Aug 2015.
     -  More details [here](https://punitjha.github.io/calgary.html).

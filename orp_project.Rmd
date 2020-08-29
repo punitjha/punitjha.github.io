@@ -3,6 +3,7 @@ title: "Original Research Proposal"
 output: html_document
 bibliography: prl.bib
 ---
+-**On the inclusion of long-range interactions among molecules in machine learning modles**
 - **University of Illinois at Urbana-Champaign, Urbana-Champaign, IL.**
   - **Ph.D. Student and Teaching Assistant, Aug 2016 - Present**
   - **Summary**:

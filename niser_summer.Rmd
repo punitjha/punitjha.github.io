@@ -4,7 +4,7 @@ output: html_document
 ---
 
 - **National Institute of Science Education and Research, Bhubaneswar, India.**
-  - Undergraduate Summer Intern, May May 2013 - Aug 2013.
+  - Undergraduate Summer Intern, May 2013 - Aug 2013.
   - Reactive molecular dynamics of hydrocarbon dissociation on Ni surface: Carried out reactive dynamics simulations of the adsorption and decomposition of CH\textsubscript{4} molecules interacting with a Ni(100) surface. Studied the temperature dependence of chemisorption of CH\textsubscript{4} by breakage of C-H bonds that leads to the formation of CH\textsubscript{3} and H radical on a Ni(100) surface.
   - **Skills Acquired:**
-          Learned rogramming in FORTRAN 90 and how to carry out quantum mechanical simulations using ReaxFF.
+          Learned programming in FORTRAN 90 and how to carry out quantum mechanical simulations using ReaxFF.
