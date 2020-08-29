@@ -49,32 +49,34 @@ My full CV can be found [here](https://drive.google.com/file/d/1KJKFoMfk-ttQBkl0
 Here is list of relevant courses that I have done at the Univeristy of Illinios and NISER, India.
 
 #### [**Univeristy of Illinios:**](https://chemistry.illinois.edu/)
-- Data Science \& Eng.  
-- Quantum Mech. \& Spectrosc. 
-- Molecular Electronic Structure 
-- Quantum Mechanics 
+-  ECE 365: Data Science \& Eng. 
+- CS 420: Parallel Programming
+-  CS 446: Machine Learning: Theory  (Ongoing)
+-  CS 447: Natural Language Processing (Ongoing)
+-  CS 498: Intro. to Deep Learning (Ongoing)
+-  Data Mining Specialization  - UIUC Coursera (Ongoing)
+-  Cloud Computing Specialization  - UIUC Coursera (Ongoing)
+- Machine Learning by Andrew Ng (Coursera)
+- CS 400: Data Structures in C++ - UIUC Coursera.
+- Quantum Mech. \& Spectrosc.
+- Molecular Electronic Structure
+- Quantum Mechanics
 - Statistical Thermodynamics 
-- Parallel Prog.: Sci \& Engrg 
 
 #### [**NISER:**](https://stat.illinois.edu/)  
-- Probablity Theory  
+- Probability Theory 
+- Algebra - II
 - Computational Physics  
 - Biophysics and Statistics
-- Linear Algebra- II
 - Numerical Methods in C++ 
 - Classical Mechanics- I
-- NMR Theory
+- Nuclear Magnetic Resonance Theory
+- Physical methods in Chemistry I \& II
 - Organic chemistry- I \& II
 - Quantum Chemistry- I \&  II
 - Introduction to Economics
 - Sociology
 - History of Science
-
-#### **Online Courses**
-
-- Machine Learning (Online via Coursera)
-- Data Structures in C++ (Online via Coursera)
-
   
 ***
 ### Courses Taught
@@ -87,19 +89,19 @@ Here is list of relevant courses that I have done at the Univeristy of Illinios 
 ***
   
 ### Honors and Awards
-- 2019, CATMS Travel Award
-- 2019, Drickamer Research Fellowship
-- 2019, IBM-Zerner Graduate Student Award
-- 2018, J. C. Martin Memorial Student Travel Award
-- 2017, Chemical Sloan Fellowship
-- 2016, Saryu Doshi Post Graduate Fellowships in Liberal Arts \& Sciences
-- 2016, Dornsife Fellowship
-- 2016, Virginia Bartow Scholarship
-- 2016, Hannum Fellowship
-- 2015, MITACS Globalink Fellowship
-- 2012, Academic Excellence Award
-- 2011, Innovation in Science Pursuit for Inspired Research (INSPIRE) by Govt. of India
-
+- 2019, CATMS Travel Award by the Department of Chemistry, UIUC.
+- 2019, Drickamer Research Fellowship by the Department of Chemistry, UIUC.
+- 2019, IBM-Zerner Graduate Student Award by the University of Florida at the 59th Sanibel Symposium.
+- 2018, J. C. Martin Memorial Student Travel Award by the Department of Chemistry, UIUC.
+- 2017, Sloan Chemical Prize  by the Department of Chemistry, UIUC.
+- 2016, Hannum Fellowship  by the Department of Chemistry,  UIUC.
+- 2016, Virginia Bartow Scholarship for admission to Department of Chemistry,  UIUC.
+- 2016, Dornsife Fellowship for admission to Department of Chemistry, University of Southern California.
+- 2016, Saryu Doshi Post Graduate Fellowships in Liberal Arts \& Sciences by the Saryu Doshi Foundation for excellent academic performance in my M. Sc thesis.
+- 2014, MITACS Globalink Scholarship for undergoing summer research internship at the  University of Calgary, Alberta, Canada.
+- 2013, Academic Excellence Award for securing the highest   S.G.P.A of 9.92/10  in the 4th semester at NISER, Bhubaneswar, India.
+- 2011, Innovation in Science Pursuit for Inspired Research (INSPIRE)- 2011  scholarship by the Department of Science and Technology, Government of India for securing an  All India Rank of 109 out of 50,000 candidates  in the National Entrance Screening Test.
+- Ranked as one of the top 3% students in the All India Biology Olympiad. (out of 8500 students)
 ***
   
 ### Computational Skills
