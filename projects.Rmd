@@ -26,7 +26,13 @@ output:
     - Implemented the collaborative filtering learning algorithm for a dataset of movie ratings.
      - This project was a part of the Machine learning class by Andrew Ng on Coursera.
     - More details of the project can be found in this repository [here](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex8)
-
+3. **Coming Soon Projects from:**
+    -  **CS 446: Machine Learning: Theory  (Ongoing)**
+    -  **CS 447: Natural Language Processing (Ongoing)**
+    -  **CS 498: Intro. to Deep Learning (Ongoing)**
+    -  **Data Mining Specialization  - UIUC Coursera (Ongoing)**
+    -  **Cloud Computing Specialization  - UIUC Coursera (Ongoing)**
+    
 ***
 ### Lab Coding Assignments  
  1. **ECE 365: Data Science and Engineering.**
