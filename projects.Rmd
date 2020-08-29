@@ -8,8 +8,8 @@ output:
 ***
 ## **Machine Learning and Programming Projects**
 ***
-### Original Reserach Proposal
-  - **On the inclusion of long-range interactions among molecules in machine learning modles**
+### Original Research Proposal
+  - **On the inclusion of long-range interactions among molecules in machine learning models**
   - More details [here](https://punitjha.github.io/orp_project.html).
 
 ***
@@ -22,9 +22,9 @@ output:
     - More details of the project can be found in this repository [here](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
 
 2. **Anomaly Detection and Recommender Systems**:
-    - Implemented an anomaly detection algorithm for computer serves  based on Gaussian model.
+    - Implemented an anomaly detection algorithm for computer serves  based on the Gaussian model.
     - Implemented the collaborative filtering learning algorithm for a dataset of movie ratings.
-     - This project was a part of the Machine learning class by Andrew Ng on coursera.
+     - This project was a part of the Machine learning class by Andrew Ng on Coursera.
     - More details of the project can be found in this repository [here](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex8)
 
     
@@ -39,7 +39,7 @@ output:
 ### Programming Projects
 
 
-1.  **Design and Implementations of Parallel OpenMP and MPI LU factorization : Application to Finite Difference Method.**
+1.  **Design and Implementations of Parallel OpenMP and MPI LU factorization: Application to Finite Difference Method.**
      - In this project, I with my group presented  six different OpenMP and
 MPI based parallel algorithms for the LU factorization of dense matrices.
      - Please find the details [here](https://drive.google.com/file/d/1I17RTZGtopQQOAkk9z2MUyQEGYWmYsRN/view?usp=sharing)
@@ -50,8 +50,7 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
    - Codes [here](https://github.com/punitjha/CS_420_MPs)
 
 3. **Utilization of  multi-core CPU using OpenMP and MPI to implement a dense matrix-matrix multiply (MM) routine and understanding the performance behavior.**
-    - Usage of PAPI to measure cache misses and to analyze the performance
-based.
+    - Usage of PAPI to measure cache misses and to analyze the performance.
     - Please find the details [here](https://drive.google.com/file/d/1yYzdTwtnV8-4xoFCRmFnWe275Ny0dOx9/view?usp=sharing)
     - Codes [here](https://github.com/punitjha/CS_420_MPs)
 
@@ -69,15 +68,15 @@ based.
 1. **Programming projects for [CHEM 548: Molecular Electronic Structure Advanced Quantum Chemistry & Numerical Methods.](http://faculty.scs.illinois.edu/hirata/education.html)**
   - Third Project
     - Hückel and Su-Schrieffer-Heeger band structures for 1D and 2D solids.
-    - Report can be found [here](https://drive.google.com/file/d/13CjQVDkpwSTJEk4sAuKDva8kw8z89CHt/view?usp=sharing)
+    - The report can be found [here](https://drive.google.com/file/d/13CjQVDkpwSTJEk4sAuKDva8kw8z89CHt/view?usp=sharing)
     - Codes can be found [here](https://github.com/punitjha/CHEM_548_Project_3)
   - Second Project
     - Wave packet propagation, phase and group velocities, Ehrenfest theorem, convolution theorem, path integrals.
-    - Report can be found [here](https://drive.google.com/file/d/1_XcSwoqlycy-i354jd4TW_kfLtEWTs8P/view?usp=sharing)
+    - The report can be found [here](https://drive.google.com/file/d/1_XcSwoqlycy-i354jd4TW_kfLtEWTs8P/view?usp=sharing)
     - Codes can be found [here](https://github.com/punitjha/CHEM_548_Project_2)
   - First Project
     - Time-dependent perturbation theory and spectroscopy.
-    - Report can be found [here](https://drive.google.com/file/d/1zz3pD4KzFYVm5nen6yhf8u-hqnGXjfF5/view?usp=sharing)
+    - The report can be found [here](https://drive.google.com/file/d/1zz3pD4KzFYVm5nen6yhf8u-hqnGXjfF5/view?usp=sharing)
     - Codes can be found [here](https://github.com/punitjha/CHEM_548_Project_1)
 
  
