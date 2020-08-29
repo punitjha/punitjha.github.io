@@ -57,10 +57,30 @@ based.
 
 
 
+
 4. **Utilization of  multi-core CPU using OpenMP and a GPU using OpenACC to implement a matrix-multiply routine for multiplying a band matrix by a dense matrix.**
    - Investigation of the performance impact of varying the band and matrix size.
    - Please find the details [here](https://drive.google.com/file/d/1Pb781ThU_9EG2uDTm1NB4uaETlWU7GH4/view?usp=sharing)
    - Codes [here](https://github.com/punitjha/CS_420_MPs)
+
+
+### Chemistry Programming Projects
+
+1. **Programming projects for [CHEM 548: Molecular Electronic Structure Advanced Quantum Chemistry & Numerical Methods.](http://faculty.scs.illinois.edu/hirata/education.html)**
+  - Third Project
+    - Hückel and Su-Schrieffer-Heeger band structures for 1D and 2D solids.
+    - Report can be found [here](https://drive.google.com/file/d/13CjQVDkpwSTJEk4sAuKDva8kw8z89CHt/view?usp=sharing)
+    - Codes can be found [here](https://github.com/punitjha/CHEM_548_Project_3)
+  - Second Project
+    - Wave packet propagation, phase and group velocities, Ehrenfest theorem, convolution theorem, path integrals.
+    - Report can be found [here](https://drive.google.com/file/d/1_XcSwoqlycy-i354jd4TW_kfLtEWTs8P/view?usp=sharing)
+    - Codes can be found [here](https://github.com/punitjha/CHEM_548_Project_2)
+  - First Project
+    - Time-dependent perturbation theory and spectroscopy.
+    - Report can be found [here](https://drive.google.com/file/d/1zz3pD4KzFYVm5nen6yhf8u-hqnGXjfF5/view?usp=sharing)
+    - Codes can be found [here](https://github.com/punitjha/CHEM_548_Project_1)
+
+ 
 
 
 
@@ -68,29 +88,34 @@ based.
 ***
 ## **Chemistry Research Projects and Summer Internships**
 ### Ph.D. Research Project 
--  University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present. 
-- More details [here](https://punitjha.github.io/phd_project.html).
+  - Research conducted at the University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present. 
+     - **Topic**: Finite-temperature many-body perturbation theory.
+     - More details [here](https://punitjha.github.io/phd_project.html).
     
 
     
       
 ### M. Sc. Research Project
-- National Institute of Science Education and Research, Bhubaneswar, India, Aug 2014 - June 2016.
-- More details [here](https://punitjha.github.io/msc_project.html). 
+- Research conducted at the National Institute of Science Education and Research, Bhubaneswar, India, Aug 2014 - June 2016.
+    - **Topic**: Diagonal suppressed constant time Correlation Spectroscopy (COSY).
+    - More details [here](https://punitjha.github.io/msc_project.html). 
 
 ### Research Summer Internships
 1. **Undergraduate Summer Intern- 2015**
-    -  University of Calgary, Calgary, Canada, May 2015 - Aug 2015.
-    -  More details [here](https://punitjha.github.io/calgary.html).
+    - Research conducted at the University of Calgary, Calgary, Canada, May 2015 - Aug 2015.
+       - **Topic**: Dynamics of gas-hydrate nucleation.
+       -  More details [here](https://punitjha.github.io/calgary.html).
   
 2. **Undergraduate Summer Intern- 2014**
-     - Indian Institute of Technology- Bombay, Mumbai, India, May 2014 - Aug 2014.
-     - More details [here](https://punitjha.github.io/iit_b.html).
+     - Research conducted at the Indian Institute of Technology- Bombay, Mumbai, India, May 2014 - Aug 2014.
+        - **Topic**: Quantum reactive flux theory.
+        - More details [here](https://punitjha.github.io/iit_b.html).
          
       
 3.  **Undergraduate Summer Intern- 2013** 
-     - National Institute of Science Education and Research, Bhubaneswar, India, May 2013 - Aug 2013.
-     - More details [here](https://punitjha.github.io/niser_summer.html).
+     - Research conducted at the National Institute of Science Education and Research, Bhubaneswar, India, May 2013 - Aug 2013.
+         - **Topic**: Reactive molecular dynamics of hydrocarbon dissociation on Ni surface.
+         - More details [here](https://punitjha.github.io/niser_summer.html).
     
   <!--   - Reactive molecular dynamics of hydrocarbon dissociation on Ni surface: Carried out reactive dynamics simulations of the adsorption and decomposition of CH\textsubscript{4} molecules interacting with a Ni(100) surface. Studied the temperature dependence of chemisorption of CH\textsubscript{4} by breakage of C-H bonds that leads to the formation of CH\textsubscript{3} and H radical on a Ni(100) surface. -->
   <!-- - **Skills Acquired:** -->

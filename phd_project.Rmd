@@ -6,7 +6,7 @@ bibliography: prl.bib
 - **University of Illinois at Urbana-Champaign, Urbana-Champaign, IL.**
   - **Ph.D. Student and Teaching Assistant, Aug 2016 - Present**
   - **Summary**:
-      - Finite-temperature many-body perturbation theory (FT-MBPT): FT-MBPT is a theory to calculate the thermodynamic parameters of the grand canonical system at a given temperature. 
+      - **Finite-temperature many-body perturbation theory (FT-MBPT)**: FT-MBPT is a theory to calculate the thermodynamic parameters of the grand canonical system at a given temperature. 
       - I implemented the $\lambda$-variation method to  calculate the $n$th-order corrections to grand potential and internal energy using the FT-MBPT formalism which showed it is mathematically inconsistent and does not conserve charge. 
       - Derived the correct analytic formulas for FT-MBPT using another ansatz wherein charge was conserved.
       Implemented the FT-MBPT in a canonical ensemble and derived semi-analytic formulas.
