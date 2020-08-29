@@ -14,7 +14,7 @@ output:
 
 ***
 
-### Machine Learning
+### Machine Learning Projects
 
 1. **Ad Hoc Information Retrieval System**: 
     - Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.
@@ -26,6 +26,44 @@ output:
     - Implemented the collaborative filtering learning algorithm for a dataset of movie ratings.
      - This project was a part of the Machine learning class by Andrew Ng on Coursera.
     - More details of the project can be found in this repository [here](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex8)
+
+### Lab Coding Assignments  
+ 1. ECE 365: Data Science and Engineering.
+    - **Part-I: Machine Learning**
+      - k-Nearest Neighbors, Bayes Classifiers, and Linear Discriminant Analysis. [[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb)
+      - Naive Bayes, Logistic Regression, and Support Vector Machines. [[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab3_vvv/punit2_lab3.ipynb)
+      - K-means clustering, Vector Quantization, Nearest Neighbors Classification, and Linear Regression. [[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab4_vvv/punit2_lab4.ipynb)
+      - Eigendecomposition, Singular Value Decomposition, and Principal Component Analysis.
+[[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab5_vvv/punit2_lab5.ipynb)
+    - **Part-II: Natural Language Processing**
+      - Text processing and regular expressions, word frequencies and language, manipulate corpora and plot insightful graphs. [[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab1/punit2/Lab1/punit2.ipynb)
+      - Tokenization, bag-of-words represenation, ogistic regression classifier (discriminative model) using PyTorch.
+[[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab2/punit2/NLPLab2/Lab2_NLP.ipynb) 
+      - N-gram model, generate representative sentences, study of the effect of training data size, and language model complexity (n-gram size), on the modeling capacity of a language model.
+[[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab3/punit2/NLPLab3/NLPLab3.ipynb)
+      - Count-Based Word Vectors, Co-occurrence_matrix, PCA, plot-embeddings,  Word2Vec Word Embeddings, Cosine Similarity, Polysemous Words, Synonyms & Antonyms, Solving Analogies with Word Vectors, Guided Analysis of Bias in Word Vectors, and Independent Analysis of Bias in Word Vectors. [[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab4/punit2/Lab4/lab4.ipynb)
+    - **Part-III: Text Analysis** 
+      - Syntagmatic word association minining.
+[[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-1/punit2_lab1.ipynb)
+      - Sentiment analysis.
+[[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-2/punit2_lab2.ipynb)
+      - Document Clustering using TF-IDF vectorizer.
+[[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-3/punit2_lab3.ipynb)   
+      - Topic Modelling: Use of gensim library to create a LDA topic model.
+[[Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-4/punit2_lab4.ipynb)
+   
+   
+ 2. Machine Learning by Andrew Ng (Coursera)
+    - Intro to Octave, Linear regression with one variable, Gradient Descent, and Linear regression with multiple variables.[[Link]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex1/ex1)
+    - Logistic Regression, Regularized logistic regression, and Plotting the decision boundary. [[Link]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex2/ex2)
+    - Multi-class Classification/ One-vs-all Classification and Neural Networks. [[Link]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex3/ex3)
+    - Neural Networks, Backpropagation, and Visualizing the hidden layer. [[Link]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex4/ex4)
+    - Regularized Linear Regression, Bias-variance and learning curves, Polynomial regression, Adjusting the regularization parameter, Computing test set error, and visualization.
+[[Link]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex5/ex5)    
+    - Support Vector Machines and Spam Classification. [[Link]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex6/ex6)    
+    - K-means Clustering and Image compression with K-means.
+[[Link]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex7/ex7)
+
 
     
 <!-- ### Natural Language Processing Projects -->
@@ -86,10 +124,10 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
    - Harmonic Vibrational Analysis.
      - Instructions  can be found  [here](https://drive.google.com/file/d/1rTu-TCD8vZMX0CsE9NFp1brANDxAqt5x/view?usp=sharing)
      - Codes can be found [here](https://github.com/punitjha/Crawdad_Project_3)
-   - The Hartree-Fock Self-Consistent Field Method
+   - The Hartree-Fock Self-Consistent Field Method.
      - Instructions  can be found  [here](https://drive.google.com/file/d/1sIRmEjvBEmPc7N1bsYVXyuu1kVwnSsYz/view?usp=sharing)
      - Codes can be found [here](https://github.com/punitjha/Crawdad_Project_2)
-   - The Second-Order Moller-Plesset Perturbation Theory (MP2) Energy
+   - The Second-Order Moller-Plesset Perturbation Theory (MP2) Energy.
      - Instructions  can be found  [here](https://drive.google.com/file/d/1zDiOA2GHTFlNxmCZSjk4dJDEQ-xe4-4x/view?usp=sharing)
      - Codes can be found [here](https://github.com/punitjha/Crawdad_Project_1)
 
