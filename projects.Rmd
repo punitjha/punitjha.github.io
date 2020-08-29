@@ -6,7 +6,7 @@ output:
 ---
 
 ***
-## Machine Learning and Programming Projects
+## **Machine Learning and Programming Projects**
 ***
 ### Original Reserach Proposal
   - **On the inclusion of long-range interactions among molecules in machine learning modles**
@@ -16,15 +16,17 @@ output:
 
 ### Machine Learning
 
-1. **Anomaly Detection**:
-    - Implemented an anomaly detection algorithm for computer serves  based on Gaussian model.
-    
-2. **Recommender Systems**: 
-    - Implemented the collaborative filtering learning algorithm for a dataset of movie ratings.
-
-3. **Ad Hoc Information Retrieval System**: 
+1. **Ad Hoc Information Retrieval System**: 
     - Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.
-    - This project was a part of the ECE 365
+    - This project was a part of the ECE 365: Data Science and Engineer course.
+    - More details of the project can be found in this repository [here](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
+
+2. **Anomaly Detection and Recommender Systems**:
+    - Implemented an anomaly detection algorithm for computer serves  based on Gaussian model.
+    - Implemented the collaborative filtering learning algorithm for a dataset of movie ratings.
+     - This project was a part of the Machine learning class by Andrew Ng on coursera.
+    - More details of the project can be found in this repository [here](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex8)
+
     
 <!-- ### Natural Language Processing Projects -->
 
@@ -64,7 +66,7 @@ based.
 
 
 ***
-## Chemistry Research Projects and Summer Internships
+## **Chemistry Research Projects and Summer Internships**
 ### Ph.D. Research Project 
 -  University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present. 
 - More details [here](https://punitjha.github.io/phd_project.html).
