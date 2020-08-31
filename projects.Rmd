@@ -36,7 +36,7 @@ output:
 ***
 ### Mini-projects and Jupyter Notebooks
 
-  - **Part-I: Machine Learning**
+  - **Machine Learning**
       - k-Nearest Neighbors, Bayes Classifiers, and Linear Discriminant Analysis. [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb)
       - Naive Bayes, Logistic Regression, and Support Vector Machines. [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab3_vvv/punit2_lab3.ipynb)
       - K-means clustering, Vector Quantization, Nearest Neighbors Classification, and Linear Regression. [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab4_vvv/punit2_lab4.ipynb)
@@ -51,14 +51,14 @@ output:
     - Support Vector Machines and Spam Classification. [[Octave]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex6/ex6)
     - K-means Clustering and Image compression with K-means.
 [[Octave]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex7/ex7)
-  - **Part-II: Natural Language Processing**
+  - **Natural Language Processing**
       - Text processing and regular expressions, word frequencies and language, manipulate corpora and plot insightful graphs. [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab1/punit2/Lab1/punit2.ipynb)
       - Tokenization, bag-of-words represenation, ogistic regression classifier (discriminative model) using PyTorch.
 [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab2/punit2/NLPLab2/Lab2_NLP.ipynb)
       - N-gram model, generate representative sentences, study of the effect of training data size, and language model complexity (n-gram size), on the modeling capacity of a language model.
 [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab3/punit2/NLPLab3/NLPLab3.ipynb)
       - Count-Based Word Vectors, Co-occurrence_matrix, PCA, plot-embeddings,  Word2Vec Word Embeddings, Cosine Similarity, Polysemous Words, Synonyms & Antonyms, Solving Analogies with Word Vectors, Guided Analysis of Bias in Word Vectors, and Independent Analysis of Bias in Word Vectors. [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab4/punit2/Lab4/lab4.ipynb)
-  - **Part-III: Text Analysis**
+  - **Text Analysis**
       - Syntagmatic word association mining.
 [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-1/punit2_lab1.ipynb)
       - Sentiment analysis.
