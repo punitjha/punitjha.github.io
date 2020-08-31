@@ -34,7 +34,7 @@ output:
     -  **Cloud Computing Specialization  - UIUC Coursera (Ongoing)**
     
 ***
-### Mini-projects and Jupyter Notebooks
+### Small projects, Assignments, and Jupyter Notebooks.
 
   - **Machine Learning**
       - k-Nearest Neighbors, Bayes Classifiers, and Linear Discriminant Analysis. [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb)
