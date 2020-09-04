@@ -23,7 +23,7 @@ output:
 
 2. **Anomaly Detection and Recommender Systems**:
     - Implemented an anomaly detection algorithm for computer serves  based on the Gaussian model.
-    - Implemented the collaborative filtering learning algorithm for a dataset of movie ratings.
+    - Implemented the collaborative filtering learning algorithm for a data set of movie ratings.
      - This project was a part of the Machine learning class by Andrew Ng on Coursera.
     - More details of the project can be found in this repository [here](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex8)
 3. **Coming Soon Projects from:**
@@ -40,7 +40,7 @@ output:
       - k-Nearest Neighbors, Bayes Classifiers, and Linear Discriminant Analysis. [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb)
       - Naive Bayes, Logistic Regression, and Support Vector Machines. [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab3_vvv/punit2_lab3.ipynb)
       - K-means clustering, Vector Quantization, Nearest Neighbors Classification, and Linear Regression. [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab4_vvv/punit2_lab4.ipynb)
-      - Eigendecomposition, Singular Value Decomposition, and Principal Component Analysis.
+      - Eigen decomposition, Singular Value Decomposition, and Principal Component Analysis.
 [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab5_vvv/punit2_lab5.ipynb)
      - Intro to Octave, Linear regression with one variable, Gradient Descent, and Linear regression with multiple variables.[[Octave ]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex1/ex1)
     - Logistic Regression, Regularized logistic regression, and Plotting the decision boundary. [[Octave]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex2/ex2)
@@ -121,7 +121,7 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
    - The Hartree-Fock Self-Consistent Field Method.
      - Instructions  can be found  [here](https://drive.google.com/file/d/1sIRmEjvBEmPc7N1bsYVXyuu1kVwnSsYz/view?usp=sharing)
      - Codes can be found [here](https://github.com/punitjha/Crawdad_Project_2)
-   - The Second-Order Moller-Plesset Perturbation Theory (MP2) Energy.
+   - The Second-Order Möller-Plesset Perturbation Theory (MP2) Energy.
      - Instructions  can be found  [here](https://drive.google.com/file/d/1zDiOA2GHTFlNxmCZSjk4dJDEQ-xe4-4x/view?usp=sharing)
      - Codes can be found [here](https://github.com/punitjha/Crawdad_Project_1)
    - Hückel and Su-Schrieffer-Heeger band structures for 1D and 2D solids.
@@ -152,6 +152,7 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
 - Research conducted at the National Institute of Science Education and Research, Bhubaneswar, India, Aug 2014 - June 2016.
     - **Topic**: Diagonal suppressed constant time Correlation Spectroscopy (COSY).
     - More details [here](https://punitjha.github.io/msc_project.html). 
+    
 ***
 
 ### Research Summer Internships
