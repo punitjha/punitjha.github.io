@@ -50,6 +50,14 @@ output:
 * [Data Stories](http://datastori.es/) 
   
 ***
+
+## Programming
+
+* [Big O cheat sheet](https://www.bigocheatsheet.com/)
+
+
+***
+
   
 ## R Resources
 
