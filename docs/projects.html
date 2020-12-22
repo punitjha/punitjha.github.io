@@ -493,39 +493,78 @@ Results obtained from a trained YOLO model
 </div>
 <ul>
 <li>Implemented a YOLO-like object detector on the PASCAL VOC 2007 dataset to produce results like in the above image.</li>
-<li>Used a pre-trained network structure for the model which was inspired by by DetNet.</li>
+<li>Used a pre-trained network structure for the model. In particular, we used the ResNet50 architecture as a base for our detector. This is different from the base architecture in the YOLO paper and also results in a different output grid size (14x14 instead of 7x7).</li>
 <li>Please find the details of the Python code used <a href="https://github.com/punitjha/YOLO-Object-Detection">here</a>.</li>
 <li>All calculations were run on Google Colab.</li>
 </ul>
 <hr />
+<!-- ### **Face Generation with GANs** -->
 </div>
-<div id="face-generation-with-gans" class="section level3">
-<h3><strong>Face Generation with GANs</strong></h3>
+<div id="face-generation-with-gans-github" class="section level3">
+<h3><strong><span style="text-decoration: underline">Face Generation with GANs</span></strong> <strong><a href="https://github.com/punitjha/Generative-Adversarial-Network"><span style="color:magenta">[GitHub]</span></a></strong></h3>
+<div class="figure" style="text-align: left">
+<img src="dcgan.png" alt=" Deep Convolutional Generative Adversarial Network Architecture. Ref: https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html" width=" 95%" height="95%" />
+<p class="caption">
+Deep Convolutional Generative Adversarial Network Architecture. Ref: <a href="https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html" class="uri">https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html</a>
+</p>
+</div>
+<ul>
+<li>Trained a generative adversarial network (GAN) with spectral normalization of discriminator weights on the CelebA Dataset and generate facial images.</li>
+<li>The generator and discriminator network architectures I implement are roughly based on DCGAN.</li>
+<li>Spectral normalization of discriminator weights is used to improve the quality of generator images.</li>
+<li>Both DCGAN and LSGAN loss functions were used keeping the network architecture constant (with and without spectral normalization).</li>
+<li>Please find the details of the Python code used <a href="https://github.com/punitjha/YOLO-Object-Detection">here</a>.</li>
+<li>All calculations were run on Google Colab. Due to limitaions in availability of computational resources, I could train the model only for 22 epochs. Some results are shown below.</li>
+</ul>
+<div class="figure" style="text-align: left">
+<img src="gan_results_1.png" alt=" Results obtained from LSGAN and DSGAN" width=" 55%" height="55%" />
+<p class="caption">
+Results obtained from LSGAN and DSGAN
+</p>
+</div>
+<div class="figure" style="text-align: left">
+<img src="spec_norm.png" alt="Effect of spectral normalization on the quality of predicted images " width=" 55%" height="55%" />
+<p class="caption">
+Effect of spectral normalization on the quality of predicted images
+</p>
+</div>
 <hr />
+<!-- ### **Text Generation & Language classification (RNNs)** -->
 </div>
-<div id="text-generation-language-classification-rnns" class="section level3">
-<h3><strong>Text Generation &amp; Language classification (RNNs)</strong></h3>
+<div id="text-generation-language-classification-rnns-github" class="section level3">
+<h3><strong><span style="text-decoration: underline">Text Generation &amp; Language classification (RNNs)</strong> <strong><a href="https://github.com/punitjha/Recurrent-Neural-Networks"><span style="color:magenta">[GitHub]</span></a></strong></h3>
+<div class="figure" style="text-align: left">
+<img src="confusion.png" alt=" Deep Convolutional Generative Adversarial Networks. Ref: https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html" width=" 45%" height="45%" />
+<p class="caption">
+Deep Convolutional Generative Adversarial Networks. Ref: <a href="https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html" class="uri">https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html</a>
+</p>
+</div>
+<ul>
+<li>I train an RNN for two tasks on text data:
+<ul>
+<li>Language classification - RNN will learn to detect which language a chunk of text is written in (similar to a feature you might find in an online translator). While this might be relatively easy to do if the input text is unicode and unique characters indicate a particular language, we address the case where all input text to converted to ASCII characters so our network must learn instead to detect letter patterns.</li>
+<li>Text generation - RNN learns to generate text by predicting the most likely next character based on previous characters.</li>
+</ul></li>
+</ul>
 <hr />
 </div>
 <div id="ad-hoc-information-retrieval-system" class="section level3">
-<h3><strong>Ad Hoc Information Retrieval System</strong>:</h3>
-<pre><code>- Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.
-- This project was a part of the ECE 365: Data Science and Engineer course.
-- More details of the project can be found in this repository [here](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)</code></pre>
+<h3><strong>Ad Hoc Information Retrieval System</strong></h3>
+<ul>
+<li>Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.</li>
+<li>This project was a part of the ECE 365: Data Science and Engineer course.</li>
+<li>More details of the project can be found in this repository <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5">here</a></li>
+</ul>
 <hr />
 </div>
 <div id="anomaly-detection-and-recommender-systems" class="section level3">
-<h3><strong>Anomaly Detection and Recommender Systems</strong>:</h3>
-<pre><code>- Implemented an anomaly detection algorithm for computer serves  based on the Gaussian model.
-- Implemented the collaborative filtering learning algorithm for a data set of movie ratings.
- - This project was a part of the Machine learning class by Andrew Ng on Coursera.
-- More details of the project can be found in this repository [here](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex8)</code></pre>
-<!-- 3. **Coming Soon Projects from:** -->
-<!--     -  **CS 446: Machine Learning: Theory  (Ongoing)** -->
-<!--     -  **CS 447: Natural Language Processing (Ongoing)** -->
-<!--     -  **CS 498: Intro. to Deep Learning (Ongoing)** -->
-<!--     -  **Data Mining Specialization  - UIUC Coursera (Ongoing)** -->
-<!--     -  **Cloud Computing Specialization  - UIUC Coursera (Ongoing)** -->
+<h3><strong>Anomaly Detection and Recommender Systems</strong></h3>
+<ul>
+<li>Implemented an anomaly detection algorithm for computer serves based on the Gaussian model.</li>
+<li>Implemented the collaborative filtering learning algorithm for a data set of movie ratings.</li>
+<li>This project was a part of the Machine learning class by Andrew Ng on Coursera.</li>
+<li>More details of the project can be found in this repository <a href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex8">here</a></li>
+</ul>
 <hr />
 </div>
 <div id="small-projects-assignments-and-jupyter-notebooks" class="section level3">
@@ -567,8 +606,11 @@ Results obtained from a trained YOLO model
 <h1><strong>Programming Projects</strong></h1>
 <div id="design-and-implementations-of-parallel-openmp-and-mpi-lu-factorization-application-to-finite-difference-method." class="section level3">
 <h3><strong>Design and Implementations of Parallel OpenMP and MPI LU factorization: Application to Finite Difference Method.</strong></h3>
-<pre><code> - In this project, I with my group presented  six different OpenMP and</code></pre>
-<p>MPI based parallel algorithms for the LU factorization of dense matrices. - Please find the details <a href="https://drive.google.com/file/d/1I17RTZGtopQQOAkk9z2MUyQEGYWmYsRN/view?usp=sharing">here</a> - Codes <a href="https://github.com/punitjha/CS_420_Project">here</a></p>
+<ul>
+<li>In this project, I with my group presented six different OpenMP and MPI based parallel algorithms for the LU factorization of dense matrices.</li>
+<li>Please find the details <a href="https://drive.google.com/file/d/1I17RTZGtopQQOAkk9z2MUyQEGYWmYsRN/view?usp=sharing">here</a></li>
+<li>Codes <a href="https://github.com/punitjha/CS_420_Project">here</a></li>
+</ul>
 </div>
 <div id="optimization-of-a-dense-matrix-matrix-multiplication-routine-and-understanding-its-performance-behavior." class="section level3">
 <h3><strong>Optimization of a dense matrix-matrix multiplication routine and understanding its performance behavior.</strong></h3>
@@ -580,9 +622,11 @@ Results obtained from a trained YOLO model
 </div>
 <div id="utilization-of-multi-core-cpu-using-openmp-and-mpi-to-implement-a-dense-matrix-matrix-multiply-mm-routine-and-understanding-the-performance-behavior." class="section level3">
 <h3><strong>Utilization of multi-core CPU using OpenMP and MPI to implement a dense matrix-matrix multiply (MM) routine and understanding the performance behavior.</strong></h3>
-<pre><code>- Usage of PAPI to measure cache misses and to analyze the performance.
-- Please find the details [here](https://drive.google.com/file/d/1yYzdTwtnV8-4xoFCRmFnWe275Ny0dOx9/view?usp=sharing)
-- Codes [here](https://github.com/punitjha/CS_420_MPs)</code></pre>
+<ul>
+<li>Usage of PAPI to measure cache misses and to analyze the performance.</li>
+<li>Please find the details <a href="https://drive.google.com/file/d/1yYzdTwtnV8-4xoFCRmFnWe275Ny0dOx9/view?usp=sharing">here</a></li>
+<li>Codes <a href="https://github.com/punitjha/CS_420_MPs">here</a></li>
+</ul>
 </div>
 <div id="utilization-of-multi-core-cpu-using-openmp-and-a-gpu-using-openacc-to-implement-a-matrix-multiply-routine-for-multiplying-a-band-matrix-by-a-dense-matrix." class="section level3">
 <h3><strong>Utilization of multi-core CPU using OpenMP and a GPU using OpenACC to implement a matrix-multiply routine for multiplying a band matrix by a dense matrix.</strong></h3>

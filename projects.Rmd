@@ -72,44 +72,68 @@ knitr::include_graphics(c("medium.png"))
 <!-- ### **YOLO Object Detection on PASCAL VOC** -->
 
 ### **<span style="text-decoration: underline">YOLO Object Detection on PASCAL VOC</span>** **[<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/YOLO-Object-Detection)**
-
 ```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap="Results obtained from a trained YOLO model",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("download_lol.png"))
 ```  
 
   -  Implemented a YOLO-like object detector on the PASCAL VOC 2007 dataset to produce results like in the above image.
-  -  Used  a pre-trained network structure for the model which was inspired by by DetNet.
+  -  Used a pre-trained network structure for the model.  In particular, we used the ResNet50 architecture as a base for our detector. This is different from the base architecture in the YOLO paper and also results in a different output grid size (14x14 instead of 7x7).
   -  Please find the details of the Python code used  [here](https://github.com/punitjha/YOLO-Object-Detection). 
   -  All calculations were run on Google Colab.
 
 
 ***
-### **Face Generation with GANs**
+<!-- ### **Face Generation with GANs** -->
+### **<span style="text-decoration: underline">Face Generation with GANs</span>** **[<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/Generative-Adversarial-Network)**
+```{r, echo=FALSE, out.width=" 95%",out.height="95%",fig.cap=" Deep Convolutional Generative Adversarial Network Architecture. Ref: https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("dcgan.png"))
+``` 
+
+
+  -  Trained a generative adversarial network (GAN) with spectral normalization of discriminator weights on the CelebA Dataset and generate facial images.
+  -  The generator and discriminator network architectures I implement are roughly based on DCGAN.
+  -  Spectral normalization of discriminator weights is used to improve the quality of generator images.
+  -  Both DCGAN and LSGAN loss functions were used keeping the network architecture constant (with and without spectral normalization).
+  -  Please find the details of the Python code used  [here](https://github.com/punitjha/YOLO-Object-Detection). 
+  -  All calculations were run on Google Colab. Due to limitaions in availability of computational resources, I could train the model only for 22 epochs. Some results are shown below.
+
+
+
+```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap=" Results obtained from LSGAN and DSGAN",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("gan_results_1.png"))
+```
+```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap="Effect of spectral normalization on the quality of predicted images ",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("spec_norm.png"))
+```
+
 
 
 
 ***
-### **Text Generation & Language classification (RNNs)**
+<!-- ### **Text Generation & Language classification (RNNs)** -->
+### **<span style="text-decoration: underline">Text Generation & Language classification (RNNs)** **[<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/Recurrent-Neural-Networks)**
+```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap=" Deep Convolutional Generative Adversarial Networks. Ref: https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("confusion.png"))
+```
+
+  - I train an RNN for two tasks on text data:
+    - Language classification - RNN will learn to detect which language a chunk of text is written in (similar to a feature you might find in an online translator). While this might be relatively easy to do if the input text is unicode and unique characters indicate a particular language, we address the case where all input text to converted to ASCII characters so our network must learn instead to detect letter patterns.
+    - Text generation - RNN learns to generate text by predicting the most likely next character based on previous characters.
+
 
 
 ***
-### **Ad Hoc Information Retrieval System**: 
-    - Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.
-    - This project was a part of the ECE 365: Data Science and Engineer course.
-    - More details of the project can be found in this repository [here](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
+### **Ad Hoc Information Retrieval System** 
+  - Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.
+  - This project was a part of the ECE 365: Data Science and Engineer course.
+  - More details of the project can be found in this repository [here](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
 
 ***
-### **Anomaly Detection and Recommender Systems**:
-    - Implemented an anomaly detection algorithm for computer serves  based on the Gaussian model.
-    - Implemented the collaborative filtering learning algorithm for a data set of movie ratings.
-     - This project was a part of the Machine learning class by Andrew Ng on Coursera.
-    - More details of the project can be found in this repository [here](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex8)
-<!-- 3. **Coming Soon Projects from:** -->
-<!--     -  **CS 446: Machine Learning: Theory  (Ongoing)** -->
-<!--     -  **CS 447: Natural Language Processing (Ongoing)** -->
-<!--     -  **CS 498: Intro. to Deep Learning (Ongoing)** -->
-<!--     -  **Data Mining Specialization  - UIUC Coursera (Ongoing)** -->
-<!--     -  **Cloud Computing Specialization  - UIUC Coursera (Ongoing)** -->
+### **Anomaly Detection and Recommender Systems**
+  - Implemented an anomaly detection algorithm for computer serves  based on the Gaussian model.
+  - Implemented the collaborative filtering learning algorithm for a data set of movie ratings.
+  - This project was a part of the Machine learning class by Andrew Ng on Coursera.
+  - More details of the project can be found in this repository [here](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex8)
     
 ***
 ### **Small projects, Assignments, and Jupyter Notebooks**
@@ -155,25 +179,25 @@ knitr::include_graphics(c("download_lol.png"))
 
 
 ###  **Design and Implementations of Parallel OpenMP and MPI LU factorization: Application to Finite Difference Method.**
-     - In this project, I with my group presented  six different OpenMP and
+  - In this project, I with my group presented  six different OpenMP and
 MPI based parallel algorithms for the LU factorization of dense matrices.
-     - Please find the details [here](https://drive.google.com/file/d/1I17RTZGtopQQOAkk9z2MUyQEGYWmYsRN/view?usp=sharing)
-     - Codes [here](https://github.com/punitjha/CS_420_Project)
+  - Please find the details [here](https://drive.google.com/file/d/1I17RTZGtopQQOAkk9z2MUyQEGYWmYsRN/view?usp=sharing)
+  - Codes [here](https://github.com/punitjha/CS_420_Project)
      
 ### **Optimization of a dense matrix-matrix multiplication routine and understanding its performance behavior.** 
-   - Parallel programming machine project on dense matrix-matrix multiplication and cache performance.
-   - Please find the details [here](https://drive.google.com/file/d/1IvqxqR6E6_CINKB8OunAmBpQvYcb_nPo/view?usp=sharing)
-   - Codes [here](https://github.com/punitjha/CS_420_MPs)
+  - Parallel programming machine project on dense matrix-matrix multiplication and cache performance.
+  - Please find the details [here](https://drive.google.com/file/d/1IvqxqR6E6_CINKB8OunAmBpQvYcb_nPo/view?usp=sharing)
+  - Codes [here](https://github.com/punitjha/CS_420_MPs)
    
 ### **Utilization of  multi-core CPU using OpenMP and MPI to implement a dense matrix-matrix multiply (MM) routine and understanding the performance behavior.**
-    - Usage of PAPI to measure cache misses and to analyze the performance.
-    - Please find the details [here](https://drive.google.com/file/d/1yYzdTwtnV8-4xoFCRmFnWe275Ny0dOx9/view?usp=sharing)
-    - Codes [here](https://github.com/punitjha/CS_420_MPs)
+  - Usage of PAPI to measure cache misses and to analyze the performance.
+  - Please find the details [here](https://drive.google.com/file/d/1yYzdTwtnV8-4xoFCRmFnWe275Ny0dOx9/view?usp=sharing)
+  - Codes [here](https://github.com/punitjha/CS_420_MPs)
     
 ### **Utilization of  multi-core CPU using OpenMP and a GPU using OpenACC to implement a matrix-multiply routine for multiplying a band matrix by a dense matrix.**
-   - Investigation of the performance impact of varying the band and matrix size.
-   - Please find the details [here](https://drive.google.com/file/d/1Pb781ThU_9EG2uDTm1NB4uaETlWU7GH4/view?usp=sharing)
-   - Codes [here](https://github.com/punitjha/CS_420_MPs)
+  - Investigation of the performance impact of varying the band and matrix size.
+  - Please find the details [here](https://drive.google.com/file/d/1Pb781ThU_9EG2uDTm1NB4uaETlWU7GH4/view?usp=sharing)
+  - Codes [here](https://github.com/punitjha/CS_420_MPs)
    
 ***
 ## **Chemistry Programming Projects**
