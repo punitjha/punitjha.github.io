@@ -20,6 +20,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -251,6 +254,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -258,6 +324,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -331,66 +407,129 @@ $(document).ready(function () {
 
 </div>
 
-<div id="TOC">
-<ul>
-<li><a href="#machine-learning-and-programming-projects-lololo"><strong>Machine Learning and Programming Projects lololo</strong></a>
-<ul>
-<li><a href="#original-research-proposal">Original Research Proposal</a></li>
-<li><a href="#machine-learning-projects">Machine Learning Projects</a></li>
-<li><a href="#small-projects-assignments-and-jupyter-notebooks.">Small projects, Assignments, and Jupyter Notebooks.</a></li>
-<li><a href="#programming-projects">Programming Projects</a></li>
-<li><a href="#chemistry-programming-projects">Chemistry Programming Projects</a></li>
-</ul></li>
-<li><a href="#chemistry-research-projects-and-summer-internships"><strong>Chemistry Research Projects and Summer Internships</strong></a>
-<ul>
-<li><a href="#ph.d.-research-project">Ph.D. Research Project</a></li>
-<li><a href="#m.-sc.-research-project">M. Sc. Research Project</a></li>
-<li><a href="#research-summer-internships">Research Summer Internships</a></li>
-</ul></li>
-</ul>
-</div>
 
 <hr />
-<div id="machine-learning-and-programming-projects-lololo" class="section level2">
-<h2><strong>Machine Learning and Programming Projects lololo</strong></h2>
+<div id="machine-learning" class="section level1">
+<h1><strong>Machine Learning</strong></h1>
 <hr />
-<div id="original-research-proposal" class="section level3">
-<h3>Original Research Proposal</h3>
+<div id="mri-image-segmentation-github" class="section level3">
+<h3><strong><span style="text-decoration: underline">MRI Image Segmentation</span> </strong> <strong><a href="https://github.com/punitjha/Brain-MRI-Segmentation-U-nets"><span style="color:magenta">[GitHub]</span></a></strong></h3>
+<div class="figure" style="text-align: left">
+<img src="image1.png" alt="Fig 1 Example 2D slice(s) of the 3D brain image showing both a normal subject (top) and a subject with glioma (bottom). Ref: CS446 UIUC" width="65%" height="65%" />
+<p class="caption">
+Fig 1 Example 2D slice(s) of the 3D brain image showing both a normal subject (top) and a subject with glioma (bottom). Ref: CS446 UIUC
+</p>
+</div>
 <ul>
-<li><strong>On the inclusion of long-range interactions among molecules in machine learning models</strong></li>
-<li>More details <a href="https://punitjha.github.io/orp_project.html">here</a>.</li>
+<li>Gliomas are tumors of the brain that involve glial cells in the brain. Gliomas are classified as grades I to IV, where the grades indicate severity of the diseases.</li>
+<li>The categories are:
+<ul>
+<li>Grade I: benign, curable with complete surgical resection,</li>
+<li>Grade II: low grade, undergo surgical resection, radiotherapy/chemotherapy,</li>
+<li>Grade III/IV: high-grade glioma’s, and</li>
+<li>Grade IV: glioblastoma.</li>
+</ul></li>
+<li>The task is to identify the location of the tumor, and its classification into three groups, namely:
+<ul>
+<li>edema which indicates inflammation,</li>
+<li>enhancing which indicates part of the tumor with active growth , and</li>
+<li>the necrotic core which are dead tissue, generally in the center).</li>
+</ul></li>
+<li>Four different magnetic resonance images (MRI), also known as contrasts are provided for each subject, namely,
+<ul>
+<li>T1-weighted which this tends to be higher intensity with tissues with more lipids,</li>
+<li>T2-weighted which is usually higher intensity for tissues with more water,</li>
+<li>FLAIR this is similar to T2 but free water is suppressed, and</li>
+<li>T1CE this is same as T1, but with a contrast agent injected to brighten certain patterns).</li>
+</ul></li>
+<li>After training on labelled images the task was to to predict the segmentation of unlabelled images in the test set. This is also known as semantic segmentation in computer vision and this project was carried out as a part of CS 446: Machine Learning at UIUC.</li>
+<li>For more details and codes please refer to <a href="https://github.com/punitjha/Brain-MRI-Segmentation-U-nets"><span style="color:red">here.</span></a></li>
+<li>All calculations were run on Google Cloud.</li>
+<li>A few slices from results are shown below:
+<div class="figure" style="text-align: left">
+<img src="mri_016.png" alt="Results obtained from the U-net model" width="75%" height="75%" />
+<p class="caption">
+Results obtained from the U-net model
+</p>
+</div></li>
+</ul>
+<!-- Each sample is a tensor of size = 4 x height (H) x width (W) x depth (D), where the four 3D tensors represent the a) native (T1) and b) post-contrast T1-weighted (T1Gd), c) T2-weighted (T2), and d) T2-FLAIR contrasts (images) of the brain MRI. Note that different samples may have slightly different dimensions H, W, and D -- your are models should be able to handle this. For training samples, you are also provided with a HxWxD label “image”, with a label for each voxel (3D pixel). Your task is to predict the segmentation of unlabelled images. This is also known as semantic segmentation in computer vision. Beyond the course notes, you can find some straightforward descriptions here, and here Note that the output dimension for each sample is of size H x W x D. -->
+<!-- Learning Goals -->
+<!--     Gain real-world experience with ML, subject to blind test evaluation -->
+<!--     Investigate the effect of spatially correlated features. The use of convolution and other image processing techniques may be helpful. -->
+<!--     Apply ML with high dimensional inputs and outputs -->
+<!--     Grapple with data preprocessing/cleaning, if necessary -->
+<!-- Data -->
+<!-- The train and validation split of the dataset are provided on box. You are provided with 204 labeled (training) samples and 68 unlabelled (validation) images, all saved as NumPy tensors (.npy). Download data here (~3GB): -->
+<hr />
+</div>
+<div id="original-research-proposal-report" class="section level3">
+<h3><strong><span style="text-decoration: underline">Original Research Proposal</span></strong> <strong><a href="https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing"><span style="color:magenta">[Report]</span></a></strong></h3>
+<div class="figure" style="text-align: left">
+<img src="medium.png" alt="Results obtained from the U-net model. Ref.: N. Artrith, T. Morawietz, and J. Behler, Phys. Rev. B 83, 153101 (2011)" width=" 55%" height="55%" />
+<p class="caption">
+Results obtained from the U-net model. Ref.: N. Artrith, T. Morawietz, and J. Behler, Phys. Rev. B 83, 153101 (2011)
+</p>
+</div>
+<ul>
+<li><p>ORP titled, <strong>On the inclusion of long-range interactions among molecules in machine learning models</strong>.</p></li>
+<li><p>Developed an ORP on the problem of inclusion of long-range (electrostatic) interactions in machine learning algorithms. Analyzed different neural network schemes, especially deep high-dimensional neural networks (HDNNs), and whether they can efficiently learn and predict molecular charges learned from various charge partitioning schemes.</p></li>
+<li><p>I studied different charge partitioning schemes like Hirshfeld, Charge Model 5, Merz-Singh-Kollman, and Natural Bonding Orbital methods used in molecular dynamics simulations.</p></li>
+<li><p>Proposed modifications to the existing mathematical formulation and structure of HDNNs to be able to better predict molecular charges, the computational cost for implementing the project, potential setbacks, and alternate plans for the project.</p></li>
+<li><p>Please find the details of my ORP report <a href="https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing">here</a>.</p>
+<!-- - More details [here](https://punitjha.github.io/orp_project.html). --></li>
+</ul>
+<hr />
+<hr />
+<!-- ### **YOLO Object Detection on PASCAL VOC** -->
+</div>
+<div id="yolo-object-detection-on-pascal-voc-github" class="section level3">
+<h3><strong><span style="text-decoration: underline">YOLO Object Detection on PASCAL VOC</span></strong> <strong><a href="https://github.com/punitjha/YOLO-Object-Detection"><span style="color:magenta">[GitHub]</span></a></strong></h3>
+<div class="figure" style="text-align: left">
+<img src="download_lol.png" alt="Results obtained from a trained YOLO model" width=" 55%" height="55%" />
+<p class="caption">
+Results obtained from a trained YOLO model
+</p>
+</div>
+<ul>
+<li>Implemented a YOLO-like object detector on the PASCAL VOC 2007 dataset to produce results like in the above image.</li>
+<li>Used a pre-trained network structure for the model which was inspired by by DetNet.</li>
+<li>Please find the details of the Python code used <a href="https://github.com/punitjha/YOLO-Object-Detection">here</a>.</li>
+<li>All calculations were run on Google Colab.</li>
 </ul>
 <hr />
 </div>
-<div id="machine-learning-projects" class="section level3">
-<h3>Machine Learning Projects</h3>
-<ol style="list-style-type: decimal">
-<li><strong>Ad Hoc Information Retrieval System</strong>:
-<ul>
-<li>Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.</li>
-<li>This project was a part of the ECE 365: Data Science and Engineer course.</li>
-<li>More details of the project can be found in this repository <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5">here</a></li>
-</ul></li>
-<li><strong>Anomaly Detection and Recommender Systems</strong>:
-<ul>
-<li>Implemented an anomaly detection algorithm for computer serves based on the Gaussian model.</li>
-<li>Implemented the collaborative filtering learning algorithm for a data set of movie ratings.</li>
-<li>This project was a part of the Machine learning class by Andrew Ng on Coursera.</li>
-<li>More details of the project can be found in this repository <a href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex8">here</a></li>
-</ul></li>
-<li><strong>Coming Soon Projects from:</strong>
-<ul>
-<li><strong>CS 446: Machine Learning: Theory (Ongoing)</strong></li>
-<li><strong>CS 447: Natural Language Processing (Ongoing)</strong></li>
-<li><strong>CS 498: Intro. to Deep Learning (Ongoing)</strong></li>
-<li><strong>Data Mining Specialization - UIUC Coursera (Ongoing)</strong></li>
-<li><strong>Cloud Computing Specialization - UIUC Coursera (Ongoing)</strong></li>
-</ul></li>
-</ol>
+<div id="face-generation-with-gans" class="section level3">
+<h3><strong>Face Generation with GANs</strong></h3>
 <hr />
 </div>
-<div id="small-projects-assignments-and-jupyter-notebooks." class="section level3">
-<h3>Small projects, Assignments, and Jupyter Notebooks.</h3>
+<div id="text-generation-language-classification-rnns" class="section level3">
+<h3><strong>Text Generation &amp; Language classification (RNNs)</strong></h3>
+<hr />
+</div>
+<div id="ad-hoc-information-retrieval-system" class="section level3">
+<h3><strong>Ad Hoc Information Retrieval System</strong>:</h3>
+<pre><code>- Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.
+- This project was a part of the ECE 365: Data Science and Engineer course.
+- More details of the project can be found in this repository [here](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)</code></pre>
+<hr />
+</div>
+<div id="anomaly-detection-and-recommender-systems" class="section level3">
+<h3><strong>Anomaly Detection and Recommender Systems</strong>:</h3>
+<pre><code>- Implemented an anomaly detection algorithm for computer serves  based on the Gaussian model.
+- Implemented the collaborative filtering learning algorithm for a data set of movie ratings.
+ - This project was a part of the Machine learning class by Andrew Ng on Coursera.
+- More details of the project can be found in this repository [here](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex8)</code></pre>
+<!-- 3. **Coming Soon Projects from:** -->
+<!--     -  **CS 446: Machine Learning: Theory  (Ongoing)** -->
+<!--     -  **CS 447: Natural Language Processing (Ongoing)** -->
+<!--     -  **CS 498: Intro. to Deep Learning (Ongoing)** -->
+<!--     -  **Data Mining Specialization  - UIUC Coursera (Ongoing)** -->
+<!--     -  **Cloud Computing Specialization  - UIUC Coursera (Ongoing)** -->
+<hr />
+</div>
+<div id="small-projects-assignments-and-jupyter-notebooks" class="section level3">
+<h3><strong>Small projects, Assignments, and Jupyter Notebooks</strong></h3>
 <ul>
 <li><strong>Machine Learning</strong>
 <ul>
@@ -423,38 +562,39 @@ $(document).ready(function () {
 </ul>
 <hr />
 </div>
-<div id="programming-projects" class="section level3">
-<h3>Programming Projects</h3>
-<ol style="list-style-type: decimal">
-<li><strong>Design and Implementations of Parallel OpenMP and MPI LU factorization: Application to Finite Difference Method.</strong>
-<ul>
-<li>In this project, I with my group presented six different OpenMP and MPI based parallel algorithms for the LU factorization of dense matrices.</li>
-<li>Please find the details <a href="https://drive.google.com/file/d/1I17RTZGtopQQOAkk9z2MUyQEGYWmYsRN/view?usp=sharing">here</a></li>
-<li>Codes <a href="https://github.com/punitjha/CS_420_Project">here</a></li>
-</ul></li>
-<li><strong>Optimization of a dense matrix-matrix multiplication routine and understanding its performance behavior.</strong>
+</div>
+<div id="programming-projects" class="section level1">
+<h1><strong>Programming Projects</strong></h1>
+<div id="design-and-implementations-of-parallel-openmp-and-mpi-lu-factorization-application-to-finite-difference-method." class="section level3">
+<h3><strong>Design and Implementations of Parallel OpenMP and MPI LU factorization: Application to Finite Difference Method.</strong></h3>
+<pre><code> - In this project, I with my group presented  six different OpenMP and</code></pre>
+<p>MPI based parallel algorithms for the LU factorization of dense matrices. - Please find the details <a href="https://drive.google.com/file/d/1I17RTZGtopQQOAkk9z2MUyQEGYWmYsRN/view?usp=sharing">here</a> - Codes <a href="https://github.com/punitjha/CS_420_Project">here</a></p>
+</div>
+<div id="optimization-of-a-dense-matrix-matrix-multiplication-routine-and-understanding-its-performance-behavior." class="section level3">
+<h3><strong>Optimization of a dense matrix-matrix multiplication routine and understanding its performance behavior.</strong></h3>
 <ul>
 <li>Parallel programming machine project on dense matrix-matrix multiplication and cache performance.</li>
 <li>Please find the details <a href="https://drive.google.com/file/d/1IvqxqR6E6_CINKB8OunAmBpQvYcb_nPo/view?usp=sharing">here</a></li>
 <li>Codes <a href="https://github.com/punitjha/CS_420_MPs">here</a></li>
-</ul></li>
-<li><strong>Utilization of multi-core CPU using OpenMP and MPI to implement a dense matrix-matrix multiply (MM) routine and understanding the performance behavior.</strong>
-<ul>
-<li>Usage of PAPI to measure cache misses and to analyze the performance.</li>
-<li>Please find the details <a href="https://drive.google.com/file/d/1yYzdTwtnV8-4xoFCRmFnWe275Ny0dOx9/view?usp=sharing">here</a></li>
-<li>Codes <a href="https://github.com/punitjha/CS_420_MPs">here</a></li>
-</ul></li>
-<li><strong>Utilization of multi-core CPU using OpenMP and a GPU using OpenACC to implement a matrix-multiply routine for multiplying a band matrix by a dense matrix.</strong>
+</ul>
+</div>
+<div id="utilization-of-multi-core-cpu-using-openmp-and-mpi-to-implement-a-dense-matrix-matrix-multiply-mm-routine-and-understanding-the-performance-behavior." class="section level3">
+<h3><strong>Utilization of multi-core CPU using OpenMP and MPI to implement a dense matrix-matrix multiply (MM) routine and understanding the performance behavior.</strong></h3>
+<pre><code>- Usage of PAPI to measure cache misses and to analyze the performance.
+- Please find the details [here](https://drive.google.com/file/d/1yYzdTwtnV8-4xoFCRmFnWe275Ny0dOx9/view?usp=sharing)
+- Codes [here](https://github.com/punitjha/CS_420_MPs)</code></pre>
+</div>
+<div id="utilization-of-multi-core-cpu-using-openmp-and-a-gpu-using-openacc-to-implement-a-matrix-multiply-routine-for-multiplying-a-band-matrix-by-a-dense-matrix." class="section level3">
+<h3><strong>Utilization of multi-core CPU using OpenMP and a GPU using OpenACC to implement a matrix-multiply routine for multiplying a band matrix by a dense matrix.</strong></h3>
 <ul>
 <li>Investigation of the performance impact of varying the band and matrix size.</li>
 <li>Please find the details <a href="https://drive.google.com/file/d/1Pb781ThU_9EG2uDTm1NB4uaETlWU7GH4/view?usp=sharing">here</a></li>
 <li>Codes <a href="https://github.com/punitjha/CS_420_MPs">here</a></li>
-</ul></li>
-</ol>
+</ul>
 <hr />
 </div>
-<div id="chemistry-programming-projects" class="section level3">
-<h3>Chemistry Programming Projects</h3>
+<div id="chemistry-programming-projects" class="section level2">
+<h2><strong>Chemistry Programming Projects</strong></h2>
 <!-- 1. **Programming projects for [CHEM 548: Molecular Electronic Structure Advanced Quantum Chemistry & Numerical Methods.](http://faculty.scs.illinois.edu/hirata/education.html)** -->
 <!--    - Third Project -->
 <!--      - Hückel and Su-Schrieffer-Heeger band structures for 1D and 2D solids. -->
@@ -504,11 +644,11 @@ $(document).ready(function () {
 <hr />
 </div>
 </div>
-<div id="chemistry-research-projects-and-summer-internships" class="section level2">
-<h2><strong>Chemistry Research Projects and Summer Internships</strong></h2>
+<div id="chemistry-research-projects-and-summer-internships" class="section level1">
+<h1><strong>Chemistry Research Projects and Summer Internships</strong></h1>
 <hr />
 <div id="ph.d.-research-project" class="section level3">
-<h3>Ph.D. Research Project</h3>
+<h3><strong>Ph.D. Research Project</strong></h3>
 <ul>
 <li>Research conducted at the University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present.
 <ul>
@@ -519,7 +659,7 @@ $(document).ready(function () {
 <hr />
 </div>
 <div id="m.-sc.-research-project" class="section level3">
-<h3>M. Sc. Research Project</h3>
+<h3><strong>M. Sc. Research Project</strong></h3>
 <ul>
 <li>Research conducted at the National Institute of Science Education and Research, Bhubaneswar, India, Aug 2014 - June 2016.
 <ul>
@@ -530,7 +670,7 @@ $(document).ready(function () {
 <hr />
 </div>
 <div id="research-summer-internships" class="section level3">
-<h3>Research Summer Internships</h3>
+<h3><strong>Research Summer Internships</strong></h3>
 <ol style="list-style-type: decimal">
 <li><strong>Undergraduate Summer Intern- 2015</strong>
 <ul>
@@ -578,6 +718,8 @@ $(document).ready(function () {
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -610,6 +752,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

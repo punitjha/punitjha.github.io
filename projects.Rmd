@@ -2,39 +2,117 @@
 title: "Research Projects"
 output:
    html_document:
-     toc: true
+    toc: true
+    toc_float: true
+      
+    
+    
 ---
 
 ***
-## **Machine Learning and Programming Projects lololo**
+# **Machine Learning**
 ***
-### Original Research Proposal
-  - **On the inclusion of long-range interactions among molecules in machine learning models**
-  - More details [here](https://punitjha.github.io/orp_project.html).
+### **<span style="text-decoration: underline">MRI Image Segmentation</span> ** **[<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/Brain-MRI-Segmentation-U-nets)**
+
+```{r, echo=FALSE, out.width="65%",out.height="65%",fig.cap="Fig 1 Example 2D slice(s) of the 3D brain image showing both a normal subject (top) and a subject with glioma (bottom). Ref: CS446 UIUC",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("image1.png"))
+```
+  - Gliomas are tumors of the brain that involve glial cells in the brain. Gliomas are classified as grades I to IV, where the grades indicate severity of the diseases. 
+  - The categories are:
+    - Grade I: benign, curable with complete surgical resection, 
+    - Grade II: low grade, undergo surgical resection, radiotherapy/chemotherapy,
+    - Grade III/IV: high-grade glioma’s, and
+    - Grade IV: glioblastoma. 
+  - The task is to identify the location of the tumor, and its classification into three groups, namely:
+    - edema which indicates inflammation, 
+    - enhancing which indicates part of the tumor with active growth , and
+    - the necrotic core which are dead tissue, generally in the center).
+  - Four different magnetic resonance images (MRI), also known as contrasts are provided for each subject, namely,
+    - T1-weighted which this tends to be higher intensity with tissues with more lipids,
+    - T2-weighted which is usually higher intensity for tissues with more water,
+    - FLAIR this is similar to T2 but free water is suppressed, and
+    - T1CE this is same as T1, but with a contrast agent injected to brighten certain patterns).
+  - After training on labelled images the task was to to predict the segmentation of unlabelled images in the test set. This is also known as semantic segmentation in computer vision and this project was carried out as a part of CS 446: Machine Learning at UIUC.
+  - For more details and codes please refer to [<span style="color:red">here.</span>](https://github.com/punitjha/Brain-MRI-Segmentation-U-nets) 
+  - All calculations were run on Google Cloud. 
+  - A few slices from results are shown below:
+```{r, echo=FALSE, out.width="75%",out.height="75%",fig.cap="Results obtained from the U-net model",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("mri_016.png"))
+```  
+
+<!-- Each sample is a tensor of size = 4 x height (H) x width (W) x depth (D), where the four 3D tensors represent the a) native (T1) and b) post-contrast T1-weighted (T1Gd), c) T2-weighted (T2), and d) T2-FLAIR contrasts (images) of the brain MRI. Note that different samples may have slightly different dimensions H, W, and D -- your are models should be able to handle this. For training samples, you are also provided with a HxWxD label “image”, with a label for each voxel (3D pixel). Your task is to predict the segmentation of unlabelled images. This is also known as semantic segmentation in computer vision. Beyond the course notes, you can find some straightforward descriptions here, and here Note that the output dimension for each sample is of size H x W x D. -->
+<!-- Learning Goals -->
+
+<!--     Gain real-world experience with ML, subject to blind test evaluation -->
+<!--     Investigate the effect of spatially correlated features. The use of convolution and other image processing techniques may be helpful. -->
+<!--     Apply ML with high dimensional inputs and outputs -->
+<!--     Grapple with data preprocessing/cleaning, if necessary -->
+
+<!-- Data -->
+
+<!-- The train and validation split of the dataset are provided on box. You are provided with 204 labeled (training) samples and 68 unlabelled (validation) images, all saved as NumPy tensors (.npy). Download data here (~3GB): -->
+***
+### **<span style="text-decoration: underline">Original Research Proposal</span>** **[<span style="color:magenta">[Report]</span>](https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing)**
+
+```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap="Results obtained from the U-net model. Ref.: N. Artrith, T. Morawietz, and J. Behler, Phys. Rev. B 83, 153101 (2011)",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("medium.png"))
+```  
+
+  - ORP titled, **On the inclusion of long-range interactions among molecules in machine learning models**.
+  - Developed an ORP on the problem of inclusion of long-range (electrostatic) interactions in machine learning algorithms. Analyzed different neural network schemes, especially deep high-dimensional neural networks (HDNNs), and whether they can efficiently learn and predict molecular charges learned from various charge partitioning schemes.
+  - I studied different charge partitioning schemes like Hirshfeld, Charge Model 5, Merz-Singh-Kollman, and Natural Bonding Orbital methods used in molecular dynamics simulations.
+  - Proposed modifications to the existing mathematical formulation and structure of HDNNs to be able to better predict  molecular charges, the computational cost for implementing the project, potential  setbacks, and alternate plans for the project.
+  - Please find the details of my ORP report  [here](https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing). 
+
+    <!-- - More details [here](https://punitjha.github.io/orp_project.html). -->
 
 ***
 
-### Machine Learning Projects
+***
+<!-- ### **YOLO Object Detection on PASCAL VOC** -->
 
-1. **Ad Hoc Information Retrieval System**: 
+### **<span style="text-decoration: underline">YOLO Object Detection on PASCAL VOC</span>** **[<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/YOLO-Object-Detection)**
+
+```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap="Results obtained from a trained YOLO model",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("download_lol.png"))
+```  
+
+  -  Implemented a YOLO-like object detector on the PASCAL VOC 2007 dataset to produce results like in the above image.
+  -  Used  a pre-trained network structure for the model which was inspired by by DetNet.
+  -  Please find the details of the Python code used  [here](https://github.com/punitjha/YOLO-Object-Detection). 
+  -  All calculations were run on Google Colab.
+
+
+***
+### **Face Generation with GANs**
+
+
+
+***
+### **Text Generation & Language classification (RNNs)**
+
+
+***
+### **Ad Hoc Information Retrieval System**: 
     - Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.
     - This project was a part of the ECE 365: Data Science and Engineer course.
     - More details of the project can be found in this repository [here](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
 
-2. **Anomaly Detection and Recommender Systems**:
+***
+### **Anomaly Detection and Recommender Systems**:
     - Implemented an anomaly detection algorithm for computer serves  based on the Gaussian model.
     - Implemented the collaborative filtering learning algorithm for a data set of movie ratings.
      - This project was a part of the Machine learning class by Andrew Ng on Coursera.
     - More details of the project can be found in this repository [here](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex8)
-3. **Coming Soon Projects from:**
-    -  **CS 446: Machine Learning: Theory  (Ongoing)**
-    -  **CS 447: Natural Language Processing (Ongoing)**
-    -  **CS 498: Intro. to Deep Learning (Ongoing)**
-    -  **Data Mining Specialization  - UIUC Coursera (Ongoing)**
-    -  **Cloud Computing Specialization  - UIUC Coursera (Ongoing)**
+<!-- 3. **Coming Soon Projects from:** -->
+<!--     -  **CS 446: Machine Learning: Theory  (Ongoing)** -->
+<!--     -  **CS 447: Natural Language Processing (Ongoing)** -->
+<!--     -  **CS 498: Intro. to Deep Learning (Ongoing)** -->
+<!--     -  **Data Mining Specialization  - UIUC Coursera (Ongoing)** -->
+<!--     -  **Cloud Computing Specialization  - UIUC Coursera (Ongoing)** -->
     
 ***
-### Small projects, Assignments, and Jupyter Notebooks.
+### **Small projects, Assignments, and Jupyter Notebooks**
 
   - **Machine Learning**
       - k-Nearest Neighbors, Bayes Classifiers, and Linear Discriminant Analysis. [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb)
@@ -73,29 +151,32 @@ output:
 
 ***
     
-### Programming Projects
+# **Programming Projects**
 
 
-1.  **Design and Implementations of Parallel OpenMP and MPI LU factorization: Application to Finite Difference Method.**
+###  **Design and Implementations of Parallel OpenMP and MPI LU factorization: Application to Finite Difference Method.**
      - In this project, I with my group presented  six different OpenMP and
 MPI based parallel algorithms for the LU factorization of dense matrices.
      - Please find the details [here](https://drive.google.com/file/d/1I17RTZGtopQQOAkk9z2MUyQEGYWmYsRN/view?usp=sharing)
      - Codes [here](https://github.com/punitjha/CS_420_Project)
-2. **Optimization of a dense matrix-matrix multiplication routine and understanding its performance behavior.** 
+     
+### **Optimization of a dense matrix-matrix multiplication routine and understanding its performance behavior.** 
    - Parallel programming machine project on dense matrix-matrix multiplication and cache performance.
    - Please find the details [here](https://drive.google.com/file/d/1IvqxqR6E6_CINKB8OunAmBpQvYcb_nPo/view?usp=sharing)
    - Codes [here](https://github.com/punitjha/CS_420_MPs)
-3. **Utilization of  multi-core CPU using OpenMP and MPI to implement a dense matrix-matrix multiply (MM) routine and understanding the performance behavior.**
+   
+### **Utilization of  multi-core CPU using OpenMP and MPI to implement a dense matrix-matrix multiply (MM) routine and understanding the performance behavior.**
     - Usage of PAPI to measure cache misses and to analyze the performance.
     - Please find the details [here](https://drive.google.com/file/d/1yYzdTwtnV8-4xoFCRmFnWe275Ny0dOx9/view?usp=sharing)
     - Codes [here](https://github.com/punitjha/CS_420_MPs)
-4. **Utilization of  multi-core CPU using OpenMP and a GPU using OpenACC to implement a matrix-multiply routine for multiplying a band matrix by a dense matrix.**
+    
+### **Utilization of  multi-core CPU using OpenMP and a GPU using OpenACC to implement a matrix-multiply routine for multiplying a band matrix by a dense matrix.**
    - Investigation of the performance impact of varying the band and matrix size.
    - Please find the details [here](https://drive.google.com/file/d/1Pb781ThU_9EG2uDTm1NB4uaETlWU7GH4/view?usp=sharing)
    - Codes [here](https://github.com/punitjha/CS_420_MPs)
    
 ***
-### Chemistry Programming Projects
+## **Chemistry Programming Projects**
 
 <!-- 1. **Programming projects for [CHEM 548: Molecular Electronic Structure Advanced Quantum Chemistry & Numerical Methods.](http://faculty.scs.illinois.edu/hirata/education.html)** -->
 <!--    - Third Project -->
@@ -131,9 +212,9 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
 
 
 ***
-## **Chemistry Research Projects and Summer Internships**
+# **Chemistry Research Projects and Summer Internships**
 ***
-### Ph.D. Research Project 
+### **Ph.D. Research Project** 
   - Research conducted at the University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present. 
      - **Topic**: Finite-temperature many-body perturbation theory.
      - More details [here](https://punitjha.github.io/phd_project.html).
@@ -141,14 +222,14 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
 ***
     
       
-### M. Sc. Research Project
+### **M. Sc. Research Project**
 - Research conducted at the National Institute of Science Education and Research, Bhubaneswar, India, Aug 2014 - June 2016.
     - **Topic**: Diagonal suppressed constant time Correlation Spectroscopy (COSY).
     - More details [here](https://punitjha.github.io/msc_project.html). 
     
 ***
 
-### Research Summer Internships
+### **Research Summer Internships**
 1. **Undergraduate Summer Intern- 2015**
     - Research conducted at the University of Calgary, Calgary, Canada, May 2015 - Aug 2015.
        - **Topic**: Dynamics of gas-hydrate nucleation.
