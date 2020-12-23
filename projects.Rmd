@@ -1,5 +1,5 @@
 ---
-title: "Research Projects"
+title: "ML Projects and Thermodynamics Research"
 output:
    html_document:
     toc: true
@@ -12,7 +12,7 @@ output:
 ***
 ## **Machine Learning**
 ***
-### **<span style="text-decoration: underline">MRI Image Segmentation</span> ** **[<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/Brain-MRI-Segmentation-U-nets)**
+### MRI Image Segmentation[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Brain-MRI-Segmentation-U-nets)
 
 ```{r, echo=FALSE, out.width="65%",out.height="65%",fig.cap="Fig 1 Example 2D slice(s) of the 3D brain image showing both a normal subject (top) and a subject with glioma (bottom). Ref: CS446 UIUC",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("image1.png"))
@@ -52,7 +52,7 @@ knitr::include_graphics(c("mri_016.png"))
 
 <!-- The train and validation split of the dataset are provided on box. You are provided with 204 labeled (training) samples and 68 unlabelled (validation) images, all saved as NumPy tensors (.npy). Download data here (~3GB): -->
 ***
-### **<span style="text-decoration: underline">Original Research Proposal</span>** **[<span style="color:magenta">[Report]</span>](https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing)**
+### Original Research Proposal[<span style="color:blue">[Report]</span>](https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing)
 
 ```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap="Results obtained from the U-net model. Ref.: N. Artrith, T. Morawietz, and J. Behler, Phys. Rev. B 83, 153101 (2011)",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("medium.png"))
@@ -69,7 +69,7 @@ knitr::include_graphics(c("medium.png"))
 ***
 <!-- ### **YOLO Object Detection on PASCAL VOC** -->
 
-### **<span style="text-decoration: underline">YOLO Object Detection on PASCAL VOC</span>** **[<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/YOLO-Object-Detection)**
+### YOLO Object Detection on PASCAL VOC[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/YOLO-Object-Detection)
 ```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap="Results obtained from a trained YOLO model",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("download_lol.png"))
 ```  
@@ -82,7 +82,7 @@ knitr::include_graphics(c("download_lol.png"))
 
 ***
 <!-- ### **Face Generation with GANs** -->
-### **<span style="text-decoration: underline">Face Generation with GANs</span>** **[<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/Generative-Adversarial-Network)**
+### Face Generation with GANs[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Generative-Adversarial-Network)
 ```{r, echo=FALSE, out.width=" 95%",out.height="95%",fig.cap=" Deep Convolutional Generative Adversarial Network Architecture. Ref: https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("dcgan.png"))
 ``` 
@@ -109,7 +109,7 @@ knitr::include_graphics(c("spec_norm.png"))
 
 ***
 <!-- ### **Text Generation & Language classification (RNNs)** -->
-### **<span style="text-decoration: underline">Text Generation & Language classification (RNNs)** **[<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/Recurrent-Neural-Networks)**
+### Text Generation & Language classification (RNNs)[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Recurrent-Neural-Networks)
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="Vizualizing the performance of ourRNN  model by creating a confusion matrix. The ground truth languages of samples are represented by rows in the matrix while the predicted languages are represented by columns.",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("confusion.png"))
 ```
@@ -151,16 +151,16 @@ For them he wall; and no live away. Fies, sir.
 ```
 ***
 
-### **<span style="text-decoration: underline">Multi Label Image Classification** **[<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/Multi-Label-Image-Classification)**
+### Multi Label Image Classification[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Multi-Label-Image-Classification)
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="A sample image from the PASCAL VOC 2007  dataset",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("pascal_voc.png"))
 ```
 
 
 
-  - I implement a multi-label image classifier on the [<span style="color:magenta">PASCAL VOC 2007 </span>](http://host.robots.ox.ac.uk/pascal/VOC/voc2007) dataset. I basically run three experiments
+  - I implement a multi-label image classifier on the [<span style="color:blue">PASCAL VOC 2007 </span>](http://host.robots.ox.ac.uk/pascal/VOC/voc2007) dataset. I basically run three experiments
     - Train AlexNet (PyTorch built-in) from scratch.
-    - Fine-tune AlexNet (PyTorch built-in), which is pretrained on [<span style="color:magenta">ImageNet.</span>](http://www.image-net.org/)
+    - Fine-tune AlexNet (PyTorch built-in), which is pretrained on [<span style="color:blue">ImageNet.</span>](http://www.image-net.org/)
     - Train a simple network (defined in the file classifier.py) from scratch.
   - In the second part, I design and train my own deep simple convolutional network to predict a binary present/absent image-level label for each of the 20 PASCAL classes. I used AlexNet as the starting point. The goal was to get an average mAP socre of atleast 40 percent. 
   
@@ -192,12 +192,12 @@ Avg loss: 0.1801034240768506
 ```
 ***
 
-### **<span style="text-decoration: underline">Multi Layer Neural Networks** **[<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/Multi-Layer-Neural-Networks)**
+###Multi Layer Neural Networks[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Multi-Layer-Neural-Networks)
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="A sample image from the CIFAR-10 image classification dataset. Ref: https://www.cs.toronto.edu/~kriz/cifar.html",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("cifar_10.png"))
 ```
 
-  - I implemented multi-layer neural networks from scratch on the [<span style="color:magenta"> CIFAR-10 </span>](https://www.cs.toronto.edu/~kriz/cifar.html) image classification dataset, to understand the fundamentals of neural networks and backpropagation.
+  - I implemented multi-layer neural networks from scratch on the [<span style="color:blue"> CIFAR-10 </span>](https://www.cs.toronto.edu/~kriz/cifar.html) image classification dataset, to understand the fundamentals of neural networks and backpropagation.
 
   - I wrote from scratch forward and backward pass and trained two- and three-layer networks with SGD and Adam optimizers.
   
@@ -211,37 +211,37 @@ knitr::include_graphics(c("adam.png"))
 
 
 ***
-### **<span style="text-decoration: underline">Ad Hoc Information Retrieval System** **[<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)**
+### Ad Hoc Information Retrieval System[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
 <!-- ### **Ad Hoc Information Retrieval System**   -->
 ```{r, echo=FALSE, out.width=" 65%",out.height="65%",fig.cap=" Architecture of an ad hoc IR system. Source: Jurafsky and Martin 2009, sec. 23.2",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("info.png"))
 ```
   - Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.
-  - The model was trained on the  [<span style="color:magenta"> Cranfield collection </span>](http://ir.dcs.gla.ac.uk/resources/test_collections/cran/).  This was the pioneering test collection in allowing precise quantitative measures of information retrieval effectiveness, but is nowadays too small for anything but the most elementary pilot experiments. Collected in the United Kingdom starting in the late 1950s, it contains 1398 abstracts of aerodynamics journal articles, a set of 225 queries, and exhaustive relevance judgments of all (query, document) pairs.
+  - The model was trained on the  [<span style="color:blue"> Cranfield collection </span>](http://ir.dcs.gla.ac.uk/resources/test_collections/cran/).  This was the pioneering test collection in allowing precise quantitative measures of information retrieval effectiveness, but is nowadays too small for anything but the most elementary pilot experiments. Collected in the United Kingdom starting in the late 1950s, it contains 1398 abstracts of aerodynamics journal articles, a set of 225 queries, and exhaustive relevance judgments of all (query, document) pairs.
   - This project was a part of the ECE 365: Data Science and Engineer course.
   - More details of the project can be found in this repository [here](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
 
 ***
-###  **<span style="text-decoration: underline">Machine Learning Algorithms Using only Numpy**
+### Machine Learning Algorithms Using only Numpy
 
 ```{r, echo=FALSE, out.width="500%",out.height="500%",fig.cap=" (a) Comparison of SGD with Momentum or Nesterov Accelerated Gradient, and Adam methods and their rate of convergence. (b) Image compression using PCA",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("index_both.png"))
 ```
 
 - I implemented a few ML algorithms from scratch using only Python Numpy. All of these algorithms are run on tiny datasets on a standard CPU laptop. These were part of assigments from CS-446 and CS-498.
-  - Stochastic Gradient Descent Variants - SGD with Momentum or Nesterov Accelerated Gradient, and Adam. [<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
-  - GMM [<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
-  - HMM [<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
-  - PCA [<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
-  - RNN [<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
-  - Adaboost On Stumps [<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
-  - Feed Forward Neural Network [<span style="color:magenta">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
-  - kNN, LDA and Bayse Classifiers and comparision with corresponding scikit-learn modules. [<span style="color:magenta"> [GitHub] </span>](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb)
-  - Mulit-layer Neural Networks (2 and 3 layered NN with SGD and Adam) [<span style="color:magenta"> [GitHub] </span>](https://github.com/punitjha/Multi-Layer-Neural-Networks)
-  - Logistic regression   [<span style="color:magenta"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
-  - Perceptron   [<span style="color:magenta"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
-  - SVM   [<span style="color:magenta"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
-  - Softmax  [<span style="color:magenta"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
+  - Stochastic Gradient Descent Variants - SGD with Momentum or Nesterov Accelerated Gradient, and Adam. [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
+  - GMM [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
+  - HMM [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
+  - PCA [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
+  - RNN [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
+  - Adaboost On Stumps [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
+  - Feed Forward Neural Network [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
+  - kNN, LDA and Bayse Classifiers and comparision with corresponding scikit-learn modules. [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb)
+  - Mulit-layer Neural Networks (2 and 3 layered NN with SGD and Adam) [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/Multi-Layer-Neural-Networks)
+  - Logistic regression   [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
+  - Perceptron   [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
+  - SVM   [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
+  - Softmax  [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
  
 
 ***
@@ -286,12 +286,14 @@ knitr::include_graphics(c("download.png"))
  
 
 ***
-    
 ## **Programming Projects**
-
-### **Parallel Programming and C++ Projects**
+***
+### Parallel Programming and C++ Projects
 
 - **Design and Implementations of Parallel OpenMP and MPI LU factorization: Application to Finite Difference Method.**
+```{r, echo=FALSE, out.width="500%",out.height="500%",fig.cap="",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("parallel_1.png"))
+```
   - In this project, I with my group presented  six different OpenMP and
 MPI based parallel algorithms for the LU factorization of dense matrices.
   - Please find the details [here](https://drive.google.com/file/d/1I17RTZGtopQQOAkk9z2MUyQEGYWmYsRN/view?usp=sharing)
@@ -313,7 +315,7 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
   - Codes [here](https://github.com/punitjha/CS_420_MPs)
    
 ***
-### **Chemistry Programming Projects**
+### Chemistry Programming Projects
 
 <!-- 1. **Programming projects for [CHEM 548: Molecular Electronic Structure Advanced Quantum Chemistry & Numerical Methods.](http://faculty.scs.illinois.edu/hirata/education.html)** -->
 <!--    - Third Project -->
@@ -351,7 +353,7 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
 ***
 ## **Chemistry Research Projects and Summer Internships**
 ***
-### **Ph.D. Research Project** 
+### Ph.D. Research Project 
   - Research conducted at the University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present. 
      - **Topic**: Finite-temperature many-body perturbation theory.
      - More details [here](https://punitjha.github.io/phd_project.html).
@@ -359,14 +361,14 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
 ***
     
       
-### **M. Sc. Research Project**
+### M. Sc. Research Project
 - Research conducted at the National Institute of Science Education and Research, Bhubaneswar, India, Aug 2014 - June 2016.
     - **Topic**: Diagonal suppressed constant time Correlation Spectroscopy (COSY).
     - More details [here](https://punitjha.github.io/msc_project.html). 
     
 ***
 
-### **Research Summer Internships**
+### Research Summer Internships
 1. **Undergraduate Summer Intern- 2015**
     - Research conducted at the University of Calgary, Calgary, Canada, May 2015 - Aug 2015.
        - **Topic**: Dynamics of gas-hydrate nucleation.
