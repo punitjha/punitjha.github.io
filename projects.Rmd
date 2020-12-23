@@ -11,9 +11,10 @@ output:
 
 ***
 ## **Machine Learning**
-***
-### MRI Image Segmentation[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Brain-MRI-Segmentation-U-nets)
 
+<hr style="border:2px solid gray"> </hr>
+### MRI Image Segmentation[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Brain-MRI-Segmentation-U-nets)
+<hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width="65%",out.height="65%",fig.cap="Fig 1 Example 2D slice(s) of the 3D brain image showing both a normal subject (top) and a subject with glioma (bottom). Ref: CS446 UIUC",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("image1.png"))
 ```
@@ -51,9 +52,9 @@ knitr::include_graphics(c("mri_016.png"))
 <!-- Data -->
 
 <!-- The train and validation split of the dataset are provided on box. You are provided with 204 labeled (training) samples and 68 unlabelled (validation) images, all saved as NumPy tensors (.npy). Download data here (~3GB): -->
-***
+<hr style="border:2px solid gray"> </hr>
 ### Original Research Proposal[<span style="color:blue">[Report]</span>](https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing)
-
+<hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap="Results obtained from the U-net model. Ref.: N. Artrith, T. Morawietz, and J. Behler, Phys. Rev. B 83, 153101 (2011)",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("medium.png"))
 ```  
@@ -66,27 +67,26 @@ knitr::include_graphics(c("medium.png"))
 
     <!-- - More details [here](https://punitjha.github.io/orp_project.html). -->
 
-***
-<!-- ### **YOLO Object Detection on PASCAL VOC** -->
-
+<hr style="border:2px solid gray"> </hr>
 ### YOLO Object Detection on PASCAL VOC[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/YOLO-Object-Detection)
+<hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap="Results obtained from a trained YOLO model",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("download_lol.png"))
 ```  
-
   -  Implemented a YOLO-like object detector on the PASCAL VOC 2007 dataset to produce results like in the above image.
   -  Used a pre-trained network structure for the model.  In particular, we used the ResNet50 architecture as a base for our detector. This is different from the base architecture in the YOLO paper and also results in a different output grid size (14x14 instead of 7x7).
   -  Please find the details of the Python code used  [here](https://github.com/punitjha/YOLO-Object-Detection). 
   -  All calculations were run on Google Colab.
 
 
-***
+
 <!-- ### **Face Generation with GANs** -->
+<hr style="border:2px solid gray"> </hr>
 ### Face Generation with GANs[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Generative-Adversarial-Network)
+<hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 95%",out.height="95%",fig.cap=" Deep Convolutional Generative Adversarial Network Architecture. Ref: https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("dcgan.png"))
 ``` 
-
 
   -  Trained a generative adversarial network (GAN) with spectral normalization of discriminator weights on the CelebA Dataset and generate facial images.
   -  The generator and discriminator network architectures I implement are roughly based on DCGAN.
@@ -107,9 +107,10 @@ knitr::include_graphics(c("spec_norm.png"))
 
 
 
-***
+<hr style="border:2px solid gray"> </hr>
 <!-- ### **Text Generation & Language classification (RNNs)** -->
 ### Text Generation & Language classification (RNNs)[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Recurrent-Neural-Networks)
+<hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="Vizualizing the performance of ourRNN  model by creating a confusion matrix. The ground truth languages of samples are represented by rows in the matrix while the predicted languages are represented by columns.",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("confusion.png"))
 ```
@@ -149,13 +150,12 @@ But one a stand have a court in thee: which man as thy break on my bed
 'As oath a women; there and shake me; and whencul, comes the house
 For them he wall; and no live away. Fies, sir.
 ```
-***
-
+<hr style="border:2px solid gray"> </hr>
 ### Multi Label Image Classification[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Multi-Label-Image-Classification)
+<hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="A sample image from the PASCAL VOC 2007  dataset",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("pascal_voc.png"))
 ```
-
 
 
   - I implement a multi-label image classifier on the [<span style="color:blue">PASCAL VOC 2007 </span>](http://host.robots.ox.ac.uk/pascal/VOC/voc2007) dataset. I basically run three experiments
@@ -190,13 +190,12 @@ knitr::include_graphics(c("pascal_voc.png"))
 mAP: 0.4108
 Avg loss: 0.1801034240768506
 ```
-***
-
-###Multi Layer Neural Networks[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Multi-Layer-Neural-Networks)
+<hr style="border:2px solid gray"> </hr>
+### Multi Layer Neural Networks[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Multi-Layer-Neural-Networks)
+<hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="A sample image from the CIFAR-10 image classification dataset. Ref: https://www.cs.toronto.edu/~kriz/cifar.html",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("cifar_10.png"))
 ```
-
   - I implemented multi-layer neural networks from scratch on the [<span style="color:blue"> CIFAR-10 </span>](https://www.cs.toronto.edu/~kriz/cifar.html) image classification dataset, to understand the fundamentals of neural networks and backpropagation.
 
   - I wrote from scratch forward and backward pass and trained two- and three-layer networks with SGD and Adam optimizers.
@@ -210,8 +209,9 @@ knitr::include_graphics(c("adam.png"))
 
 
 
-***
+<hr style="border:2px solid gray"> </hr>
 ### Ad Hoc Information Retrieval System[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
+<hr style="border:2px solid gray"> </hr>
 <!-- ### **Ad Hoc Information Retrieval System**   -->
 ```{r, echo=FALSE, out.width=" 65%",out.height="65%",fig.cap=" Architecture of an ad hoc IR system. Source: Jurafsky and Martin 2009, sec. 23.2",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("info.png"))
@@ -221,9 +221,9 @@ knitr::include_graphics(c("info.png"))
   - This project was a part of the ECE 365: Data Science and Engineer course.
   - More details of the project can be found in this repository [here](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
 
-***
+<hr style="border:2px solid gray"> </hr>
 ### Machine Learning Algorithms Using only Numpy
-
+<hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width="500%",out.height="500%",fig.cap=" (a) Comparison of SGD with Momentum or Nesterov Accelerated Gradient, and Adam methods and their rate of convergence. (b) Image compression using PCA",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("index_both.png"))
 ```
@@ -244,8 +244,9 @@ knitr::include_graphics(c("index_both.png"))
   - Softmax  [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
  
 
-***
-###  **<span style="text-decoration: underline"> Machine Learning, NLP, and Text Analysis using Scikit-learn **
+<hr style="border:2px solid gray"> </hr>
+###  Machine Learning, NLP, and Text Analysis using Scikit-learn
+<hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width="200%",out.height="200%",fig.cap="Use of [spectral clustering](https://arxiv.org/pdf/0711.0189.pdf) to separate data that K-means cannot. (a) Original data (b) Clustering using K-means (c) Spectral Clustering",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("download.png"))
 ```
@@ -287,13 +288,17 @@ knitr::include_graphics(c("download.png"))
 
 ***
 ## **Programming Projects**
-***
-### Parallel Programming and C++ Projects
+<hr style="border:2px solid gray"> </hr>
 
-- **Design and Implementations of Parallel OpenMP and MPI LU factorization: Application to Finite Difference Method.**
-```{r, echo=FALSE, out.width="500%",out.height="500%",fig.cap="",fig.show='hold',fig.align='left'}
+### Parallel Programming and C++ Projects
+<hr style="border:2px solid gray"> </hr>
+
+
+```{r, echo=FALSE, out.width="100%",out.height="100%",fig.cap="",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("parallel_1.png"))
 ```
+
+- **Design and Implementations of Parallel OpenMP and MPI LU factorization: Application to Finite Difference Method.**
   - In this project, I with my group presented  six different OpenMP and
 MPI based parallel algorithms for the LU factorization of dense matrices.
   - Please find the details [here](https://drive.google.com/file/d/1I17RTZGtopQQOAkk9z2MUyQEGYWmYsRN/view?usp=sharing)
@@ -314,8 +319,9 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
   - Please find the details [here](https://drive.google.com/file/d/1Pb781ThU_9EG2uDTm1NB4uaETlWU7GH4/view?usp=sharing)
   - Codes [here](https://github.com/punitjha/CS_420_MPs)
    
-***
+<hr style="border:2px solid gray"> </hr>
 ### Chemistry Programming Projects
+<hr style="border:2px solid gray"> </hr>
 
 <!-- 1. **Programming projects for [CHEM 548: Molecular Electronic Structure Advanced Quantum Chemistry & Numerical Methods.](http://faculty.scs.illinois.edu/hirata/education.html)** -->
 <!--    - Third Project -->
@@ -331,7 +337,11 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
 <!--      - The report can be found [here](https://drive.google.com/file/d/1zz3pD4KzFYVm5nen6yhf8u-hqnGXjfF5/view?usp=sharing) -->
 <!--      - Codes can be found [here](https://github.com/punitjha/CHEM_548_Project_1) -->
 
-1. **Electronic structure theory programming projects. ** 
+```{r, echo=FALSE, out.width="80%",out.height="80%",fig.cap="",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("chem.png"))
+```
+
+- **Electronic structure theory programming projects. ** 
    - Molecular Geometry Analysis.
      - [Instructions](https://drive.google.com/file/d/1ucsnJL2St-DKmW5cs6o_3M0TKxbly09p/view?usp=sharing) and  [Codes](https://github.com/punitjha/Crawdad_Project_4)
    - Harmonic Vibrational Analysis.
@@ -352,23 +362,25 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
 
 ***
 ## **Chemistry Research Projects and Summer Internships**
-***
+<hr style="border:2px solid gray"> </hr>
 ### Ph.D. Research Project 
+<hr style="border:2px solid gray"> </hr>
+
   - Research conducted at the University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present. 
      - **Topic**: Finite-temperature many-body perturbation theory.
      - More details [here](https://punitjha.github.io/phd_project.html).
     
-***
-    
-      
+<hr style="border:2px solid gray"> </hr>
 ### M. Sc. Research Project
+<hr style="border:2px solid gray"> </hr>
+
 - Research conducted at the National Institute of Science Education and Research, Bhubaneswar, India, Aug 2014 - June 2016.
     - **Topic**: Diagonal suppressed constant time Correlation Spectroscopy (COSY).
     - More details [here](https://punitjha.github.io/msc_project.html). 
     
-***
-
+<hr style="border:2px solid gray"> </hr>
 ### Research Summer Internships
+<hr style="border:2px solid gray"> </hr>
 1. **Undergraduate Summer Intern- 2015**
     - Research conducted at the University of Calgary, Calgary, Canada, May 2015 - Aug 2015.
        - **Topic**: Dynamics of gas-hydrate nucleation.
@@ -385,7 +397,24 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
          - **Topic**: Reactive molecular dynamics of hydrocarbon dissociation on Ni surface.
          - More details [here](https://punitjha.github.io/niser_summer.html).
           
-***    
+*** 
+
+### References
+  - ECE 365: Data Science & Eng.
+  - CS 420: Parallel Programming
+  - CS 446: Machine Learning
+  - CS 498: Intro. to Deep Learning 
+  - Data Mining Specialization 
+  - Cloud Computing Specialization  
+  - Machine Learning by Andrew Ng (Coursera)
+  - CS 400: Data Structures in C++
+  - Quantum Mech. & Spectrosc.
+  - Molecular Electronic Structure
+  - Quantum Mechanics
+  - Statistical Thermodynamics
+  
+  
+  
   <!--   - Reactive molecular dynamics of hydrocarbon dissociation on Ni surface: Carried out reactive dynamics simulations of the adsorption and decomposition of CH\textsubscript{4} molecules interacting with a Ni(100) surface. Studied the temperature dependence of chemisorption of CH\textsubscript{4} by breakage of C-H bonds that leads to the formation of CH\textsubscript{3} and H radical on a Ni(100) surface. -->
   <!-- - **Skills Acquired:** -->
   <!--         Learned rogramming in FORTRAN 90 and how to carry out quantum mechanical simulations using ReaxFF. -->
