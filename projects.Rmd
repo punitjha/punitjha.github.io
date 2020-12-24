@@ -18,30 +18,30 @@ output:
 ```{r, echo=FALSE, out.width="65%",out.height="65%",fig.cap="Fig 1 Example 2D slice(s) of the 3D brain image showing both a normal subject (top) and a subject with glioma (bottom). Ref: CS446 UIUC",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("image1.png"))
 ```
-  - Gliomas are tumors of the brain that involve glial cells in the brain. Gliomas are classified as grades I to IV, where the grades indicate severity of the diseases. 
-  - The categories are:
+  - Gliomas are tumors of the brain that involve glial cells in the brain. Gliomas are classified as grades I to IV, where the grades indicate the severity of the diseases. The categories are:
     - Grade I: benign, curable with complete surgical resection, 
     - Grade II: low grade, undergo surgical resection, radiotherapy/chemotherapy,
-    - Grade III/IV: high-grade glioma’s, and
+    - Grade III/IV: high-grade gliomas, and
     - Grade IV: glioblastoma. 
   - The task is to identify the location of the tumor, and its classification into three groups, namely:
     - edema which indicates inflammation, 
-    - enhancing which indicates part of the tumor with active growth , and
-    - the necrotic core which are dead tissue, generally in the center).
-  - Four different magnetic resonance images (MRI), also known as contrasts are provided for each subject, namely,
-    - T1-weighted which this tends to be higher intensity with tissues with more lipids,
+    - enhancing which indicates part of the tumor with active growth, and
+    - the necrotic core which are dead tissue, generally in the center.
+  - Four different magnetic resonance images (MRI), also known as contrasts are provided for each subject,
+    - T1-weighted which tends to be higher intensity with tissues with more lipids,
     - T2-weighted which is usually higher intensity for tissues with more water,
     - FLAIR this is similar to T2 but free water is suppressed, and
-    - T1CE this is same as T1, but with a contrast agent injected to brighten certain patterns).
-  - After training on labelled images the task was to to predict the segmentation of unlabelled images in the test set. This is also known as semantic segmentation in computer vision and this project was carried out as a part of CS 446: Machine Learning at UIUC.
+    - T1CE is the same as T1, but with a contrast agent injected to brighten certain patterns.
+  - After training a U-net model of input dimension 192x163x4 on labeled images the task was to predict the segmentation of unlabelled images in the test set.
+  - This is called semantic segmentation in computer vision and this project was carried out as a part of CS 446: Machine Learning at UIUC.
   - For more details and codes please refer to [<span style="color:red">here.</span>](https://github.com/punitjha/Brain-MRI-Segmentation-U-nets) 
   - All calculations were run on Google Cloud. 
-  - A few slices from results are shown below:
+  - A few slices from the results are shown below:
 ```{r, echo=FALSE, out.width="75%",out.height="75%",fig.cap="Results obtained from the U-net model",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("mri_016.png"))
 ```  
 
-<!-- Each sample is a tensor of size = 4 x height (H) x width (W) x depth (D), where the four 3D tensors represent the a) native (T1) and b) post-contrast T1-weighted (T1Gd), c) T2-weighted (T2), and d) T2-FLAIR contrasts (images) of the brain MRI. Note that different samples may have slightly different dimensions H, W, and D -- your are models should be able to handle this. For training samples, you are also provided with a HxWxD label “image”, with a label for each voxel (3D pixel). Your task is to predict the segmentation of unlabelled images. This is also known as semantic segmentation in computer vision. Beyond the course notes, you can find some straightforward descriptions here, and here Note that the output dimension for each sample is of size H x W x D. -->
+<!-- Each sample is a tensor of size = 4 x height (H) x width (W) x depth (D), where the four 3D tensors represent the a) native (T1) and b) post-contrast T1-weighted (T1Gd), c) T2-weighted (T2), and d) T2-FLAIR contrasts (images) of the brain MRI. Note that different samples may have slightly different dimensions H, W, and D -- your are models should be able to handle this. For training samples, you are also provided with a HxWxD label “image”, with a label for each voxel (3D pixel). Your task is to predict the segmentation of unlabeled images. This is also known as semantic segmentation in computer vision. Beyond the course notes, you can find some straightforward descriptions here, and here Note that the output dimension for each sample is of size H x W x D. -->
 <!-- Learning Goals -->
 
 <!--     Gain real-world experience with ML, subject to blind test evaluation -->
@@ -51,7 +51,8 @@ knitr::include_graphics(c("mri_016.png"))
 
 <!-- Data -->
 
-<!-- The train and validation split of the dataset are provided on box. You are provided with 204 labeled (training) samples and 68 unlabelled (validation) images, all saved as NumPy tensors (.npy). Download data here (~3GB): -->
+<!-- The train and validation split of the dataset are provided on box. You are provided with 204 labeled (training) samples and 68 unlabeled (validation) images, all saved as NumPy tensors (.npy). Download data here (~3GB): -->
+
 <hr style="border:2px solid gray"> </hr>
 ### Original Research Proposal[<span style="color:blue">[Report]</span>](https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing)
 <hr style="border:2px solid gray"> </hr>
@@ -60,8 +61,8 @@ knitr::include_graphics(c("medium.png"))
 ```  
 
   - ORP titled, **On the inclusion of long-range interactions among molecules in machine learning models**.
-  - Developed an ORP on the problem of inclusion of long-range (electrostatic) interactions in machine learning algorithms. Analyzed different neural network schemes, especially deep high-dimensional neural networks (HDNNs), and whether they can efficiently learn and predict molecular charges learned from various charge partitioning schemes.
-  - I studied different charge partitioning schemes like Hirshfeld, Charge Model 5, Merz-Singh-Kollman, and Natural Bonding Orbital methods used in molecular dynamics simulations.
+  - Developed an ORP on the problem of inclusion of long-range (electrostatic) interactions in ML and DL algorithms. Analyzed different neural network schemes, especially deep high-dimensional neural networks (HDNNs), and whether they can efficiently learn and predict molecular charges learned from various charge partitioning schemes.
+  - Studied different charge partitioning schemes like Hirshfeld, Charge Model 5, Merz-Singh-Kollman, and Natural Bonding Orbital methods used in molecular dynamics simulations.
   - Proposed modifications to the existing mathematical formulation and structure of HDNNs to be able to better predict  molecular charges, the computational cost for implementing the project, potential  setbacks, and alternate plans for the project.
   - Please find the details of my ORP report  [here](https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing). 
 
@@ -73,7 +74,7 @@ knitr::include_graphics(c("medium.png"))
 ```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap="Results obtained from a trained YOLO model",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("download_lol.png"))
 ```  
-  -  Implemented a YOLO-like object detector on the PASCAL VOC 2007 dataset to produce results like in the above image.
+  -  Implemented a YOLO-like object detector on the PASCAL VOC 2007 data set to produce results as shown in the above image.
   -  Used a pre-trained network structure for the model.  In particular, we used the ResNet50 architecture as a base for our detector. This is different from the base architecture in the YOLO paper and also results in a different output grid size (14x14 instead of 7x7).
   -  Please find the details of the Python code used  [here](https://github.com/punitjha/YOLO-Object-Detection). 
   -  All calculations were run on Google Colab.
@@ -89,11 +90,11 @@ knitr::include_graphics(c("dcgan.png"))
 ``` 
 
   -  Trained a generative adversarial network (GAN) with spectral normalization of discriminator weights on the CelebA Dataset and generate facial images.
-  -  The generator and discriminator network architectures I implement are roughly based on DCGAN.
+  -  The generator and discriminator network architectures  implemented are roughly based on DCGAN.
   -  Spectral normalization of discriminator weights is used to improve the quality of generator images.
-  -  Both DCGAN and LSGAN loss functions were used keeping the network architecture constant (with and without spectral normalization).
+  -  Both DCGAN and LSGAN loss functions were used while keeping the network architecture constant (with and without spectral normalization).
   -  Please find the details of the Python code used  [here](https://github.com/punitjha/YOLO-Object-Detection). 
-  -  All calculations were run on Google Colab. Due to limitaions in availability of computational resources, I could train the model only for 22 epochs. Some results are shown below.
+  -  All calculations were run on Google Colab. Due to limitations in availability of computational resources, the model could be trained only for 22 epochs. Some results are shown below.
 
 
 
@@ -111,19 +112,19 @@ knitr::include_graphics(c("spec_norm.png"))
 <!-- ### **Text Generation & Language classification (RNNs)** -->
 ### Text Generation & Language classification (RNNs)[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Recurrent-Neural-Networks)
 <hr style="border:2px solid gray"> </hr>
-```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="Vizualizing the performance of ourRNN  model by creating a confusion matrix. The ground truth languages of samples are represented by rows in the matrix while the predicted languages are represented by columns.",fig.show='hold',fig.align='left'}
+```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="Visualizing  the performance of our RNN  model by creating a confusion matrix. The ground truth languages of samples are represented by rows in the matrix while the predicted languages are represented by columns.",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("confusion.png"))
 ```
 
-  - I train an RNN for two tasks on text data for 2 puposes:
-    - Language classification - RNN will learn to detect which language a chunk of text is written in (similar to a feature you might find in an online translator). While this might be relatively easy to do if the input text is unicode and unique characters indicate a particular language, I address the case where all input text to converted to ASCII characters so our network must learn instead to detect letter patterns. The model was trained on the Bible which is a large text translated to different languages but in the same easily parsable format, so I used 20 different copies of the Bible in different languages obtined from Project Gutenberg.
+  - Trained an RNN for two tasks on text data:
+    - Language classification - RNN will learn to detect which language a chunk of text is written in (similar to a feature you might find in an online translator). While this might be relatively easy to do if the input text is Unicode and unique characters indicate a particular language, however this implementation addressed the case where all input text were converted to ASCII characters so our network must learn instead to detect letter patterns. The model was trained on the Bible which is a large text translated to different languages but in the same easily parsable format, so I used 20 different copies of the Bible in different languages obtained from Project Gutenberg.
     - Text generation - RNN learns to generate text by predicting the most likely next character based on previous characters. The model consists of three layers 
       - a linear layer that encodes the input character into an embedded state, 
       - an RNN layer (which may itself have multiple layers) that operates on that embedded state and a hidden state, and
       - a decoder layer that outputs the predicted character scores distribution.
-    - The model was trained on the completer works of Shakespheare and 24 different novels of Charles Dickens. 
+    - The model was trained on the completer works of Shakespeare and 24 different novels of Charles Dickens. 
     
-**Sample output generated by the RNN after training on Shakespheare is shown below.**
+**Sample output generated by the RNN after training on Shakespeare is shown below.**
 
 ```
 TRIA:
@@ -158,11 +159,11 @@ knitr::include_graphics(c("pascal_voc.png"))
 ```
 
 
-  - I implement a multi-label image classifier on the [<span style="color:blue">PASCAL VOC 2007 </span>](http://host.robots.ox.ac.uk/pascal/VOC/voc2007) dataset. I basically run three experiments
+  - Implemented a multi-label image classifier on the [<span style="color:blue">PASCAL VOC 2007 </span>](http://host.robots.ox.ac.uk/pascal/VOC/voc2007) data set. Carried out three experiments
     - Train AlexNet (PyTorch built-in) from scratch.
     - Fine-tune AlexNet (PyTorch built-in), which is pretrained on [<span style="color:blue">ImageNet.</span>](http://www.image-net.org/)
     - Train a simple network (defined in the file classifier.py) from scratch.
-  - In the second part, I design and train my own deep simple convolutional network to predict a binary present/absent image-level label for each of the 20 PASCAL classes. I used AlexNet as the starting point. The goal was to get an average mAP socre of atleast 40 percent. 
+  - In the second part, designed and train my own deep simple convolution network to predict a binary present/absent image-level label for each of the 20 PASCAL classes using AlexNet as the starting point. The goal was to get an average mAP score of at least 40 percent. 
   
 **The average precision on different classes are shown below after 55 epochs on Google Cloud (16GB RAM and 1 NVIDIA K80 GPU).**
 
@@ -196,9 +197,9 @@ Avg loss: 0.1801034240768506
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="A sample image from the CIFAR-10 image classification dataset. Ref: https://www.cs.toronto.edu/~kriz/cifar.html",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("cifar_10.png"))
 ```
-  - I implemented multi-layer neural networks from scratch on the [<span style="color:blue"> CIFAR-10 </span>](https://www.cs.toronto.edu/~kriz/cifar.html) image classification dataset, to understand the fundamentals of neural networks and backpropagation.
+  - Implemented multi-layer neural networks from scratch on the [<span style="color:blue"> CIFAR-10 </span>](https://www.cs.toronto.edu/~kriz/cifar.html) image classification data set, to understand the fundamentals of neural networks and backpropagation.
 
-  - I wrote from scratch forward and backward pass and trained two- and three-layer networks with SGD and Adam optimizers.
+  - Developed codes for forward and backward pass, and trained two- and three-layer networks with SGD and Adam optimizer.
   
   - Had experience with hyperparameter tuning and using proper train/test/validation data splits.
   
@@ -228,7 +229,7 @@ knitr::include_graphics(c("info.png"))
 knitr::include_graphics(c("index_both.png"))
 ```
 
-- I implemented a few ML algorithms from scratch using only Python Numpy. All of these algorithms are run on tiny datasets on a standard CPU laptop. These were part of assigments from CS-446 and CS-498.
+- Implemented a few ML algorithms from scratch using only Python Numpy. All of these algorithms are run on tiny data sets on a standard CPU laptop. These were part of assignments from CS-446 and CS-498.
   - Stochastic Gradient Descent Variants - SGD with Momentum or Nesterov Accelerated Gradient, and Adam. [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
   - GMM [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
   - HMM [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
@@ -236,7 +237,7 @@ knitr::include_graphics(c("index_both.png"))
   - RNN [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
   - Adaboost On Stumps [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
   - Feed Forward Neural Network [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
-  - kNN, LDA and Bayse Classifiers and comparision with corresponding scikit-learn modules. [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb)
+  - kNN, LDA and Bayes Classifiers and comparison with corresponding scikit-learn modules. [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb)
   - Mulit-layer Neural Networks (2 and 3 layered NN with SGD and Adam) [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/Multi-Layer-Neural-Networks)
   - Logistic regression   [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
   - Perceptron   [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
@@ -268,7 +269,7 @@ knitr::include_graphics(c("download.png"))
 [[Octave]](https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex7/ex7)
   - **Natural Language Processing**
       - Text processing and regular expressions, word frequencies and language, manipulate corpora and plot insightful graphs. [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab1/punit2/Lab1/punit2.ipynb)
-      - Tokenization, bag-of-words represenation, ogistic regression classifier (discriminative model) using PyTorch.
+      - Tokenization, bag-of-words representation, logistic regression classifier (discriminative model) using PyTorch.
 [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab2/punit2/NLPLab2/Lab2_NLP.ipynb)
       - N-gram model, generate representative sentences, study of the effect of training data size, and language model complexity (n-gram size), on the modeling capacity of a language model.
 [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab3/punit2/NLPLab3/NLPLab3.ipynb)
@@ -437,7 +438,7 @@ knitr::include_graphics(c("chem.png"))
   
   <!--   - Reactive molecular dynamics of hydrocarbon dissociation on Ni surface: Carried out reactive dynamics simulations of the adsorption and decomposition of CH\textsubscript{4} molecules interacting with a Ni(100) surface. Studied the temperature dependence of chemisorption of CH\textsubscript{4} by breakage of C-H bonds that leads to the formation of CH\textsubscript{3} and H radical on a Ni(100) surface. -->
   <!-- - **Skills Acquired:** -->
-  <!--         Learned rogramming in FORTRAN 90 and how to carry out quantum mechanical simulations using ReaxFF. -->
+  <!--         Learned programming in FORTRAN 90 and how to carry out quantum mechanical simulations using ReaxFF. -->
              
              
              

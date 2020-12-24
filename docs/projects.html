@@ -424,31 +424,31 @@ Fig 1 Example 2D slice(s) of the 3D brain image showing both a normal subject (t
 </p>
 </div>
 <ul>
-<li>Gliomas are tumors of the brain that involve glial cells in the brain. Gliomas are classified as grades I to IV, where the grades indicate severity of the diseases.</li>
-<li>The categories are:
+<li>Gliomas are tumors of the brain that involve glial cells in the brain. Gliomas are classified as grades I to IV, where the grades indicate the severity of the diseases. The categories are:
 <ul>
 <li>Grade I: benign, curable with complete surgical resection,</li>
 <li>Grade II: low grade, undergo surgical resection, radiotherapy/chemotherapy,</li>
-<li>Grade III/IV: high-grade glioma’s, and</li>
+<li>Grade III/IV: high-grade gliomas, and</li>
 <li>Grade IV: glioblastoma.</li>
 </ul></li>
 <li>The task is to identify the location of the tumor, and its classification into three groups, namely:
 <ul>
 <li>edema which indicates inflammation,</li>
-<li>enhancing which indicates part of the tumor with active growth , and</li>
-<li>the necrotic core which are dead tissue, generally in the center).</li>
+<li>enhancing which indicates part of the tumor with active growth, and</li>
+<li>the necrotic core which are dead tissue, generally in the center.</li>
 </ul></li>
-<li>Four different magnetic resonance images (MRI), also known as contrasts are provided for each subject, namely,
+<li>Four different magnetic resonance images (MRI), also known as contrasts are provided for each subject,
 <ul>
-<li>T1-weighted which this tends to be higher intensity with tissues with more lipids,</li>
+<li>T1-weighted which tends to be higher intensity with tissues with more lipids,</li>
 <li>T2-weighted which is usually higher intensity for tissues with more water,</li>
 <li>FLAIR this is similar to T2 but free water is suppressed, and</li>
-<li>T1CE this is same as T1, but with a contrast agent injected to brighten certain patterns).</li>
+<li>T1CE is the same as T1, but with a contrast agent injected to brighten certain patterns.</li>
 </ul></li>
-<li>After training on labelled images the task was to to predict the segmentation of unlabelled images in the test set. This is also known as semantic segmentation in computer vision and this project was carried out as a part of CS 446: Machine Learning at UIUC.</li>
+<li>After training a U-net model of input dimension 192x163x4 on labeled images the task was to predict the segmentation of unlabelled images in the test set.</li>
+<li>This is called semantic segmentation in computer vision and this project was carried out as a part of CS 446: Machine Learning at UIUC.</li>
 <li>For more details and codes please refer to <a href="https://github.com/punitjha/Brain-MRI-Segmentation-U-nets"><span style="color:red">here.</span></a></li>
 <li>All calculations were run on Google Cloud.</li>
-<li>A few slices from results are shown below:
+<li>A few slices from the results are shown below:
 <div class="figure" style="text-align: left">
 <img src="mri_016.png" alt="Results obtained from the U-net model" width="75%" height="75%" />
 <p class="caption">
@@ -456,14 +456,14 @@ Results obtained from the U-net model
 </p>
 </div></li>
 </ul>
-<!-- Each sample is a tensor of size = 4 x height (H) x width (W) x depth (D), where the four 3D tensors represent the a) native (T1) and b) post-contrast T1-weighted (T1Gd), c) T2-weighted (T2), and d) T2-FLAIR contrasts (images) of the brain MRI. Note that different samples may have slightly different dimensions H, W, and D -- your are models should be able to handle this. For training samples, you are also provided with a HxWxD label “image”, with a label for each voxel (3D pixel). Your task is to predict the segmentation of unlabelled images. This is also known as semantic segmentation in computer vision. Beyond the course notes, you can find some straightforward descriptions here, and here Note that the output dimension for each sample is of size H x W x D. -->
+<!-- Each sample is a tensor of size = 4 x height (H) x width (W) x depth (D), where the four 3D tensors represent the a) native (T1) and b) post-contrast T1-weighted (T1Gd), c) T2-weighted (T2), and d) T2-FLAIR contrasts (images) of the brain MRI. Note that different samples may have slightly different dimensions H, W, and D -- your are models should be able to handle this. For training samples, you are also provided with a HxWxD label “image”, with a label for each voxel (3D pixel). Your task is to predict the segmentation of unlabeled images. This is also known as semantic segmentation in computer vision. Beyond the course notes, you can find some straightforward descriptions here, and here Note that the output dimension for each sample is of size H x W x D. -->
 <!-- Learning Goals -->
 <!--     Gain real-world experience with ML, subject to blind test evaluation -->
 <!--     Investigate the effect of spatially correlated features. The use of convolution and other image processing techniques may be helpful. -->
 <!--     Apply ML with high dimensional inputs and outputs -->
 <!--     Grapple with data preprocessing/cleaning, if necessary -->
 <!-- Data -->
-<!-- The train and validation split of the dataset are provided on box. You are provided with 204 labeled (training) samples and 68 unlabelled (validation) images, all saved as NumPy tensors (.npy). Download data here (~3GB): -->
+<!-- The train and validation split of the dataset are provided on box. You are provided with 204 labeled (training) samples and 68 unlabeled (validation) images, all saved as NumPy tensors (.npy). Download data here (~3GB): -->
 <hr style="border:2px solid gray">
 </hr>
 </div>
@@ -479,8 +479,8 @@ Results obtained from the U-net model. Ref.: N. Artrith, T. Morawietz, and J. Be
 </div>
 <ul>
 <li><p>ORP titled, <strong>On the inclusion of long-range interactions among molecules in machine learning models</strong>.</p></li>
-<li><p>Developed an ORP on the problem of inclusion of long-range (electrostatic) interactions in machine learning algorithms. Analyzed different neural network schemes, especially deep high-dimensional neural networks (HDNNs), and whether they can efficiently learn and predict molecular charges learned from various charge partitioning schemes.</p></li>
-<li><p>I studied different charge partitioning schemes like Hirshfeld, Charge Model 5, Merz-Singh-Kollman, and Natural Bonding Orbital methods used in molecular dynamics simulations.</p></li>
+<li><p>Developed an ORP on the problem of inclusion of long-range (electrostatic) interactions in ML and DL algorithms. Analyzed different neural network schemes, especially deep high-dimensional neural networks (HDNNs), and whether they can efficiently learn and predict molecular charges learned from various charge partitioning schemes.</p></li>
+<li><p>Studied different charge partitioning schemes like Hirshfeld, Charge Model 5, Merz-Singh-Kollman, and Natural Bonding Orbital methods used in molecular dynamics simulations.</p></li>
 <li><p>Proposed modifications to the existing mathematical formulation and structure of HDNNs to be able to better predict molecular charges, the computational cost for implementing the project, potential setbacks, and alternate plans for the project.</p></li>
 <li><p>Please find the details of my ORP report <a href="https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing">here</a>.</p>
 <!-- - More details [here](https://punitjha.github.io/orp_project.html). --></li>
@@ -499,7 +499,7 @@ Results obtained from a trained YOLO model
 </p>
 </div>
 <ul>
-<li>Implemented a YOLO-like object detector on the PASCAL VOC 2007 dataset to produce results like in the above image.</li>
+<li>Implemented a YOLO-like object detector on the PASCAL VOC 2007 data set to produce results as shown in the above image.</li>
 <li>Used a pre-trained network structure for the model. In particular, we used the ResNet50 architecture as a base for our detector. This is different from the base architecture in the YOLO paper and also results in a different output grid size (14x14 instead of 7x7).</li>
 <li>Please find the details of the Python code used <a href="https://github.com/punitjha/YOLO-Object-Detection">here</a>.</li>
 <li>All calculations were run on Google Colab.</li>
@@ -520,11 +520,11 @@ Deep Convolutional Generative Adversarial Network Architecture. Ref: <a href="ht
 </div>
 <ul>
 <li>Trained a generative adversarial network (GAN) with spectral normalization of discriminator weights on the CelebA Dataset and generate facial images.</li>
-<li>The generator and discriminator network architectures I implement are roughly based on DCGAN.</li>
+<li>The generator and discriminator network architectures implemented are roughly based on DCGAN.</li>
 <li>Spectral normalization of discriminator weights is used to improve the quality of generator images.</li>
-<li>Both DCGAN and LSGAN loss functions were used keeping the network architecture constant (with and without spectral normalization).</li>
+<li>Both DCGAN and LSGAN loss functions were used while keeping the network architecture constant (with and without spectral normalization).</li>
 <li>Please find the details of the Python code used <a href="https://github.com/punitjha/YOLO-Object-Detection">here</a>.</li>
-<li>All calculations were run on Google Colab. Due to limitaions in availability of computational resources, I could train the model only for 22 epochs. Some results are shown below.</li>
+<li>All calculations were run on Google Colab. Due to limitations in availability of computational resources, the model could be trained only for 22 epochs. Some results are shown below.</li>
 </ul>
 <div class="figure" style="text-align: left">
 <img src="gan_results_1.png" alt=" Results obtained from LSGAN and DSGAN" width=" 55%" height="55%" />
@@ -547,25 +547,25 @@ Effect of spectral normalization on the quality of predicted images
 <hr style="border:2px solid gray">
 </hr>
 <div class="figure" style="text-align: left">
-<img src="confusion.png" alt="Vizualizing the performance of ourRNN  model by creating a confusion matrix. The ground truth languages of samples are represented by rows in the matrix while the predicted languages are represented by columns." width=" 45%" height="45%" />
+<img src="confusion.png" alt="Visualizing  the performance of our RNN  model by creating a confusion matrix. The ground truth languages of samples are represented by rows in the matrix while the predicted languages are represented by columns." width=" 45%" height="45%" />
 <p class="caption">
-Vizualizing the performance of ourRNN model by creating a confusion matrix. The ground truth languages of samples are represented by rows in the matrix while the predicted languages are represented by columns.
+Visualizing the performance of our RNN model by creating a confusion matrix. The ground truth languages of samples are represented by rows in the matrix while the predicted languages are represented by columns.
 </p>
 </div>
 <ul>
-<li>I train an RNN for two tasks on text data for 2 puposes:
+<li>Trained an RNN for two tasks on text data:
 <ul>
-<li>Language classification - RNN will learn to detect which language a chunk of text is written in (similar to a feature you might find in an online translator). While this might be relatively easy to do if the input text is unicode and unique characters indicate a particular language, I address the case where all input text to converted to ASCII characters so our network must learn instead to detect letter patterns. The model was trained on the Bible which is a large text translated to different languages but in the same easily parsable format, so I used 20 different copies of the Bible in different languages obtined from Project Gutenberg.</li>
+<li>Language classification - RNN will learn to detect which language a chunk of text is written in (similar to a feature you might find in an online translator). While this might be relatively easy to do if the input text is Unicode and unique characters indicate a particular language, however this implementation addressed the case where all input text were converted to ASCII characters so our network must learn instead to detect letter patterns. The model was trained on the Bible which is a large text translated to different languages but in the same easily parsable format, so I used 20 different copies of the Bible in different languages obtained from Project Gutenberg.</li>
 <li>Text generation - RNN learns to generate text by predicting the most likely next character based on previous characters. The model consists of three layers
 <ul>
 <li>a linear layer that encodes the input character into an embedded state,</li>
 <li>an RNN layer (which may itself have multiple layers) that operates on that embedded state and a hidden state, and</li>
 <li>a decoder layer that outputs the predicted character scores distribution.</li>
 </ul></li>
-<li>The model was trained on the completer works of Shakespheare and 24 different novels of Charles Dickens.</li>
+<li>The model was trained on the completer works of Shakespeare and 24 different novels of Charles Dickens.</li>
 </ul></li>
 </ul>
-<p><strong>Sample output generated by the RNN after training on Shakespheare is shown below.</strong></p>
+<p><strong>Sample output generated by the RNN after training on Shakespeare is shown below.</strong></p>
 <pre><code>TRIA:
 He dew that with merry a man for the strange.
 I then to the rash, so must came of the chamuness, and that I&#39;ll treason dost
@@ -603,13 +603,13 @@ A sample image from the PASCAL VOC 2007 dataset
 </p>
 </div>
 <ul>
-<li>I implement a multi-label image classifier on the <a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2007"><span style="color:blue">PASCAL VOC 2007 </span></a> dataset. I basically run three experiments
+<li>Implemented a multi-label image classifier on the <a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2007"><span style="color:blue">PASCAL VOC 2007 </span></a> data set. Carried out three experiments
 <ul>
 <li>Train AlexNet (PyTorch built-in) from scratch.</li>
 <li>Fine-tune AlexNet (PyTorch built-in), which is pretrained on <a href="http://www.image-net.org/"><span style="color:blue">ImageNet.</span></a></li>
 <li>Train a simple network (defined in the file classifier.py) from scratch.</li>
 </ul></li>
-<li>In the second part, I design and train my own deep simple convolutional network to predict a binary present/absent image-level label for each of the 20 PASCAL classes. I used AlexNet as the starting point. The goal was to get an average mAP socre of atleast 40 percent.</li>
+<li>In the second part, designed and train my own deep simple convolution network to predict a binary present/absent image-level label for each of the 20 PASCAL classes using AlexNet as the starting point. The goal was to get an average mAP score of at least 40 percent.</li>
 </ul>
 <p><strong>The average precision on different classes are shown below after 55 epochs on Google Cloud (16GB RAM and 1 NVIDIA K80 GPU).</strong></p>
 <pre><code>-------  Class: aeroplane        AP:   0.6468  -------
@@ -648,8 +648,8 @@ A sample image from the CIFAR-10 image classification dataset. Ref: <a href="htt
 </p>
 </div>
 <ul>
-<li><p>I implemented multi-layer neural networks from scratch on the <a href="https://www.cs.toronto.edu/~kriz/cifar.html"><span style="color:blue"> CIFAR-10 </span></a> image classification dataset, to understand the fundamentals of neural networks and backpropagation.</p></li>
-<li><p>I wrote from scratch forward and backward pass and trained two- and three-layer networks with SGD and Adam optimizers.</p></li>
+<li><p>Implemented multi-layer neural networks from scratch on the <a href="https://www.cs.toronto.edu/~kriz/cifar.html"><span style="color:blue"> CIFAR-10 </span></a> image classification data set, to understand the fundamentals of neural networks and backpropagation.</p></li>
+<li><p>Developed codes for forward and backward pass, and trained two- and three-layer networks with SGD and Adam optimizer.</p></li>
 <li><p>Had experience with hyperparameter tuning and using proper train/test/validation data splits.</p></li>
 </ul>
 <div class="figure" style="text-align: left">
@@ -694,7 +694,7 @@ Architecture of an ad hoc IR system. Source: Jurafsky and Martin 2009, sec. 23.
 </div></li>
 </ol>
 <ul>
-<li>I implemented a few ML algorithms from scratch using only Python Numpy. All of these algorithms are run on tiny datasets on a standard CPU laptop. These were part of assigments from CS-446 and CS-498.
+<li>Implemented a few ML algorithms from scratch using only Python Numpy. All of these algorithms are run on tiny data sets on a standard CPU laptop. These were part of assignments from CS-446 and CS-498.
 <ul>
 <li>Stochastic Gradient Descent Variants - SGD with Momentum or Nesterov Accelerated Gradient, and Adam. <a href="https://github.com/punitjha/ML-from-Scratch"><span style="color:blue">[GitHub]</span></a></li>
 <li>GMM <a href="https://github.com/punitjha/ML-from-Scratch"><span style="color:blue">[GitHub]</span></a></li>
@@ -703,7 +703,7 @@ Architecture of an ad hoc IR system. Source: Jurafsky and Martin 2009, sec. 23.
 <li>RNN <a href="https://github.com/punitjha/ML-from-Scratch"><span style="color:blue">[GitHub]</span></a></li>
 <li>Adaboost On Stumps <a href="https://github.com/punitjha/ML-from-Scratch"><span style="color:blue">[GitHub]</span></a></li>
 <li>Feed Forward Neural Network <a href="https://github.com/punitjha/ML-from-Scratch"><span style="color:blue">[GitHub]</span></a></li>
-<li>kNN, LDA and Bayse Classifiers and comparision with corresponding scikit-learn modules. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb"><span style="color:blue"> [GitHub] </span></a></li>
+<li>kNN, LDA and Bayes Classifiers and comparison with corresponding scikit-learn modules. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb"><span style="color:blue"> [GitHub] </span></a></li>
 <li>Mulit-layer Neural Networks (2 and 3 layered NN with SGD and Adam) <a href="https://github.com/punitjha/Multi-Layer-Neural-Networks"><span style="color:blue"> [GitHub] </span></a></li>
 <li>Logistic regression <a href="https://github.com/punitjha/Linear-Classifiers"><span style="color:blue"> [GitHub] </span></a></li>
 <li>Perceptron <a href="https://github.com/punitjha/Linear-Classifiers"><span style="color:blue"> [GitHub] </span></a></li>
@@ -741,7 +741,7 @@ Use of <a href="https://arxiv.org/pdf/0711.0189.pdf">spectral clustering</a> to 
 <li><strong>Natural Language Processing</strong>
 <ul>
 <li>Text processing and regular expressions, word frequencies and language, manipulate corpora and plot insightful graphs. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab1/punit2/Lab1/punit2.ipynb">[Jupyter Notebook Link]</a></li>
-<li>Tokenization, bag-of-words represenation, ogistic regression classifier (discriminative model) using PyTorch. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab2/punit2/NLPLab2/Lab2_NLP.ipynb">[Jupyter Notebook Link]</a></li>
+<li>Tokenization, bag-of-words representation, logistic regression classifier (discriminative model) using PyTorch. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab2/punit2/NLPLab2/Lab2_NLP.ipynb">[Jupyter Notebook Link]</a></li>
 <li>N-gram model, generate representative sentences, study of the effect of training data size, and language model complexity (n-gram size), on the modeling capacity of a language model. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab3/punit2/NLPLab3/NLPLab3.ipynb">[Jupyter Notebook Link]</a></li>
 <li>Count-Based Word Vectors, Co-occurrence_matrix, PCA, plot-embeddings, Word2Vec Word Embeddings, Cosine Similarity, Polysemous Words, Synonyms &amp; Antonyms, Solving Analogies with Word Vectors, Guided Analysis of Bias in Word Vectors, and Independent Analysis of Bias in Word Vectors. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab4/punit2/Lab4/lab4.ipynb">[Jupyter Notebook Link]</a></li>
 </ul></li>
@@ -964,7 +964,7 @@ Images taken from CS 400 UIUC and <a href="https://www.geeksforgeeks.org/differe
 <li>Quantum Mechanics</li>
 <li>Statistical Thermodynamics</li>
 </ul>
-<p><!--   - Reactive molecular dynamics of hydrocarbon dissociation on Ni surface: Carried out reactive dynamics simulations of the adsorption and decomposition of CH\textsubscript{4} molecules interacting with a Ni(100) surface. Studied the temperature dependence of chemisorption of CH\textsubscript{4} by breakage of C-H bonds that leads to the formation of CH\textsubscript{3} and H radical on a Ni(100) surface. --> <!-- - **Skills Acquired:** --> <!--         Learned rogramming in FORTRAN 90 and how to carry out quantum mechanical simulations using ReaxFF. --></p>
+<p><!--   - Reactive molecular dynamics of hydrocarbon dissociation on Ni surface: Carried out reactive dynamics simulations of the adsorption and decomposition of CH\textsubscript{4} molecules interacting with a Ni(100) surface. Studied the temperature dependence of chemisorption of CH\textsubscript{4} by breakage of C-H bonds that leads to the formation of CH\textsubscript{3} and H radical on a Ni(100) surface. --> <!-- - **Skills Acquired:** --> <!--         Learned programming in FORTRAN 90 and how to carry out quantum mechanical simulations using ReaxFF. --></p>
 <!--     - Finite-temperature many-body perturbation theory (FT-MBPT): FT-MBPT is a theory to calculate the thermodynamic parameters of the grand canonical system at a given temperature.  -->
 <p><!--     - I implemented the $\lambda$-variation method to  calculate the $n$th-order corrections to grand potential and internal energy using the FT-MBPT formalism which showed it is mathematically inconsistent and does not conserve charge.  --> <!--     - Derived the correct analytic formulas for FT-MBPT using another ansatz wherein charge was conserved. --> <!--     Implemented the FT-MBPT in a canonical ensemble and derived semi-analytic formulas. --> <!-- - **Original Research Proposal (ORP)** --> <!--       - Developed an ORP on the problem of inclusion of long-range (electrostatic) interactions in machine learning algorithms. Analyzed different neural network schemes,            especially deep high-dimensional neural networks (HDNNs), and whether they can efficiently learn and predict molecular charges learned from various charge partitioning schemes. --> <!--     - Studied different charge partitioning schemes like Hirshfeld, Charge Model 5, Merz-Singh-Kollman, and Natural Bonding Orbital methods used in molecular dynamics              simulations. --> <!--     - Proposed modifications to mathematical formulation and structure of HDNNs to be able to better predict  molecular charges, computational cost for implementing the            project, potential  setbacks, and alternate plans for the project. --> <!-- - **Skills Acquired:** --> <!--         Acquired knowledge of \textit{ab initio} and DFT electronic structure methods. Learned about machine learning algorithms. Learned to program in Python and enhanced           my programming skills in C++ and FORTRAN. --></p>
 <p><!-- ---     --></p>
