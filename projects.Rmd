@@ -71,11 +71,11 @@ knitr::include_graphics(c("medium.png"))
 <hr style="border:2px solid gray"> </hr>
 ### YOLO Object Detection on PASCAL VOC[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/YOLO-Object-Detection)
 <hr style="border:2px solid gray"> </hr>
-```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap="Results obtained from a trained YOLO model",fig.show='hold',fig.align='left'}
+```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap="Results obtained from YOLO",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("download_lol.png"))
 ```  
   -  Implemented a YOLO-like object detector on the PASCAL VOC 2007 data set to produce results as shown in the above image.
-  -  Used a pre-trained network structure for the model.  In particular, we used the ResNet50 architecture as a base for our detector. This is different from the base architecture in the YOLO paper and also results in a different output grid size (14x14 instead of 7x7).
+  -  Used a pre-trained network structure for the model. In particular, we used the ResNet50 architecture as a base for our detector. This is different from the base architecture in the YOLO paper and also results in a different output grid size (14x14 instead of 7x7).
   -  Please find the details of the Python code used  [here](https://github.com/punitjha/YOLO-Object-Detection). 
   -  All calculations were run on Google Colab.
 
@@ -89,12 +89,12 @@ knitr::include_graphics(c("download_lol.png"))
 knitr::include_graphics(c("dcgan.png"))
 ``` 
 
-  -  Trained a generative adversarial network (GAN) with spectral normalization of discriminator weights on the CelebA Dataset and generate facial images.
+  -  Trained a generative adversarial network (GAN) with spectral normalization of discriminator weights on the CelebA Dataset to generate facial images.
   -  The generator and discriminator network architectures  implemented are roughly based on DCGAN.
   -  Spectral normalization of discriminator weights is used to improve the quality of generator images.
   -  Both DCGAN and LSGAN loss functions were used while keeping the network architecture constant (with and without spectral normalization).
   -  Please find the details of the Python code used  [here](https://github.com/punitjha/YOLO-Object-Detection). 
-  -  All calculations were run on Google Colab. Due to limitations in availability of computational resources, the model could be trained only for 22 epochs. Some results are shown below.
+  -  All calculations were run on Google Cloud. Due to limitations in availability of computational resources, the model could be trained only for 22 epochs. Some results are shown below.
 
 
 
@@ -112,17 +112,19 @@ knitr::include_graphics(c("spec_norm.png"))
 <!-- ### **Text Generation & Language classification (RNNs)** -->
 ### Text Generation & Language classification (RNNs)[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Recurrent-Neural-Networks)
 <hr style="border:2px solid gray"> </hr>
-```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="Visualizing  the performance of our RNN  model by creating a confusion matrix. The ground truth languages of samples are represented by rows in the matrix while the predicted languages are represented by columns.",fig.show='hold',fig.align='left'}
+```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="Visualizing  the performance of the RNN  model by creating a confusion matrix. The ground truth languages of samples are represented by rows in the matrix while  predicted languages are represented by the columns.",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("confusion.png"))
 ```
 
-  - Trained an RNN for two tasks on text data:
-    - Language classification - RNN will learn to detect which language a chunk of text is written in (similar to a feature you might find in an online translator). While this might be relatively easy to do if the input text is Unicode and unique characters indicate a particular language, however this implementation addressed the case where all input text were converted to ASCII characters so our network must learn instead to detect letter patterns. The model was trained on the Bible which is a large text translated to different languages but in the same easily parsable format, so I used 20 different copies of the Bible in different languages obtained from Project Gutenberg.
+  - Trained and implemented an RNN for two tasks on text data:
     - Text generation - RNN learns to generate text by predicting the most likely next character based on previous characters. The model consists of three layers 
       - a linear layer that encodes the input character into an embedded state, 
       - an RNN layer (which may itself have multiple layers) that operates on that embedded state and a hidden state, and
       - a decoder layer that outputs the predicted character scores distribution.
-    - The model was trained on the completer works of Shakespeare and 24 different novels of Charles Dickens. 
+      - The model was trained on the completer works of Shakespeare and 24 different novels of Charles Dickens. 
+    - Language classification - RNN learnt to detect which language a chunk of text is written in (similar to a feature you might find in an online translator). 
+      - While this might be relatively easy to do if the input text is Unicode and unique characters indicate a particular language, however this implementation addressed the case where all input text were converted to ASCII characters so our network learnt instead to detect letter patterns. 
+      - The model was trained on the Bible which is a large text translated to different languages but is in easily parsable format, so 20 different copies of the Bible in different languages obtained from Project Gutenberg were used.
     
 **Sample output generated by the RNN after training on Shakespeare is shown below.**
 
@@ -157,13 +159,11 @@ For them he wall; and no live away. Fies, sir.
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="A sample image from the PASCAL VOC 2007  dataset",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("pascal_voc.png"))
 ```
-
-
-  - Implemented a multi-label image classifier on the [<span style="color:blue">PASCAL VOC 2007 </span>](http://host.robots.ox.ac.uk/pascal/VOC/voc2007) data set. Carried out three experiments
-    - Train AlexNet (PyTorch built-in) from scratch.
-    - Fine-tune AlexNet (PyTorch built-in), which is pretrained on [<span style="color:blue">ImageNet.</span>](http://www.image-net.org/)
-    - Train a simple network (defined in the file classifier.py) from scratch.
-  - In the second part, designed and train my own deep simple convolution network to predict a binary present/absent image-level label for each of the 20 PASCAL classes using AlexNet as the starting point. The goal was to get an average mAP score of at least 40 percent. 
+  - Implemented a multi-label image classifier on the [<span style="color:blue">PASCAL VOC 2007 </span>](http://host.robots.ox.ac.uk/pascal/VOC/voc2007) data set. Carried out three experiments:
+    - Trained AlexNet (PyTorch built-in) from scratch.
+    - Fine-tuned AlexNet (PyTorch built-in), which was pretrained on [<span style="color:blue">ImageNet.</span>](http://www.image-net.org/)
+    - Trained a simple network (defined in the file classifier.py) from scratch.
+  - In the second part, designed and trained my own deep simple convolution network to predict a binary present/absent image-level label for each of the 20 PASCAL classes. The network was designed with AlexNet as a starting point. The goal was to get an average mAP score of at least 40 percent. 
   
 **The average precision on different classes are shown below after 55 epochs on Google Cloud (16GB RAM and 1 NVIDIA K80 GPU).**
 
@@ -197,18 +197,16 @@ Avg loss: 0.1801034240768506
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="A sample image from the CIFAR-10 image classification dataset. Ref: https://www.cs.toronto.edu/~kriz/cifar.html",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("cifar_10.png"))
 ```
-  - Implemented multi-layer neural networks from scratch on the [<span style="color:blue"> CIFAR-10 </span>](https://www.cs.toronto.edu/~kriz/cifar.html) image classification data set, to understand the fundamentals of neural networks and backpropagation.
+  - Implemented multi-layer neural networks (2 and 3 layers) from scratch on the [<span style="color:blue"> CIFAR-10 </span>](https://www.cs.toronto.edu/~kriz/cifar.html) image classification data set, to understand the fundamentals of neural networks and backpropagation.
 
   - Developed codes for forward and backward pass, and trained two- and three-layer networks with SGD and Adam optimizer.
   
   - Had experience with hyperparameter tuning and using proper train/test/validation data splits.
   
 
-```{r, echo=FALSE, out.width=" 75%",out.height="75%",fig.cap="Results of using a the SGD and Adam optimzers on the CIFAR-10 dataset. Note that Adam converges faster than SGD in the loss history plot which is expected. We also see overfitting in the classification plot given that our dataset was realtively small compared to the number of NN parameters.",fig.show='hold',fig.align='left'}
+```{r, echo=FALSE, out.width=" 75%",out.height="75%",fig.cap="Results of using the SGD and Adam optimzers on the CIFAR-10 dataset. Note that Adam converges faster than SGD in the loss history plot which is expected. We also see overfitting in the classification plot given that our dataset was realtively small compared to the number of NN parameters.",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("adam.png"))
 ```
-
-
 
 <hr style="border:2px solid gray"> </hr>
 ### Ad Hoc Information Retrieval System[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
@@ -218,7 +216,7 @@ knitr::include_graphics(c("adam.png"))
 knitr::include_graphics(c("info.png"))
 ```
   - Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.
-  - The model was trained on the  [<span style="color:blue"> Cranfield collection </span>](http://ir.dcs.gla.ac.uk/resources/test_collections/cran/).  This was the pioneering test collection in allowing precise quantitative measures of information retrieval effectiveness, but is nowadays too small for anything but the most elementary pilot experiments. Collected in the United Kingdom starting in the late 1950s, it contains 1398 abstracts of aerodynamics journal articles, a set of 225 queries, and exhaustive relevance judgments of all (query, document) pairs.
+  - The model was trained on the  [<span style="color:blue"> Cranfield collection </span>](http://ir.dcs.gla.ac.uk/resources/test_collections/cran/).  This was the pioneering test collection in allowing precise quantitative measures of information retrieval effectiveness, but is nowadays too small for anything but the most elementary pilot experiments. It contains 1398 abstracts of aerodynamics journal articles, a set of 225 queries, and exhaustive relevance judgments of all (query, document) pairs.
   - This project was a part of the ECE 365: Data Science and Engineer course.
   - More details of the project can be found in this repository [here](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
 
@@ -229,7 +227,7 @@ knitr::include_graphics(c("info.png"))
 knitr::include_graphics(c("index_both.png"))
 ```
 
-- Implemented a few ML algorithms from scratch using only Python Numpy. All of these algorithms are run on tiny data sets on a standard CPU laptop. These were part of assignments from CS-446 and CS-498.
+- Implemented ML algorithms from scratch using only Python Numpy. All of these algorithms are run on tiny data sets on a standard CPU laptop. These were part of assignments from CS-446 and CS-498 at UIUC.
   - Stochastic Gradient Descent Variants - SGD with Momentum or Nesterov Accelerated Gradient, and Adam. [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
   - GMM [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
   - HMM [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
@@ -251,7 +249,7 @@ knitr::include_graphics(c("index_both.png"))
 ```{r, echo=FALSE, out.width="200%",out.height="200%",fig.cap="Use of [spectral clustering](https://arxiv.org/pdf/0711.0189.pdf) to separate data that K-means cannot. (a) Original data (b) Clustering using K-means (c) Spectral Clustering",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("download.png"))
 ```
-
+- This is a collection of jupyter notebooks that were used to learn Data Science and ML as a part of ECE 365: Data Science & Eng. course. This involved using modules and methods avaliable in the scikit-learn package for various ML tasks and comparing its output againt results obtained from codes written from scratch. The Ocatave repos are from the ML course by Andrew Ng.
   - **Machine Learning**
       <!-- - k-Nearest Neighbors, Bayes Classifiers, and Linear Discriminant Analysis. [[Jupyter Notebook Link]]() -->
       - Naive Bayes, Logistic Regression, and Support Vector Machines. [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab3_vvv/punit2_lab3.ipynb)
@@ -281,7 +279,7 @@ knitr::include_graphics(c("download.png"))
 [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-2/punit2_lab2.ipynb)
       - Document Clustering using TF-IDF vectorizer.
 [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-3/punit2_lab3.ipynb)
-      - Topic Modelling: Use of gensim library to create a LDA topic model.
+      - Topic Modelling: Use of Gensim library to create a LDA topic model.
 [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-4/punit2_lab4.ipynb)
     
 
@@ -327,16 +325,17 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
 ```{r, echo=FALSE, out.width="80%",out.height="80%",fig.cap="Images taken from CS 400 UIUC and [GeeksForGeeks](https://www.geeksforgeeks.org/difference-between-general-tree-and-binary-tree/)",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("lol_ok.png"))
 ```
-- Image transformation  
+- **Image transformation ** 
+  - Intro to object oriented programming in C++. It involved constructions of classes, inheritance, memory management etc.
   - Please find the details [here](https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Image_Transformation/image-transform-instructions.pdf)
   - Codes [here](https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Image_Transformation/image-transform-given-files)
-- Generic tree and tree traversal
+- **Generic tree and tree traversal**
   - Please find the details [here](https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Generic_Tree_and_Tree_Traversal_Project/tree_traversal_project_instructions.pdf)
   - Codes [here](https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Generic_Tree_and_Tree_Traversal_Project/GenericTree_starter_files/GenericTree)
-- Unordered Maps
+- **Unordered Maps**
   - Please find the details [here](https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Unordered_Maps/UnorderedMap_project_instructions.pdf)
   - Codes [here](https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Unordered_Maps/UnorderedMap_starter_files/UnorderedMap)
-- Linked List and Merge Sort
+- **Linked List and Merge Sort**
   - Please find the details [here](https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Linked_List_Merge_Sort/LinkedList_project_instructions.pdf)
   - Codes [here](https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Linked_List_Merge_Sort/LinkedList_starter_files/LinkedList)
    
