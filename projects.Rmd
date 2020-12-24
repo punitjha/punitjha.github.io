@@ -13,7 +13,7 @@ output:
 ## **Machine Learning**
 
 <hr style="border:2px solid gray"> </hr>
-### MRI Image Segmentation[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Brain-MRI-Segmentation-U-nets)
+### MRI Image Segmentation[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Brain-MRI-Segmentation-U-nets)
 <hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width="65%",out.height="65%",fig.cap="Fig 1 Example 2D slice(s) of the 3D brain image showing both a normal subject (top) and a subject with glioma (bottom). Ref: CS446 UIUC",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("image1.png"))
@@ -68,7 +68,7 @@ knitr::include_graphics(c("medium.png"))
     <!-- - More details [here](https://punitjha.github.io/orp_project.html). -->
 
 <hr style="border:2px solid gray"> </hr>
-### YOLO Object Detection on PASCAL VOC[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/YOLO-Object-Detection)
+### YOLO Object Detection on PASCAL VOC[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/YOLO-Object-Detection)
 <hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap="Results obtained from a trained YOLO model",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("download_lol.png"))
@@ -82,7 +82,7 @@ knitr::include_graphics(c("download_lol.png"))
 
 <!-- ### **Face Generation with GANs** -->
 <hr style="border:2px solid gray"> </hr>
-### Face Generation with GANs[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Generative-Adversarial-Network)
+### Face Generation with GANs[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Generative-Adversarial-Network)
 <hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 95%",out.height="95%",fig.cap=" Deep Convolutional Generative Adversarial Network Architecture. Ref: https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("dcgan.png"))
@@ -109,7 +109,7 @@ knitr::include_graphics(c("spec_norm.png"))
 
 <hr style="border:2px solid gray"> </hr>
 <!-- ### **Text Generation & Language classification (RNNs)** -->
-### Text Generation & Language classification (RNNs)[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Recurrent-Neural-Networks)
+### Text Generation & Language classification (RNNs)[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Recurrent-Neural-Networks)
 <hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="Vizualizing the performance of ourRNN  model by creating a confusion matrix. The ground truth languages of samples are represented by rows in the matrix while the predicted languages are represented by columns.",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("confusion.png"))
@@ -151,7 +151,7 @@ But one a stand have a court in thee: which man as thy break on my bed
 For them he wall; and no live away. Fies, sir.
 ```
 <hr style="border:2px solid gray"> </hr>
-### Multi Label Image Classification[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Multi-Label-Image-Classification)
+### Multi Label Image Classification[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Multi-Label-Image-Classification)
 <hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="A sample image from the PASCAL VOC 2007  dataset",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("pascal_voc.png"))
@@ -191,7 +191,7 @@ mAP: 0.4108
 Avg loss: 0.1801034240768506
 ```
 <hr style="border:2px solid gray"> </hr>
-### Multi Layer Neural Networks[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/Multi-Layer-Neural-Networks)
+### Multi Layer Neural Networks[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Multi-Layer-Neural-Networks)
 <hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="A sample image from the CIFAR-10 image classification dataset. Ref: https://www.cs.toronto.edu/~kriz/cifar.html",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("cifar_10.png"))
@@ -210,7 +210,7 @@ knitr::include_graphics(c("adam.png"))
 
 
 <hr style="border:2px solid gray"> </hr>
-### Ad Hoc Information Retrieval System[<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
+### Ad Hoc Information Retrieval System[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
 <hr style="border:2px solid gray"> </hr>
 <!-- ### **Ad Hoc Information Retrieval System**   -->
 ```{r, echo=FALSE, out.width=" 65%",out.height="65%",fig.cap=" Architecture of an ad hoc IR system. Source: Jurafsky and Martin 2009, sec. 23.2",fig.show='hold',fig.align='left'}
@@ -290,11 +290,11 @@ knitr::include_graphics(c("download.png"))
 ## **Programming Projects**
 <hr style="border:2px solid gray"> </hr>
 
-### Parallel Programming and C++ Projects
+### Parallel Programming Projects
 <hr style="border:2px solid gray"> </hr>
 
 
-```{r, echo=FALSE, out.width="100%",out.height="100%",fig.cap="",fig.show='hold',fig.align='left'}
+```{r, echo=FALSE, out.width="80%",out.height="80%",fig.cap="",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("parallel_1.png"))
 ```
 
@@ -318,6 +318,26 @@ MPI based parallel algorithms for the LU factorization of dense matrices.
   - Investigation of the performance impact of varying the band and matrix size.
   - Please find the details [here](https://drive.google.com/file/d/1Pb781ThU_9EG2uDTm1NB4uaETlWU7GH4/view?usp=sharing)
   - Codes [here](https://github.com/punitjha/CS_420_MPs)
+   
+
+<hr style="border:2px solid gray"> </hr>
+### Data Structures in C++ Projects
+<hr style="border:2px solid gray"> </hr>
+```{r, echo=FALSE, out.width="80%",out.height="80%",fig.cap="Images taken from CS 400 UIUC and [GeeksForGeeks](https://www.geeksforgeeks.org/difference-between-general-tree-and-binary-tree/)",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("lol_ok.png"))
+```
+- Image transformation  
+  - Please find the details [here](https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Image_Transformation/image-transform-instructions.pdf)
+  - Codes [here](https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Image_Transformation/image-transform-given-files)
+- Generic tree and tree traversal
+  - Please find the details [here](https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Generic_Tree_and_Tree_Traversal_Project/tree_traversal_project_instructions.pdf)
+  - Codes [here](https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Generic_Tree_and_Tree_Traversal_Project/GenericTree_starter_files/GenericTree)
+- Unordered Maps
+  - Please find the details [here](https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Unordered_Maps/UnorderedMap_project_instructions.pdf)
+  - Codes [here](https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Unordered_Maps/UnorderedMap_starter_files/UnorderedMap)
+- Linked List and Merge Sort
+  - Please find the details [here](https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Linked_List_Merge_Sort/LinkedList_project_instructions.pdf)
+  - Codes [here](https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Linked_List_Merge_Sort/LinkedList_starter_files/LinkedList)
    
 <hr style="border:2px solid gray"> </hr>
 ### Chemistry Programming Projects
