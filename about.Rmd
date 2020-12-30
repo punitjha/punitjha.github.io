@@ -53,13 +53,11 @@ Here is list of relevant courses that I have done at the University of Illinois 
 #### [**Univeristy of Illinios:**](https://chemistry.illinois.edu/)
 -  ECE 365: Data Science \& Eng. 
 -  CS 420: Parallel Programming
--  CS 446: Machine Learning: Theory  (Ongoing)
--  CS 447: Natural Language Processing (Ongoing)
--  CS 498: Intro. to Deep Learning (Ongoing)
+-  CS 446: Machine Learning: Theory 
 -  Data Mining Specialization  - UIUC Coursera (Ongoing)
 -  Cloud Computing Specialization  - UIUC Coursera (Ongoing)
-- Machine Learning by Andrew Ng (Coursera)
-- CS 400: Data Structures in C++ - UIUC Coursera.
+- Machine Learning by Andrew Ng 
+- CS 400: Data Structures in C++
 - Quantum Mech. \& Spectrosc.
 - Molecular Electronic Structure
 - Quantum Mechanics

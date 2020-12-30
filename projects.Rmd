@@ -419,21 +419,21 @@ knitr::include_graphics(c("chem.png"))
           
 *** 
 
-### References
-  - ECE 365: Data Science & Eng.
-  - CS 420: Parallel Programming
-  - CS 446: Machine Learning
-  - CS 498: Intro. to Deep Learning 
-  - Data Mining Specialization 
-  - Cloud Computing Specialization  
-  - Machine Learning by Andrew Ng (Coursera)
-  - CS 400: Data Structures in C++
-  - Quantum Mech. & Spectrosc.
-  - Molecular Electronic Structure
-  - Quantum Mechanics
-  - Statistical Thermodynamics
-  
-  
+<!-- ### References -->
+<!--   - ECE 365: Data Science & Eng. -->
+<!--   - CS 420: Parallel Programming -->
+<!--   - CS 446: Machine Learning -->
+<!--   - CS 498: Intro. to Deep Learning  -->
+<!--   - Data Mining Specialization  -->
+<!--   - Cloud Computing Specialization   -->
+<!--   - Machine Learning by Andrew Ng (Coursera) -->
+<!--   - CS 400: Data Structures in C++ -->
+<!--   - Quantum Mech. & Spectrosc. -->
+<!--   - Molecular Electronic Structure -->
+<!--   - Quantum Mechanics -->
+<!--   - Statistical Thermodynamics -->
+
+
   
   <!--   - Reactive molecular dynamics of hydrocarbon dissociation on Ni surface: Carried out reactive dynamics simulations of the adsorption and decomposition of CH\textsubscript{4} molecules interacting with a Ni(100) surface. Studied the temperature dependence of chemisorption of CH\textsubscript{4} by breakage of C-H bonds that leads to the formation of CH\textsubscript{3} and H radical on a Ni(100) surface. -->
   <!-- - **Skills Acquired:** -->
