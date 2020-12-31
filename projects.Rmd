@@ -69,7 +69,7 @@ knitr::include_graphics(c("medium.png"))
     <!-- - More details [here](https://punitjha.github.io/orp_project.html). -->
 
 <hr style="border:2px solid gray"> </hr>
-### YOLO Object Detection on PASCAL VOC[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/YOLO-Object-Detection)
+### YOLO Object Detection on PASCAL VOC[<span style="color:blue"> [GitFront]</span>](https://gitfront.io/r/user-2013142/441c69af3daf8e73e7e8b05da84f221e5382d39b/YOLO-Object-Detection/)
 <hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap="Results obtained from YOLO",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("download_lol.png"))
@@ -83,7 +83,7 @@ knitr::include_graphics(c("download_lol.png"))
 
 <!-- ### **Face Generation with GANs** -->
 <hr style="border:2px solid gray"> </hr>
-### Face Generation with GANs[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Generative-Adversarial-Network)
+### Face Generation with GANs[<span style="color:blue"> [GitFront]</span>](https://gitfront.io/r/user-2013142/fafae6dc10869ea5e5b85f1efbce3ae8a99a5f2e/Generative-Adversarial-Network/)
 <hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 95%",out.height="95%",fig.cap=" Deep Convolutional Generative Adversarial Network Architecture. Ref: https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("dcgan.png"))
@@ -110,7 +110,7 @@ knitr::include_graphics(c("spec_norm.png"))
 
 <hr style="border:2px solid gray"> </hr>
 <!-- ### **Text Generation & Language classification (RNNs)** -->
-### Text Generation & Language classification (RNNs)[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Recurrent-Neural-Networks)
+### Text Generation & Language classification (RNNs)[<span style="color:blue"> [GitFront]</span>](https://gitfront.io/r/user-2013142/e8b804a819493bc8d2501a85f7620ba5113f6b68/Recurrent-Neural-Networks/)
 <hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="Visualizing  the performance of the RNN  model by creating a confusion matrix. The ground truth languages of samples are represented by rows in the matrix while  predicted languages are represented by the columns.",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("confusion.png"))
@@ -154,7 +154,7 @@ But one a stand have a court in thee: which man as thy break on my bed
 For them he wall; and no live away. Fies, sir.
 ```
 <hr style="border:2px solid gray"> </hr>
-### Multi Label Image Classification[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Multi-Label-Image-Classification)
+### Multi Label Image Classification[<span style="color:blue"> [GitFront]</span>](https://gitfront.io/r/user-2013142/51814a2a409aed6b9b49e7a8218754a4f2ce1167/Multi-Label-Image-Classification/)
 <hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="A sample image from the PASCAL VOC 2007  dataset",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("pascal_voc.png"))
@@ -192,7 +192,7 @@ mAP: 0.4108
 Avg loss: 0.1801034240768506
 ```
 <hr style="border:2px solid gray"> </hr>
-### Multi Layer Neural Networks[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Multi-Layer-Neural-Networks)
+### Multi Layer Neural Networks[<span style="color:blue"> [GitFront]</span>](https://gitfront.io/r/user-2013142/ea0abbc5ec0932dfd20f167b254e347e9b3d750f/Multi-Layer-Neural-Networks/)
 <hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="A sample image from the CIFAR-10 image classification dataset. Ref: https://www.cs.toronto.edu/~kriz/cifar.html",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("cifar_10.png"))
@@ -237,10 +237,10 @@ knitr::include_graphics(c("index_both.png"))
   - Feed Forward Neural Network [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
   - kNN, LDA and Bayes Classifiers and comparison with corresponding scikit-learn modules. [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb)
   - Mulit-layer Neural Networks (2 and 3 layered NN with SGD and Adam) [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/Multi-Layer-Neural-Networks)
-  - Logistic regression   [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
-  - Perceptron   [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
-  - SVM   [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
-  - Softmax  [<span style="color:blue"> [GitHub] </span>](https://github.com/punitjha/Linear-Classifiers)
+  - Logistic regression   [<span style="color:blue"> [GitFront] </span>](https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/)
+  - Perceptron   [<span style="color:blue"> [GitFront] </span>](https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/)
+  - SVM   [<span style="color:blue"> [GitFront] </span>](https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/)
+  - Softmax  [<span style="color:blue"> [GitFront] </span>](https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/)
  
 
 <hr style="border:2px solid gray"> </hr>
