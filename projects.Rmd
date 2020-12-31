@@ -34,7 +34,7 @@ knitr::include_graphics(c("image1.png"))
     - T1CE is the same as T1, but with a contrast agent injected to brighten certain patterns.
   - After training a U-net model of input dimension 192x163x4 on labeled images the task was to predict the segmentation of unlabelled images in the test set.
   - This is called semantic segmentation in computer vision and this project was carried out as a part of CS 446: Machine Learning at UIUC.
-  - For more details and codes please refer to [<span style="color:red">here.</span>](https://github.com/punitjha/Brain-MRI-Segmentation-U-nets) 
+  - For more details and codes please refer to [<span style="color:blue">here.</span>](https://github.com/punitjha/Brain-MRI-Segmentation-U-nets) 
   - All calculations were run on Google Cloud. 
   - A few slices from the results are shown below:
 ```{r, echo=FALSE, out.width="75%",out.height="75%",fig.cap="Results obtained from the U-net model",fig.show='hold',fig.align='left'}
@@ -76,7 +76,7 @@ knitr::include_graphics(c("download_lol.png"))
 ```  
   -  Implemented a YOLO-like object detector on the PASCAL VOC 2007 data set to produce results as shown in the above image.
   -  Used a pre-trained network structure for the model. In particular, we used the ResNet50 architecture as a base for our detector. This is different from the base architecture in the YOLO paper and also results in a different output grid size (14x14 instead of 7x7).
-  -  Please find the details of the Python code used  [here](https://github.com/punitjha/YOLO-Object-Detection). 
+  -  Please find the details of the Python code used  [here](https://gitfront.io/r/user-2013142/441c69af3daf8e73e7e8b05da84f221e5382d39b/YOLO-Object-Detection/). 
   -  All calculations were run on Google Colab.
 
 
@@ -93,7 +93,7 @@ knitr::include_graphics(c("dcgan.png"))
   -  The generator and discriminator network architectures  implemented are roughly based on DCGAN.
   -  Spectral normalization of discriminator weights is used to improve the quality of generator images.
   -  Both DCGAN and LSGAN loss functions were used while keeping the network architecture constant (with and without spectral normalization).
-  -  Please find the details of the Python code used  [here](https://github.com/punitjha/YOLO-Object-Detection). 
+  -  Please find the details of the Python code used  [here](https://gitfront.io/r/user-2013142/fafae6dc10869ea5e5b85f1efbce3ae8a99a5f2e/Generative-Adversarial-Network/). 
   -  All calculations were run on Google Cloud. Due to limitations in availability of computational resources, the model could be trained only for 22 epochs. Some results are shown below.
 
 
