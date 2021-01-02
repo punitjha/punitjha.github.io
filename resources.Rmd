@@ -75,8 +75,44 @@ output:
 * [Useful R Packages from RStudio](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages){target="_blank"}
 
   
-***  
-  
+*** 
+
+## Online Data Visualization Websites
+
+*    [DataHero](http://datahero.com/)
+*    [Plotly](http://plot.ly/)
+*    [Number Picture](https://numberpicture.com/)
+*    [Polychart](https://github.com/Polychart)
+*    [Juice Analytics](http://www.juiceanalytics.com/)
+*    [Weave](http://www.iweave.org/)
+*    [Datavisual](http://datavisu.al/)
+*    [Zoomdata (via the cloud platforms)](http://www.zoomdata.com/)
+*    [RAW](http://rawgraphs.io/)
+*    [Datawrapper](https://datawrapper.de/)
+
+
+***
+
+## Data Visualization Softwares
+*    [Tableau](http://www.tableau.com/)
+*    [SAP Lumira (including a free Personal Edition version)](http://www.sapstore.com/getlumira)
+*    [Microsoft Excel (or any other spreadsheet that includes charts)](https://products.office.com/excel)
+*    [ClearStory](http://www.clearstorydata.com/)
+*    [Mathematica](http://www.wolfram.com/mathematica/)
+*    [MATLAB](http://www.mathworks.com/products/matlab/)
+*    [MatPlotLib (if you are comfortable programming Python)](http://matplotlib.org/)
+*    [R Programming Language](https://www.r-project.org/)
+*    [ggplot2](http://ggplot2.org/)
+
+***
+
+## Data Sources
+
+*    [Google Public Data Explorer](http://www.google.com/publicdata/directory)
+*    [Data from the World Bank](http://data.worldbank.org/)
+
+
+***
 ### GitHub Links
 
 * ["Awesome R" Packages](https://github.com/qinwf/awesome-R) 
@@ -109,3 +145,16 @@ output:
 * [Multitasking Damages Your Brain And Career, New Studies Suggest](https://www.forbes.com/sites/travisbradberry/2014/10/08/multitasking-damages-your-brain-and-career-new-studies-suggest/#13fdddd056ee)
 
 ***
+
+
+
+
+
+
+
+
+
+
+
+
+
