@@ -54,7 +54,7 @@ knitr::include_graphics(c("mri_016.png"))
 <!-- The train and validation split of the dataset are provided on box. You are provided with 204 labeled (training) samples and 68 unlabeled (validation) images, all saved as NumPy tensors (.npy). Download data here (~3GB): -->
 
 <hr style="border:2px solid gray"> </hr>
-### Original Research Proposal[<span style="color:blue">[Report]</span>](https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing)
+### Original Research Proposal and Literature Review [<span style="color:blue">[Report]</span>](https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing)
 <hr style="border:2px solid gray"> </hr>
 ```{r, echo=FALSE, out.width=" 55%",out.height="55%",fig.cap="Results obtained from the U-net model. Ref.: N. Artrith, T. Morawietz, and J. Behler, Phys. Rev. B 83, 153101 (2011)",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("medium.png"))
@@ -67,6 +67,21 @@ knitr::include_graphics(c("medium.png"))
   - Please find the details of my ORP report  [here](https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing). 
 
     <!-- - More details [here](https://punitjha.github.io/orp_project.html). -->
+
+
+<!-- ### **Deep Reinforcement Learning** -->
+<hr style="border:2px solid gray"> </hr>
+### Deep Reinforcement Learning[<span style="color:blue"> [GitFront]</span>](https://gitfront.io/r/user-2013142/0fbc0374f87206739e93444c1e6e3a8750c93eef/Deep-Reinforcement-Learning/)
+<hr style="border:2px solid gray"> </hr>
+```{r, echo=FALSE, out.width=" 45%",out.height="45%",fig.cap="  Double Deep Q-Network (DQN) on the game of Breakout using the OpenAI Gym.",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("dqn.gif"))
+``` 
+  
+  -  Implemented Deep Q-Network (DQN) and Double DQN on the game of Breakout using the OpenAI Gym.
+  -  Double DQN uses a target network to calculate the target Q-value (next state maximum) whereas the vanilla DQN uses the same network for computing Q values for both the current and next state.
+  -  Please find the details of the Python code used  [here](https://gitfront.io/r/user-2013142/0fbc0374f87206739e93444c1e6e3a8750c93eef/Deep-Reinforcement-Learning/). 
+  -  All calculations were run on Google Colab. Due to limitations in availability of computational resources, the model could be trained only for 500 episodes.
+
 
 <hr style="border:2px solid gray"> </hr>
 ### YOLO Object Detection on PASCAL VOC[<span style="color:blue"> [GitFront]</span>](https://gitfront.io/r/user-2013142/441c69af3daf8e73e7e8b05da84f221e5382d39b/YOLO-Object-Detection/)
@@ -385,10 +400,27 @@ knitr::include_graphics(c("chem.png"))
 <hr style="border:2px solid gray"> </hr>
 ### Ph.D. Research Project 
 <hr style="border:2px solid gray"> </hr>
+```{r, echo=FALSE, out.width="80%",out.height="80%",fig.cap="First order corrections to chemical potential, grand potential and internal energy at a finite-temperature in a grand canonical ensemble",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("phd_image.png"))
+```
+- **University of Illinois at Urbana-Champaign, Urbana-Champaign, IL.**
+  - **Ph.D. Student and Teaching Assistant, Aug 2016 - Present**
+  - **Summary**:
+      - **Finite-temperature many-body perturbation theory (FT-MBPT)**: FT-MBPT is a theory to calculate the thermodynamic parameters of the grand canonical system at a given temperature. 
+      - I implemented the $\lambda$-variation method to  calculate the $n$th-order corrections to grand potential and internal energy using the FT-MBPT formalism which showed it is mathematically inconsistent and does not conserve charge. 
+      - Derived the correct analytic formulas for FT-MBPT using another ansatz wherein charge was conserved.
+      Implemented the FT-MBPT in a canonical ensemble and derived semi-analytic formulas.
+  - **Skills Acquired:**
+          Acquired knowledge of \textit{ab initio} and DFT electronic structure methods. Learned about machine learning algorithms. Learned to program in Python and enhanced my programming skills in C++ and FORTRAN.
+          
 
-  - Research conducted at the University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present. 
-     - **Topic**: Finite-temperature many-body perturbation theory.
-     - More details [here](https://punitjha.github.io/phd_project.html).
+#### **Detailed Summary**
+
+ - Please find the details of my Ph.D. project [here](https://drive.google.com/file/d/1gYTqQoy4uCIJNqHBbMloC61JV3wZPn6w/view?usp=sharing). 
+
+  <!-- - Research conducted at the University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present.  -->
+  <!--    - **Topic**: Finite-temperature many-body perturbation theory. -->
+  <!--    - More details [here](https://punitjha.github.io/phd_project.html). -->
     
 <hr style="border:2px solid gray"> </hr>
 ### M. Sc. Research Project
