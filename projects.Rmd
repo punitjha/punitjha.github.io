@@ -224,7 +224,7 @@ knitr::include_graphics(c("adam.png"))
 ```
 
 <hr style="border:2px solid gray"> </hr>
-### Ad Hoc Information Retrieval System[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
+### Ad Hoc Information Retrieval System[<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Small_ML_NLP_Projects/tree/master/Ad_Hoc_Info)
 <hr style="border:2px solid gray"> </hr>
 <!-- ### **Ad Hoc Information Retrieval System**   -->
 ```{r, echo=FALSE, out.width=" 65%",out.height="65%",fig.cap=" Architecture of an ad hoc IR system. Source: Jurafsky and Martin 2009, sec. 23.2",fig.show='hold',fig.align='left'}
@@ -233,7 +233,25 @@ knitr::include_graphics(c("info.png"))
   - Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.
   - The model was trained on the  [<span style="color:blue"> Cranfield collection </span>](http://ir.dcs.gla.ac.uk/resources/test_collections/cran/).  This was the pioneering test collection in allowing precise quantitative measures of information retrieval effectiveness, but is nowadays too small for anything but the most elementary pilot experiments. It contains 1398 abstracts of aerodynamics journal articles, a set of 225 queries, and exhaustive relevance judgments of all (query, document) pairs.
   - This project was a part of the ECE 365: Data Science and Engineer course.
-  - More details of the project can be found in this repository [here](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/tree/master/NLP_Lab5)
+  - More details of the project can be found in this repository [here](https://github.com/punitjha/Small_ML_NLP_Projects/tree/master/Ad_Hoc_Info)
+
+
+
+
+
+<hr style="border:2px solid gray"> </hr>
+### Document Clustering [<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Small_ML_NLP_Projects/blob/master/Document_Clustering/Document_Clustering.ipynb)
+<hr style="border:2px solid gray"> </hr>
+```{r, echo=FALSE, out.width="70%",out.height="70%",fig.cap=" Principal components of feature data and the clusters  obtained (kmeans and hierarchical clustering) using Scikit learn's PCA",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("clustering.png"))
+```
+
+In this project, we worked with abstracts of research papers published on different aspects of coronaviruses over the years. Our goal was to segement the abstracts into different clusters based on the similarities in the topics that the abstracts talk about.
+
+  - First, used TF-IDF vectorizer to create a feature space to represent the abstracts.
+  - Used kmeans and hierarchical clustering to creates 3 different clusters and visualize them.
+  - Analyzed parameters like intra-cluster and inter-cluster distances to access the efficacy of the clustering that we have done.
+  - Obtained the most important words for each of the clusters that we had created.
 
 <hr style="border:2px solid gray"> </hr>
 ### Machine Learning Algorithms Using only Numpy
@@ -257,6 +275,34 @@ knitr::include_graphics(c("index_both.png"))
   - SVM   [<span style="color:blue"> [GitFront] </span>](https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/)
   - Softmax  [<span style="color:blue"> [GitFront] </span>](https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/)
  
+
+<hr style="border:2px solid gray"> </hr>
+### Sentiment Analysis [<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Small_ML_NLP_Projects/blob/master/Sentiment%20Analysis/Sentiment%20Analysis.ipynb)
+<hr style="border:2px solid gray"> </hr>
+```{r, echo=FALSE, out.width="70%",out.height="70%",fig.cap=" Principal components of feature data and the clusters  obtained (kmeans and hierarchical clustering) using Scikit learn's PCA",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("sent_anal.png"))
+```
+
+In this project, we worked with IMDB movie reviews and developed different machine learning models to predict a given review as positive or negative.
+
+  -  Data  cleaning was first carried out (removing stopwords, punctuation and digits).
+  -  Used two different approaches to create the feature space. First, we considered the presence/absence of the word (feature) into account. We used 2 classification models, SVM and random forest. Calculated the f1 score, test set accuracy and 10 most ifluential words for each of the models.
+  - In the 2nd one, we will used TF-IDF vectorization and also includde bigrams in the analysis. We built naive bayes and random forest classifier. Calculated the f1 score, test set accuracy and 10 most ifluential words for each of the models. Also used cross-validation and grid search approach to tune the random forest model.
+
+
+<hr style="border:2px solid gray"> </hr>
+### Topic Modelling [<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Small_ML_NLP_Projects/blob/master/Topic_Modelling/Topic_Modelling.ipynb)
+<hr style="border:2px solid gray"> </hr>
+```{r, echo=FALSE, out.width="60%",out.height="60%",fig.cap="An illustration of topic modelling Ref:[Medium article](https://medium.com/analytics-vidhya/how-to-perform-topic-modeling-using-mallet-abc43916560f) ",fig.show='hold',fig.align='left'}
+knitr::include_graphics(c("topic_modelling.png"))
+```
+In this project, we worked with research papers published on different aspects of coronaviruses over the years. Our goal was to use topic modelling to know different areas each research paper talks about and answer some important questions regarding the viruses.
+
+  - First  we extractied full body text, abstract and title from each paper and cleaned them.
+  - Used gensim library to create a LDA topic model on the extracted body texts.
+  - Used topic modelling and tried to find most relevant papers on aspects like vaccine and respiratory viruses.
+  
+
 
 <hr style="border:2px solid gray"> </hr>
 ###  Machine Learning, NLP, and Text Analysis using Scikit-learn
@@ -287,16 +333,16 @@ knitr::include_graphics(c("download.png"))
       - N-gram model, generate representative sentences, study of the effect of training data size, and language model complexity (n-gram size), on the modeling capacity of a language model.
 [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab3/punit2/NLPLab3/NLPLab3.ipynb)
       - Count-Based Word Vectors, Co-occurrence_matrix, PCA, plot-embeddings,  Word2Vec Word Embeddings, Cosine Similarity, Polysemous Words, Synonyms & Antonyms, Solving Analogies with Word Vectors, Guided Analysis of Bias in Word Vectors, and Independent Analysis of Bias in Word Vectors. [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab4/punit2/Lab4/lab4.ipynb)
-  - **Text Analysis**
-      - Syntagmatic word association mining.
-[[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-1/punit2_lab1.ipynb)
-      - Sentiment analysis.
-[[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-2/punit2_lab2.ipynb)
-      - Document Clustering using TF-IDF vectorizer.
-[[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-3/punit2_lab3.ipynb)
-      - Topic Modelling: Use of Gensim library to create a LDA topic model.
-[[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-4/punit2_lab4.ipynb)
-    
+<!--   - **Text Analysis** -->
+<!--       - Syntagmatic word association mining. -->
+<!-- [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-1/punit2_lab1.ipynb) -->
+<!--       - Sentiment analysis. -->
+<!-- [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-2/punit2_lab2.ipynb) -->
+<!--       - Document Clustering using TF-IDF vectorizer. -->
+<!-- [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-3/punit2_lab3.ipynb) -->
+<!--       - Topic Modelling: Use of Gensim library to create a LDA topic model. -->
+<!-- [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-4/punit2_lab4.ipynb) -->
+
 
  
 
