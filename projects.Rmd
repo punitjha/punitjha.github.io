@@ -1,7 +1,10 @@
 ---
-title: "ML Projects and Thermodynamics Research"
+title: " Projects and Blog"
 output:
-   html_document
+   html_document:
+    toc: true
+    toc_depth: 6  
+    toc_float: false 
 ---
 
 ***
@@ -251,11 +254,11 @@ In this project, we worked with abstracts of research papers published on differ
 <hr style="border:2px solid gray"> </hr>
 ### Machine Learning Algorithms Using only Numpy
 <hr style="border:2px solid gray"> </hr>
-```{r, echo=FALSE, out.width="500%",out.height="500%",fig.cap=" (a) Comparison of SGD with Momentum or Nesterov Accelerated Gradient, and Adam methods and their rate of convergence. (b) Image compression using PCA",fig.show='hold',fig.align='left'}
+```{r, echo=FALSE, out.width="500%",out.height="500%",fig.cap=" Comparison of SGD with Momentum or Nesterov Accelerated Gradient, and Adam methods and their rate of convergence. (b) Image compression using PCA",fig.show='hold',fig.align='left'}
 knitr::include_graphics(c("index_both.png"))
 ```
 
-- Implemented ML algorithms from scratch using only Python Numpy. All of these algorithms are run on tiny data sets on a standard CPU laptop. These were part of assignments from CS-446 and CS-498 at UIUC.
+  - Implemented ML algorithms from scratch using only Python Numpy. All of these algorithms are run on tiny data sets on a standard CPU laptop.
   - Stochastic Gradient Descent Variants - SGD with Momentum or Nesterov Accelerated Gradient, and Adam. [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
   - GMM [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
   - HMM [<span style="color:blue">[GitHub]</span>](https://github.com/punitjha/ML-from-Scratch)
@@ -270,7 +273,6 @@ knitr::include_graphics(c("index_both.png"))
   - SVM   [<span style="color:blue"> [GitFront] </span>](https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/)
   - Softmax  [<span style="color:blue"> [GitFront] </span>](https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/)
  
-
 <hr style="border:2px solid gray"> </hr>
 ### Sentiment Analysis [<span style="color:blue"> [GitHub]</span>](https://github.com/punitjha/Small_ML_NLP_Projects/blob/master/Sentiment%20Analysis/Sentiment%20Analysis.ipynb)
 <hr style="border:2px solid gray"> </hr>
@@ -283,6 +285,7 @@ In this project, we worked with IMDB movie reviews and developed different machi
   -  Data  cleaning was first carried out (removing stopwords, punctuation and digits).
   -  Used two different approaches to create the feature space. First, we considered the presence/absence of the word (feature) into account. We used 2 classification models, SVM and random forest. Calculated the f1 score, test set accuracy and 10 most ifluential words for each of the models.
   - In the 2nd one, we will used TF-IDF vectorization and also includde bigrams in the analysis. We built naive bayes and random forest classifier. Calculated the f1 score, test set accuracy and 10 most ifluential words for each of the models. Also used cross-validation and grid search approach to tune the random forest model.
+
 
 
 <hr style="border:2px solid gray"> </hr>
@@ -341,7 +344,7 @@ knitr::include_graphics(c("download.png"))
 
  
 
-***
+
 ## **Programming Projects**
 <hr style="border:2px solid gray"> </hr>
 

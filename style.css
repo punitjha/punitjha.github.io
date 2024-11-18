@@ -68,5 +68,20 @@ h1.title {
 h2,h3,h4,h5,h6{
   font-size: 16pt;
 }
+<style>
+.toc {
+  background-color: #f8f9fa; /* Light background */
+  padding: 10px;
+  border: 1px solid #ddd;
+}
 
+.toc a {
+  text-decoration: none;
+  color: #007bff; /* Link color */
+}
+
+.toc a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Hover color */
+}
 
