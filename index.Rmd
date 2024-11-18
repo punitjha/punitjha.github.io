@@ -8,14 +8,33 @@ output: html_document
 <img src="passport_size.jpg" style="width:20%; margin-right: 5px" align="right">
 \vspace{500cm}
 
+Hello!
 
-Welcome to my website! Thanks for your interest. I am a fifth-year Ph.D. candidate in the Department of Chemistry at the [Univeristy of Illinois at Urbana-Champaign](https://chemistry.illinois.edu/). I work in theoretical and computational chemistry. My reserach is based on finite-temperature many-body perturbation theory at [Prof. So Hirata's](http://faculty.scs.illinois.edu/hirata/members.html) laboratory. I have successfully published [four reserach publications](https://scholar.google.com/citations?user=XmN4PKgAAAAJ&hl=en) so far, and currently work on using machine learning and deep learning methods to try to solve problems in chemistry. I am also looking for jobs in industry and postdoctoral postitions in academia.
+Welcome to my website and thanks for your interest!
 
-### Quick Intro
-- Ph.D. in Chemistry, University of Illinois at Urbana-Champaign (Expected August 2021)
-- Integrated M. Sc., National Institute of Science Education and Research, Bhubaneswar, India (May 2016)
-- Hobbies - reading, climbing, bouldering, cooking
-- Languages- English, Hindi, Odiya, Maithili
+I am Punit Kumar Jha.
 
-### Resume/Short CV   
-A short CV is attached [here](https://drive.google.com/file/d/13BmYV_SHLOJ9HgGp9cHBgwEl8CoFze7-/view?usp=sharing).
+I am currently a Senior Research Scientist at SandboxAQ. Previously, I used to work at Good Chemistry Inc. a subsidiary of 1QBit, Canada, Vancouver.
+
+My current areas of research include 
+
+- development and use of generative AI models for
+    - protein structure prediction,
+    - protein-protein and protein-ligand binding affinity prediction, 
+    - high-throughput virtual screening.
+    - DFT and wavefunction based quantum chemistry.
+
+During my time at Good Chemistry and my PhD, I worked on DFT and wavefunction based quantum chemistry method  development.
+
+My PhD research was based on finite-temperature many-body  perturbation theory at [Prof. So Hirata's](http://faculty.scs.illinois.edu/hirata/members.html) laboratory.
+
+More more details of my research career and projects I have worked on please select the <span style="color: red;">Career</span> option above.
+
+<!-- I have successfully published [four reserach publications](https://scholar.google.com/citations?user=XmN4PKgAAAAJ&hl=en) so far, and currently work on using machine learning and deep learning methods to try to solve problems in chemistry. I am also looking for jobs in industry and postdoctoral positions in academia. -->
+
+<!-- ### Research Interests -->
+<!-- - Ph.D. in Chemistry, University of Illinois at Urbana-Champaign ( June, 2021) -->
+<!-- - Integrated M. Sc., National Institute of Science Education and Research, Bhubaneswar, India (May 2016) -->
+<!-- - Hobbies - reading, climbing, bouldering, cooking -->
+<!-- - Languages- English, Hindi, Odiya, Maithili -->
+

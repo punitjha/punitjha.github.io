@@ -13,28 +13,38 @@
 
 <title>ML Projects and Thermodynamics Research</title>
 
-<script src="site_libs/header-attrs-2.1/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -47,33 +57,10 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 
 
@@ -82,10 +69,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -102,40 +85,16 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -163,7 +122,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -175,7 +134,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -185,11 +144,28 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.parent().addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -201,13 +177,12 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -215,16 +190,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -254,69 +222,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -326,22 +231,12 @@ div.tocify {
 <div class="container-fluid main-container">
 
 
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
-
-
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -399,11 +294,12 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
-<h1 class="title toc-ignore">ML Projects and Thermodynamics Research</h1>
+<h1 class="title toc-ignore">ML Projects and Thermodynamics
+Research</h1>
 
 </div>
 
@@ -414,39 +310,58 @@ div.tocify {
 <hr style="border:2px solid gray">
 </hr>
 <div id="mri-image-segmentation-github" class="section level3">
-<h3>MRI Image Segmentation<a href="https://github.com/punitjha/Brain-MRI-Segmentation-U-nets"><span style="color:blue"> [GitHub]</span></a></h3>
+<h3>MRI Image Segmentation<a
+href="https://github.com/punitjha/Brain-MRI-Segmentation-U-nets"><span
+style="color:blue"> [GitHub]</span></a></h3>
 <hr style="border:2px solid gray">
 </hr>
 <div class="figure" style="text-align: left">
 <img src="image1.png" alt="Fig 1 Example 2D slice(s) of the 3D brain image showing both a normal subject (top) and a subject with glioma (bottom). Ref: CS446 UIUC" width="65%" height="65%" />
 <p class="caption">
-Fig 1 Example 2D slice(s) of the 3D brain image showing both a normal subject (top) and a subject with glioma (bottom). Ref: CS446 UIUC
+Fig 1 Example 2D slice(s) of the 3D brain image showing both a normal
+subject (top) and a subject with glioma (bottom). Ref: CS446 UIUC
 </p>
 </div>
 <ul>
-<li>Gliomas are tumors of the brain that involve glial cells in the brain. Gliomas are classified as grades I to IV, where the grades indicate the severity of the diseases. The categories are:
+<li>Gliomas are tumors of the brain that involve glial cells in the
+brain. Gliomas are classified as grades I to IV, where the grades
+indicate the severity of the diseases. The categories are:
 <ul>
 <li>Grade I: benign, curable with complete surgical resection,</li>
-<li>Grade II: low grade, undergo surgical resection, radiotherapy/chemotherapy,</li>
+<li>Grade II: low grade, undergo surgical resection,
+radiotherapy/chemotherapy,</li>
 <li>Grade III/IV: high-grade gliomas, and</li>
 <li>Grade IV: glioblastoma.</li>
 </ul></li>
-<li>The task is to identify the location of the tumor, and its classification into three groups, namely:
+<li>The task is to identify the location of the tumor, and its
+classification into three groups, namely:
 <ul>
 <li>edema which indicates inflammation,</li>
-<li>enhancing which indicates part of the tumor with active growth, and</li>
-<li>the necrotic core which are dead tissue, generally in the center.</li>
+<li>enhancing which indicates part of the tumor with active growth,
+and</li>
+<li>the necrotic core which are dead tissue, generally in the
+center.</li>
 </ul></li>
-<li>Four different magnetic resonance images (MRI), also known as contrasts are provided for each subject,
+<li>Four different magnetic resonance images (MRI), also known as
+contrasts are provided for each subject,
 <ul>
-<li>T1-weighted which tends to be higher intensity with tissues with more lipids,</li>
-<li>T2-weighted which is usually higher intensity for tissues with more water,</li>
+<li>T1-weighted which tends to be higher intensity with tissues with
+more lipids,</li>
+<li>T2-weighted which is usually higher intensity for tissues with more
+water,</li>
 <li>FLAIR this is similar to T2 but free water is suppressed, and</li>
-<li>T1CE is the same as T1, but with a contrast agent injected to brighten certain patterns.</li>
+<li>T1CE is the same as T1, but with a contrast agent injected to
+brighten certain patterns.</li>
 </ul></li>
-<li>After training a U-net model of input dimension 192x163x4 on labeled images the task was to predict the segmentation of unlabelled images in the test set.</li>
-<li>This is called semantic segmentation in computer vision and this project was carried out as a part of CS 446: Machine Learning at UIUC.</li>
-<li>For more details and codes please refer to <a href="https://github.com/punitjha/Brain-MRI-Segmentation-U-nets"><span style="color:blue">here.</span></a></li>
+<li>After training a U-net model of input dimension 192x163x4 on labeled
+images the task was to predict the segmentation of unlabelled images in
+the test set.</li>
+<li>This is called semantic segmentation in computer vision and this
+project was carried out as a part of CS 446: Machine Learning at
+UIUC.</li>
+<li>For more details and codes please refer to <a
+href="https://github.com/punitjha/Brain-MRI-Segmentation-U-nets"><span
+style="color:blue">here.</span></a></li>
 <li>All calculations were run on Google Cloud.</li>
 <li>A few slices from the results are shown below:
 <div class="figure" style="text-align: left">
@@ -467,22 +382,37 @@ Results obtained from the U-net model
 <hr style="border:2px solid gray">
 </hr>
 </div>
-<div id="original-research-proposal-and-literature-review-report" class="section level3">
-<h3>Original Research Proposal and Literature Review <a href="https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing"><span style="color:blue">[Report]</span></a></h3>
+<div id="original-research-proposal-and-literature-review-report"
+class="section level3">
+<h3>Original Research Proposal and Literature Review <a
+href="https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing"><span
+style="color:blue">[Report]</span></a></h3>
 <hr style="border:2px solid gray">
 </hr>
 <div class="figure" style="text-align: left">
 <img src="medium.png" alt="Results obtained from the U-net model. Ref.: N. Artrith, T. Morawietz, and J. Behler, Phys. Rev. B 83, 153101 (2011)" width=" 55%" height="55%" />
 <p class="caption">
-Results obtained from the U-net model. Ref.: N. Artrith, T. Morawietz, and J. Behler, Phys. Rev. B 83, 153101 (2011)
+Results obtained from the U-net model. Ref.: N. Artrith, T. Morawietz,
+and J. Behler, Phys. Rev. B 83, 153101 (2011)
 </p>
 </div>
 <ul>
-<li><p>ORP titled, <strong>On the inclusion of long-range interactions among molecules in machine learning models</strong>.</p></li>
-<li><p>Developed an ORP on the problem of inclusion of long-range (electrostatic) interactions in ML and DL algorithms. Analyzed different neural network schemes, especially deep high-dimensional neural networks (HDNNs), and whether they can efficiently learn and predict molecular charges learned from various charge partitioning schemes.</p></li>
-<li><p>Studied different charge partitioning schemes like Hirshfeld, Charge Model 5, Merz-Singh-Kollman, and Natural Bonding Orbital methods used in molecular dynamics simulations.</p></li>
-<li><p>Proposed modifications to the existing mathematical formulation and structure of HDNNs to be able to better predict molecular charges, the computational cost for implementing the project, potential setbacks, and alternate plans for the project.</p></li>
-<li><p>Please find the details of my ORP report <a href="https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing">here</a>.</p>
+<li><p>ORP titled, <strong>On the inclusion of long-range interactions
+among molecules in machine learning models</strong>.</p></li>
+<li><p>Developed an ORP on the problem of inclusion of long-range
+(electrostatic) interactions in ML and DL algorithms. Analyzed different
+neural network schemes, especially deep high-dimensional neural networks
+(HDNNs), and whether they can efficiently learn and predict molecular
+charges learned from various charge partitioning schemes.</p></li>
+<li><p>Studied different charge partitioning schemes like Hirshfeld,
+Charge Model 5, Merz-Singh-Kollman, and Natural Bonding Orbital methods
+used in molecular dynamics simulations.</p></li>
+<li><p>Proposed modifications to the existing mathematical formulation
+and structure of HDNNs to be able to better predict molecular charges,
+the computational cost for implementing the project, potential setbacks,
+and alternate plans for the project.</p></li>
+<li><p>Please find the details of my ORP report <a
+href="https://drive.google.com/file/d/1Q4W8AkKSU9xhT38bK1Kor9uf_cKh4fRC/view?usp=sharing">here</a>.</p>
 <!-- - More details [here](https://punitjha.github.io/orp_project.html). --></li>
 </ul>
 <!-- ### **Deep Reinforcement Learning** -->
@@ -490,26 +420,38 @@ Results obtained from the U-net model. Ref.: N. Artrith, T. Morawietz, and J. Be
 </hr>
 </div>
 <div id="deep-reinforcement-learning-gitfront" class="section level3">
-<h3>Deep Reinforcement Learning<a href="https://gitfront.io/r/user-2013142/0fbc0374f87206739e93444c1e6e3a8750c93eef/Deep-Reinforcement-Learning/"><span style="color:blue"> [GitFront]</span></a></h3>
+<h3>Deep Reinforcement Learning<a
+href="https://gitfront.io/r/user-2013142/0fbc0374f87206739e93444c1e6e3a8750c93eef/Deep-Reinforcement-Learning/"><span
+style="color:blue"> [GitFront]</span></a></h3>
 <hr style="border:2px solid gray">
 </hr>
 <div class="figure" style="text-align: left">
 <img src="dqn.gif" alt="  Double Deep Q-Network (DQN) on the game of Breakout using the OpenAI Gym." width=" 45%" height="45%" />
 <p class="caption">
-Double Deep Q-Network (DQN) on the game of Breakout using the OpenAI Gym.
+Double Deep Q-Network (DQN) on the game of Breakout using the OpenAI
+Gym.
 </p>
 </div>
 <ul>
-<li>Implemented Deep Q-Network (DQN) and Double DQN on the game of Breakout using the OpenAI Gym.</li>
-<li>Double DQN uses a target network to calculate the target Q-value (next state maximum) whereas the vanilla DQN uses the same network for computing Q values for both the current and next state.</li>
-<li>Please find the details of the Python code used <a href="https://gitfront.io/r/user-2013142/0fbc0374f87206739e93444c1e6e3a8750c93eef/Deep-Reinforcement-Learning/">here</a>.</li>
-<li>All calculations were run on Google Colab. Due to limitations in availability of computational resources, the model could be trained only for 500 episodes.</li>
+<li>Implemented Deep Q-Network (DQN) and Double DQN on the game of
+Breakout using the OpenAI Gym.</li>
+<li>Double DQN uses a target network to calculate the target Q-value
+(next state maximum) whereas the vanilla DQN uses the same network for
+computing Q values for both the current and next state.</li>
+<li>Please find the details of the Python code used <a
+href="https://gitfront.io/r/user-2013142/0fbc0374f87206739e93444c1e6e3a8750c93eef/Deep-Reinforcement-Learning/">here</a>.</li>
+<li>All calculations were run on Google Colab. Due to limitations in
+availability of computational resources, the model could be trained only
+for 500 episodes.</li>
 </ul>
 <hr style="border:2px solid gray">
 </hr>
 </div>
-<div id="yolo-object-detection-on-pascal-voc-gitfront" class="section level3">
-<h3>YOLO Object Detection on PASCAL VOC<a href="https://gitfront.io/r/user-2013142/441c69af3daf8e73e7e8b05da84f221e5382d39b/YOLO-Object-Detection/"><span style="color:blue"> [GitFront]</span></a></h3>
+<div id="yolo-object-detection-on-pascal-voc-gitfront"
+class="section level3">
+<h3>YOLO Object Detection on PASCAL VOC<a
+href="https://gitfront.io/r/user-2013142/441c69af3daf8e73e7e8b05da84f221e5382d39b/YOLO-Object-Detection/"><span
+style="color:blue"> [GitFront]</span></a></h3>
 <hr style="border:2px solid gray">
 </hr>
 <div class="figure" style="text-align: left">
@@ -519,9 +461,14 @@ Results obtained from YOLO
 </p>
 </div>
 <ul>
-<li>Implemented a YOLO-like object detector on the PASCAL VOC 2007 data set to produce results as shown in the above image.</li>
-<li>Used a pre-trained network structure for the model. In particular, we used the ResNet50 architecture as a base for our detector. This is different from the base architecture in the YOLO paper and also results in a different output grid size (14x14 instead of 7x7).</li>
-<li>Please find the details of the Python code used <a href="https://gitfront.io/r/user-2013142/441c69af3daf8e73e7e8b05da84f221e5382d39b/YOLO-Object-Detection/">here</a>.</li>
+<li>Implemented a YOLO-like object detector on the PASCAL VOC 2007 data
+set to produce results as shown in the above image.</li>
+<li>Used a pre-trained network structure for the model. In particular,
+we used the ResNet50 architecture as a base for our detector. This is
+different from the base architecture in the YOLO paper and also results
+in a different output grid size (14x14 instead of 7x7).</li>
+<li>Please find the details of the Python code used <a
+href="https://gitfront.io/r/user-2013142/441c69af3daf8e73e7e8b05da84f221e5382d39b/YOLO-Object-Detection/">here</a>.</li>
 <li>All calculations were run on Google Colab.</li>
 </ul>
 <!-- ### **Face Generation with GANs** -->
@@ -529,22 +476,35 @@ Results obtained from YOLO
 </hr>
 </div>
 <div id="face-generation-with-gans-gitfront" class="section level3">
-<h3>Face Generation with GANs<a href="https://gitfront.io/r/user-2013142/fafae6dc10869ea5e5b85f1efbce3ae8a99a5f2e/Generative-Adversarial-Network/"><span style="color:blue"> [GitFront]</span></a></h3>
+<h3>Face Generation with GANs<a
+href="https://gitfront.io/r/user-2013142/fafae6dc10869ea5e5b85f1efbce3ae8a99a5f2e/Generative-Adversarial-Network/"><span
+style="color:blue"> [GitFront]</span></a></h3>
 <hr style="border:2px solid gray">
 </hr>
 <div class="figure" style="text-align: left">
 <img src="dcgan.png" alt=" Deep Convolutional Generative Adversarial Network Architecture. Ref: https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html" width=" 95%" height="95%" />
 <p class="caption">
-Deep Convolutional Generative Adversarial Network Architecture. Ref: <a href="https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html" class="uri">https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html</a>
+Deep Convolutional Generative Adversarial Network Architecture. Ref: <a
+href="https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html"
+class="uri">https://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html</a>
 </p>
 </div>
 <ul>
-<li>Trained a generative adversarial network (GAN) with spectral normalization of discriminator weights on the CelebA Dataset to generate facial images.</li>
-<li>The generator and discriminator network architectures implemented are roughly based on DCGAN.</li>
-<li>Spectral normalization of discriminator weights is used to improve the quality of generator images.</li>
-<li>Both DCGAN and LSGAN loss functions were used while keeping the network architecture constant (with and without spectral normalization).</li>
-<li>Please find the details of the Python code used <a href="https://gitfront.io/r/user-2013142/fafae6dc10869ea5e5b85f1efbce3ae8a99a5f2e/Generative-Adversarial-Network/">here</a>.</li>
-<li>All calculations were run on Google Cloud. Due to limitations in availability of computational resources, the model could be trained only for 22 epochs. Some results are shown below.</li>
+<li>Trained a generative adversarial network (GAN) with spectral
+normalization of discriminator weights on the CelebA Dataset to generate
+facial images.</li>
+<li>The generator and discriminator network architectures implemented
+are roughly based on DCGAN.</li>
+<li>Spectral normalization of discriminator weights is used to improve
+the quality of generator images.</li>
+<li>Both DCGAN and LSGAN loss functions were used while keeping the
+network architecture constant (with and without spectral
+normalization).</li>
+<li>Please find the details of the Python code used <a
+href="https://gitfront.io/r/user-2013142/fafae6dc10869ea5e5b85f1efbce3ae8a99a5f2e/Generative-Adversarial-Network/">here</a>.</li>
+<li>All calculations were run on Google Cloud. Due to limitations in
+availability of computational resources, the model could be trained only
+for 22 epochs. Some results are shown below.</li>
 </ul>
 <div class="figure" style="text-align: left">
 <img src="gan_results_1.png" alt=" Results obtained from LSGAN and DSGAN" width=" 55%" height="55%" />
@@ -562,34 +522,55 @@ Effect of spectral normalization on the quality of predicted images
 </hr>
 <!-- ### **Text Generation & Language classification (RNNs)** -->
 </div>
-<div id="text-generation-language-classification-rnns-gitfront" class="section level3">
-<h3>Text Generation &amp; Language classification (RNNs)<a href="https://gitfront.io/r/user-2013142/e8b804a819493bc8d2501a85f7620ba5113f6b68/Recurrent-Neural-Networks/"><span style="color:blue"> [GitFront]</span></a></h3>
+<div id="text-generation-language-classification-rnns-gitfront"
+class="section level3">
+<h3>Text Generation &amp; Language classification (RNNs)<a
+href="https://gitfront.io/r/user-2013142/e8b804a819493bc8d2501a85f7620ba5113f6b68/Recurrent-Neural-Networks/"><span
+style="color:blue"> [GitFront]</span></a></h3>
 <hr style="border:2px solid gray">
 </hr>
 <div class="figure" style="text-align: left">
 <img src="confusion.png" alt="Visualizing  the performance of the RNN  model by creating a confusion matrix. The ground truth languages of samples are represented by rows in the matrix while  predicted languages are represented by the columns." width=" 45%" height="45%" />
 <p class="caption">
-Visualizing the performance of the RNN model by creating a confusion matrix. The ground truth languages of samples are represented by rows in the matrix while predicted languages are represented by the columns.
+Visualizing the performance of the RNN model by creating a confusion
+matrix. The ground truth languages of samples are represented by rows in
+the matrix while predicted languages are represented by the columns.
 </p>
 </div>
 <ul>
 <li>Trained and implemented an RNN for two tasks on text data:
 <ul>
-<li>Text generation - RNN learns to generate text by predicting the most likely next character based on previous characters. The model consists of three layers
+<li>Text generation - RNN learns to generate text by predicting the most
+likely next character based on previous characters. The model consists
+of three layers
 <ul>
-<li>a linear layer that encodes the input character into an embedded state,</li>
-<li>an RNN layer (which may itself have multiple layers) that operates on that embedded state and a hidden state, and</li>
-<li>a decoder layer that outputs the predicted character scores distribution.</li>
-<li>The model was trained on the completer works of Shakespeare and 24 different novels of Charles Dickens.</li>
+<li>a linear layer that encodes the input character into an embedded
+state,</li>
+<li>an RNN layer (which may itself have multiple layers) that operates
+on that embedded state and a hidden state, and</li>
+<li>a decoder layer that outputs the predicted character scores
+distribution.</li>
+<li>The model was trained on the completer works of Shakespeare and 24
+different novels of Charles Dickens.</li>
 </ul></li>
-<li>Language classification - RNN learnt to detect which language a chunk of text is written in (similar to a feature you might find in an online translator).
+<li>Language classification - RNN learnt to detect which language a
+chunk of text is written in (similar to a feature you might find in an
+online translator).
 <ul>
-<li>While this might be relatively easy to do if the input text is Unicode and unique characters indicate a particular language, however this implementation addressed the case where all input text were converted to ASCII characters so our network learnt instead to detect letter patterns.</li>
-<li>The model was trained on the Bible which is a large text translated to different languages but is in easily parsable format, so 20 different copies of the Bible in different languages obtained from Project Gutenberg were used.</li>
+<li>While this might be relatively easy to do if the input text is
+Unicode and unique characters indicate a particular language, however
+this implementation addressed the case where all input text were
+converted to ASCII characters so our network learnt instead to detect
+letter patterns.</li>
+<li>The model was trained on the Bible which is a large text translated
+to different languages but is in easily parsable format, so 20 different
+copies of the Bible in different languages obtained from Project
+Gutenberg were used.</li>
 </ul></li>
 </ul></li>
 </ul>
-<p><strong>Sample output generated by the RNN after training on Shakespeare is shown below.</strong></p>
+<p><strong>Sample output generated by the RNN after training on
+Shakespeare is shown below.</strong></p>
 <pre><code>TRIA:
 He dew that with merry a man for the strange.
 I then to the rash, so must came of the chamuness, and that I&#39;ll treason dost
@@ -616,8 +597,11 @@ For them he wall; and no live away. Fies, sir.</code></pre>
 <hr style="border:2px solid gray">
 </hr>
 </div>
-<div id="multi-label-image-classification-gitfront" class="section level3">
-<h3>Multi Label Image Classification<a href="https://gitfront.io/r/user-2013142/51814a2a409aed6b9b49e7a8218754a4f2ce1167/Multi-Label-Image-Classification/"><span style="color:blue"> [GitFront]</span></a></h3>
+<div id="multi-label-image-classification-gitfront"
+class="section level3">
+<h3>Multi Label Image Classification<a
+href="https://gitfront.io/r/user-2013142/51814a2a409aed6b9b49e7a8218754a4f2ce1167/Multi-Label-Image-Classification/"><span
+style="color:blue"> [GitFront]</span></a></h3>
 <hr style="border:2px solid gray">
 </hr>
 <div class="figure" style="text-align: left">
@@ -627,15 +611,27 @@ A sample image from the PASCAL VOC 2007 dataset
 </p>
 </div>
 <ul>
-<li>Implemented a multi-label image classifier on the <a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2007"><span style="color:blue">PASCAL VOC 2007 </span></a> data set. Carried out three experiments:
+<li>Implemented a multi-label image classifier on the <a
+href="http://host.robots.ox.ac.uk/pascal/VOC/voc2007"><span
+style="color:blue">PASCAL VOC 2007 </span></a> data set. Carried out
+three experiments:
 <ul>
 <li>Trained AlexNet (PyTorch built-in) from scratch.</li>
-<li>Fine-tuned AlexNet (PyTorch built-in), which was pretrained on <a href="http://www.image-net.org/"><span style="color:blue">ImageNet.</span></a></li>
-<li>Trained a simple network (defined in the file classifier.py) from scratch.</li>
+<li>Fine-tuned AlexNet (PyTorch built-in), which was pretrained on <a
+href="http://www.image-net.org/"><span
+style="color:blue">ImageNet.</span></a></li>
+<li>Trained a simple network (defined in the file classifier.py) from
+scratch.</li>
 </ul></li>
-<li>In the second part, designed and trained my own deep simple convolution network to predict a binary present/absent image-level label for each of the 20 PASCAL classes. The network was designed with AlexNet as a starting point. The goal was to get an average mAP score of at least 40 percent.</li>
+<li>In the second part, designed and trained my own deep simple
+convolution network to predict a binary present/absent image-level label
+for each of the 20 PASCAL classes. The network was designed with AlexNet
+as a starting point. The goal was to get an average mAP score of at
+least 40 percent.</li>
 </ul>
-<p><strong>The average precision on different classes are shown below after 55 epochs on Google Cloud (16GB RAM and 1 NVIDIA K80 GPU).</strong></p>
+<p><strong>The average precision on different classes are shown below
+after 55 epochs on Google Cloud (16GB RAM and 1 NVIDIA K80
+GPU).</strong></p>
 <pre><code>-------  Class: aeroplane        AP:   0.6468  -------
 -------  Class: bicycle          AP:   0.4247  -------
 -------  Class: bird             AP:   0.3491  -------
@@ -662,70 +658,111 @@ Avg loss: 0.1801034240768506</code></pre>
 </hr>
 </div>
 <div id="multi-layer-neural-networks-gitfront" class="section level3">
-<h3>Multi Layer Neural Networks<a href="https://gitfront.io/r/user-2013142/ea0abbc5ec0932dfd20f167b254e347e9b3d750f/Multi-Layer-Neural-Networks/"><span style="color:blue"> [GitFront]</span></a></h3>
+<h3>Multi Layer Neural Networks<a
+href="https://gitfront.io/r/user-2013142/ea0abbc5ec0932dfd20f167b254e347e9b3d750f/Multi-Layer-Neural-Networks/"><span
+style="color:blue"> [GitFront]</span></a></h3>
 <hr style="border:2px solid gray">
 </hr>
 <div class="figure" style="text-align: left">
-<img src="cifar_10.PNG" alt="A sample image from the CIFAR-10 image classification dataset. Ref: https://www.cs.toronto.edu/~kriz/cifar.html" width=" 45%" height="45%" />
+<img src="cifar_10.png" alt="A sample image from the CIFAR-10 image classification dataset. Ref: https://www.cs.toronto.edu/~kriz/cifar.html" width=" 45%" height="45%" />
 <p class="caption">
-A sample image from the CIFAR-10 image classification dataset. Ref: <a href="https://www.cs.toronto.edu/~kriz/cifar.html" class="uri">https://www.cs.toronto.edu/~kriz/cifar.html</a>
+A sample image from the CIFAR-10 image classification dataset. Ref: <a
+href="https://www.cs.toronto.edu/~kriz/cifar.html"
+class="uri">https://www.cs.toronto.edu/~kriz/cifar.html</a>
 </p>
 </div>
 <ul>
-<li><p>Implemented multi-layer neural networks (2 and 3 layers) from scratch on the <a href="https://www.cs.toronto.edu/~kriz/cifar.html"><span style="color:blue"> CIFAR-10 </span></a> image classification data set, to understand the fundamentals of neural networks and backpropagation.</p></li>
-<li><p>Developed codes for forward and backward pass, and trained two- and three-layer networks with SGD and Adam optimizer.</p></li>
-<li><p>Had experience with hyperparameter tuning and using proper train/test/validation data splits.</p></li>
+<li><p>Implemented multi-layer neural networks (2 and 3 layers) from
+scratch on the <a
+href="https://www.cs.toronto.edu/~kriz/cifar.html"><span
+style="color:blue"> CIFAR-10 </span></a> image classification data set,
+to understand the fundamentals of neural networks and
+backpropagation.</p></li>
+<li><p>Developed codes for forward and backward pass, and trained two-
+and three-layer networks with SGD and Adam optimizer.</p></li>
+<li><p>Had experience with hyperparameter tuning and using proper
+train/test/validation data splits.</p></li>
 </ul>
 <div class="figure" style="text-align: left">
 <img src="adam.png" alt="Results of using the SGD and Adam optimzers on the CIFAR-10 dataset. Note that Adam converges faster than SGD in the loss history plot which is expected. We also see overfitting in the classification plot given that our dataset was realtively small compared to the number of NN parameters." width=" 75%" height="75%" />
 <p class="caption">
-Results of using the SGD and Adam optimzers on the CIFAR-10 dataset. Note that Adam converges faster than SGD in the loss history plot which is expected. We also see overfitting in the classification plot given that our dataset was realtively small compared to the number of NN parameters.
+Results of using the SGD and Adam optimzers on the CIFAR-10 dataset.
+Note that Adam converges faster than SGD in the loss history plot which
+is expected. We also see overfitting in the classification plot given
+that our dataset was realtively small compared to the number of NN
+parameters.
 </p>
 </div>
 <hr style="border:2px solid gray">
 </hr>
 </div>
-<div id="ad-hoc-information-retrieval-system-github" class="section level3">
-<h3>Ad Hoc Information Retrieval System<a href="https://github.com/punitjha/Small_ML_NLP_Projects/tree/master/Ad_Hoc_Info"><span style="color:blue"> [GitHub]</span></a></h3>
+<div id="ad-hoc-information-retrieval-system-github"
+class="section level3">
+<h3>Ad Hoc Information Retrieval System<a
+href="https://github.com/punitjha/Small_ML_NLP_Projects/tree/master/Ad_Hoc_Info"><span
+style="color:blue"> [GitHub]</span></a></h3>
 <hr style="border:2px solid gray">
 </hr>
 <!-- ### **Ad Hoc Information Retrieval System**   -->
 <div class="figure" style="text-align: left">
 <img src="info.png" alt=" Architecture of an ad hoc IR system. Source: Jurafsky and Martin 2009, sec. 23.2" width=" 65%" height="65%" />
 <p class="caption">
-Architecture of an ad hoc IR system. Source: Jurafsky and Martin 2009, sec. 23.2
+Architecture of an ad hoc IR system. Source: Jurafsky and Martin 2009,
+sec. 23.2
 </p>
 </div>
 <ul>
-<li>Using 1400 abstracts of journal articles created an information retrieval system that takes in a query and outputs the top matched abstracts using TF-IDF weights and cosine similarity scores.</li>
-<li>The model was trained on the <a href="http://ir.dcs.gla.ac.uk/resources/test_collections/cran/"><span style="color:blue"> Cranfield collection </span></a>. This was the pioneering test collection in allowing precise quantitative measures of information retrieval effectiveness, but is nowadays too small for anything but the most elementary pilot experiments. It contains 1398 abstracts of aerodynamics journal articles, a set of 225 queries, and exhaustive relevance judgments of all (query, document) pairs.</li>
-<li>This project was a part of the ECE 365: Data Science and Engineer course.</li>
-<li>More details of the project can be found in this repository <a href="https://github.com/punitjha/Small_ML_NLP_Projects/tree/master/Ad_Hoc_Info">here</a></li>
+<li>Using 1400 abstracts of journal articles created an information
+retrieval system that takes in a query and outputs the top matched
+abstracts using TF-IDF weights and cosine similarity scores.</li>
+<li>The model was trained on the <a
+href="http://ir.dcs.gla.ac.uk/resources/test_collections/cran/"><span
+style="color:blue"> Cranfield collection </span></a>. This was the
+pioneering test collection in allowing precise quantitative measures of
+information retrieval effectiveness, but is nowadays too small for
+anything but the most elementary pilot experiments. It contains 1398
+abstracts of aerodynamics journal articles, a set of 225 queries, and
+exhaustive relevance judgments of all (query, document) pairs.</li>
+<li>This project was a part of the ECE 365: Data Science and Engineer
+course.</li>
+<li>More details of the project can be found in this repository <a
+href="https://github.com/punitjha/Small_ML_NLP_Projects/tree/master/Ad_Hoc_Info">here</a></li>
 </ul>
 <hr style="border:2px solid gray">
 </hr>
 </div>
 <div id="document-clustering-github" class="section level3">
-<h3>Document Clustering <a href="https://github.com/punitjha/Small_ML_NLP_Projects/blob/master/Document_Clustering/Document_Clustering.ipynb"><span style="color:blue"> [GitHub]</span></a></h3>
+<h3>Document Clustering <a
+href="https://github.com/punitjha/Small_ML_NLP_Projects/blob/master/Document_Clustering/Document_Clustering.ipynb"><span
+style="color:blue"> [GitHub]</span></a></h3>
 <hr style="border:2px solid gray">
 </hr>
 <div class="figure" style="text-align: left">
 <img src="clustering.png" alt=" Principal components of feature data and the clusters  obtained (kmeans and hierarchical clustering) using Scikit learn's PCA" width="70%" height="70%" />
 <p class="caption">
-Principal components of feature data and the clusters obtained (kmeans and hierarchical clustering) using Scikit learn’s PCA
+Principal components of feature data and the clusters obtained (kmeans
+and hierarchical clustering) using Scikit learn’s PCA
 </p>
 </div>
-<p>In this project, we worked with abstracts of research papers published on different aspects of coronaviruses over the years. Our goal was to segement the abstracts into different clusters based on the similarities in the topics that the abstracts talk about.</p>
+<p>In this project, we worked with abstracts of research papers
+published on different aspects of coronaviruses over the years. Our goal
+was to segement the abstracts into different clusters based on the
+similarities in the topics that the abstracts talk about.</p>
 <ul>
-<li>First, used TF-IDF vectorizer to create a feature space to represent the abstracts.</li>
-<li>Used kmeans and hierarchical clustering to creates 3 different clusters and visualize them.</li>
-<li>Analyzed parameters like intra-cluster and inter-cluster distances to access the efficacy of the clustering that we have done.</li>
-<li>Obtained the most important words for each of the clusters that we had created.</li>
+<li>First, used TF-IDF vectorizer to create a feature space to represent
+the abstracts.</li>
+<li>Used kmeans and hierarchical clustering to creates 3 different
+clusters and visualize them.</li>
+<li>Analyzed parameters like intra-cluster and inter-cluster distances
+to access the efficacy of the clustering that we have done.</li>
+<li>Obtained the most important words for each of the clusters that we
+had created.</li>
 </ul>
 <hr style="border:2px solid gray">
 </hr>
 </div>
-<div id="machine-learning-algorithms-using-only-numpy" class="section level3">
+<div id="machine-learning-algorithms-using-only-numpy"
+class="section level3">
 <h3>Machine Learning Algorithms Using only Numpy</h3>
 <hr style="border:2px solid gray">
 </hr>
@@ -733,106 +770,211 @@ Principal components of feature data and the clusters obtained (kmeans and hiera
 <img src="index_both.png" alt=" (a) Comparison of SGD with Momentum or Nesterov Accelerated Gradient, and Adam methods and their rate of convergence. (b) Image compression using PCA" width="500%" height="500%" />
 <p class="caption">
 <ol style="list-style-type: lower-alpha">
-<li>Comparison of SGD with Momentum or Nesterov Accelerated Gradient, and Adam methods and their rate of convergence. (b) Image compression using PCA
+<li>Comparison of SGD with Momentum or Nesterov Accelerated Gradient,
+and Adam methods and their rate of convergence. (b) Image compression
+using PCA
 </p>
 </div></li>
 </ol>
 <ul>
-<li>Implemented ML algorithms from scratch using only Python Numpy. All of these algorithms are run on tiny data sets on a standard CPU laptop. These were part of assignments from CS-446 and CS-498 at UIUC.
+<li>Implemented ML algorithms from scratch using only Python Numpy. All
+of these algorithms are run on tiny data sets on a standard CPU laptop.
+These were part of assignments from CS-446 and CS-498 at UIUC.
 <ul>
-<li>Stochastic Gradient Descent Variants - SGD with Momentum or Nesterov Accelerated Gradient, and Adam. <a href="https://github.com/punitjha/ML-from-Scratch"><span style="color:blue">[GitHub]</span></a></li>
-<li>GMM <a href="https://github.com/punitjha/ML-from-Scratch"><span style="color:blue">[GitHub]</span></a></li>
-<li>HMM <a href="https://github.com/punitjha/ML-from-Scratch"><span style="color:blue">[GitHub]</span></a></li>
-<li>PCA <a href="https://github.com/punitjha/ML-from-Scratch"><span style="color:blue">[GitHub]</span></a></li>
-<li>RNN <a href="https://github.com/punitjha/ML-from-Scratch"><span style="color:blue">[GitHub]</span></a></li>
-<li>Adaboost On Stumps <a href="https://github.com/punitjha/ML-from-Scratch"><span style="color:blue">[GitHub]</span></a></li>
-<li>Feed Forward Neural Network <a href="https://github.com/punitjha/ML-from-Scratch"><span style="color:blue">[GitHub]</span></a></li>
-<li>kNN, LDA and Bayes Classifiers and comparison with corresponding scikit-learn modules. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb"><span style="color:blue"> [GitHub] </span></a></li>
-<li>Mulit-layer Neural Networks (2 and 3 layered NN with SGD and Adam) <a href="https://github.com/punitjha/Multi-Layer-Neural-Networks"><span style="color:blue"> [GitHub] </span></a></li>
-<li>Logistic regression <a href="https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/"><span style="color:blue"> [GitFront] </span></a></li>
-<li>Perceptron <a href="https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/"><span style="color:blue"> [GitFront] </span></a></li>
-<li>SVM <a href="https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/"><span style="color:blue"> [GitFront] </span></a></li>
-<li>Softmax <a href="https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/"><span style="color:blue"> [GitFront] </span></a></li>
+<li>Stochastic Gradient Descent Variants - SGD with Momentum or Nesterov
+Accelerated Gradient, and Adam. <a
+href="https://github.com/punitjha/ML-from-Scratch"><span
+style="color:blue">[GitHub]</span></a></li>
+<li>GMM <a href="https://github.com/punitjha/ML-from-Scratch"><span
+style="color:blue">[GitHub]</span></a></li>
+<li>HMM <a href="https://github.com/punitjha/ML-from-Scratch"><span
+style="color:blue">[GitHub]</span></a></li>
+<li>PCA <a href="https://github.com/punitjha/ML-from-Scratch"><span
+style="color:blue">[GitHub]</span></a></li>
+<li>RNN <a href="https://github.com/punitjha/ML-from-Scratch"><span
+style="color:blue">[GitHub]</span></a></li>
+<li>Adaboost On Stumps <a
+href="https://github.com/punitjha/ML-from-Scratch"><span
+style="color:blue">[GitHub]</span></a></li>
+<li>Feed Forward Neural Network <a
+href="https://github.com/punitjha/ML-from-Scratch"><span
+style="color:blue">[GitHub]</span></a></li>
+<li>kNN, LDA and Bayes Classifiers and comparison with corresponding
+scikit-learn modules. <a
+href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab2_vvv/punit2_lab2.ipynb"><span
+style="color:blue"> [GitHub] </span></a></li>
+<li>Mulit-layer Neural Networks (2 and 3 layered NN with SGD and Adam)
+<a href="https://github.com/punitjha/Multi-Layer-Neural-Networks"><span
+style="color:blue"> [GitHub] </span></a></li>
+<li>Logistic regression <a
+href="https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/"><span
+style="color:blue"> [GitFront] </span></a></li>
+<li>Perceptron <a
+href="https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/"><span
+style="color:blue"> [GitFront] </span></a></li>
+<li>SVM <a
+href="https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/"><span
+style="color:blue"> [GitFront] </span></a></li>
+<li>Softmax <a
+href="https://gitfront.io/r/user-2013142/4f2fa8a5fd85f0e24f1599dab48de75c7d77a387/Linear-Classifiers/"><span
+style="color:blue"> [GitFront] </span></a></li>
 </ul></li>
 </ul>
 <hr style="border:2px solid gray">
 </hr>
-</div>
 <div id="sentiment-analysis-github" class="section level3">
-<h3>Sentiment Analysis <a href="https://github.com/punitjha/Small_ML_NLP_Projects/blob/master/Sentiment%20Analysis/Sentiment%20Analysis.ipynb"><span style="color:blue"> [GitHub]</span></a></h3>
+<h3>Sentiment Analysis <a
+href="https://github.com/punitjha/Small_ML_NLP_Projects/blob/master/Sentiment%20Analysis/Sentiment%20Analysis.ipynb"><span
+style="color:blue"> [GitHub]</span></a></h3>
 <hr style="border:2px solid gray">
 </hr>
 <div class="figure" style="text-align: left">
 <img src="sent_anal.png" alt=" Principal components of feature data and the clusters  obtained (kmeans and hierarchical clustering) using Scikit learn's PCA" width="70%" height="70%" />
 <p class="caption">
-Principal components of feature data and the clusters obtained (kmeans and hierarchical clustering) using Scikit learn’s PCA
+Principal components of feature data and the clusters obtained (kmeans
+and hierarchical clustering) using Scikit learn’s PCA
 </p>
 </div>
-<p>In this project, we worked with IMDB movie reviews and developed different machine learning models to predict a given review as positive or negative.</p>
+<p>In this project, we worked with IMDB movie reviews and developed
+different machine learning models to predict a given review as positive
+or negative.</p>
 <ul>
-<li>Data cleaning was first carried out (removing stopwords, punctuation and digits).</li>
-<li>Used two different approaches to create the feature space. First, we considered the presence/absence of the word (feature) into account. We used 2 classification models, SVM and random forest. Calculated the f1 score, test set accuracy and 10 most ifluential words for each of the models.</li>
-<li>In the 2nd one, we will used TF-IDF vectorization and also includde bigrams in the analysis. We built naive bayes and random forest classifier. Calculated the f1 score, test set accuracy and 10 most ifluential words for each of the models. Also used cross-validation and grid search approach to tune the random forest model.</li>
+<li>Data cleaning was first carried out (removing stopwords, punctuation
+and digits).</li>
+<li>Used two different approaches to create the feature space. First, we
+considered the presence/absence of the word (feature) into account. We
+used 2 classification models, SVM and random forest. Calculated the f1
+score, test set accuracy and 10 most ifluential words for each of the
+models.</li>
+<li>In the 2nd one, we will used TF-IDF vectorization and also includde
+bigrams in the analysis. We built naive bayes and random forest
+classifier. Calculated the f1 score, test set accuracy and 10 most
+ifluential words for each of the models. Also used cross-validation and
+grid search approach to tune the random forest model.</li>
 </ul>
 <hr style="border:2px solid gray">
 </hr>
 </div>
 <div id="topic-modelling-github" class="section level3">
-<h3>Topic Modelling <a href="https://github.com/punitjha/Small_ML_NLP_Projects/blob/master/Topic_Modelling/Topic_Modelling.ipynb"><span style="color:blue"> [GitHub]</span></a></h3>
+<h3>Topic Modelling <a
+href="https://github.com/punitjha/Small_ML_NLP_Projects/blob/master/Topic_Modelling/Topic_Modelling.ipynb"><span
+style="color:blue"> [GitHub]</span></a></h3>
 <hr style="border:2px solid gray">
 </hr>
 <div class="figure" style="text-align: left">
 <img src="topic_modelling.png" alt="An illustration of topic modelling Ref:[Medium article](https://medium.com/analytics-vidhya/how-to-perform-topic-modeling-using-mallet-abc43916560f) " width="60%" height="60%" />
 <p class="caption">
-An illustration of topic modelling Ref:<a href="https://medium.com/analytics-vidhya/how-to-perform-topic-modeling-using-mallet-abc43916560f">Medium article</a>
+An illustration of topic modelling Ref:<a
+href="https://medium.com/analytics-vidhya/how-to-perform-topic-modeling-using-mallet-abc43916560f">Medium
+article</a>
 </p>
 </div>
-<p>In this project, we worked with research papers published on different aspects of coronaviruses over the years. Our goal was to use topic modelling to know different areas each research paper talks about and answer some important questions regarding the viruses.</p>
+<p>In this project, we worked with research papers published on
+different aspects of coronaviruses over the years. Our goal was to use
+topic modelling to know different areas each research paper talks about
+and answer some important questions regarding the viruses.</p>
 <ul>
-<li>First we extractied full body text, abstract and title from each paper and cleaned them.</li>
-<li>Used gensim library to create a LDA topic model on the extracted body texts.</li>
-<li>Used topic modelling and tried to find most relevant papers on aspects like vaccine and respiratory viruses.</li>
+<li>First we extractied full body text, abstract and title from each
+paper and cleaned them.</li>
+<li>Used gensim library to create a LDA topic model on the extracted
+body texts.</li>
+<li>Used topic modelling and tried to find most relevant papers on
+aspects like vaccine and respiratory viruses.</li>
 </ul>
 <hr style="border:2px solid gray">
 </hr>
 </div>
-<div id="machine-learning-nlp-and-text-analysis-using-scikit-learn" class="section level3">
+<div id="machine-learning-nlp-and-text-analysis-using-scikit-learn"
+class="section level3">
 <h3>Machine Learning, NLP, and Text Analysis using Scikit-learn</h3>
 <hr style="border:2px solid gray">
 </hr>
 <div class="figure" style="text-align: left">
 <img src="download.png" alt="Use of [spectral clustering](https://arxiv.org/pdf/0711.0189.pdf) to separate data that K-means cannot. (a) Original data (b) Clustering using K-means (c) Spectral Clustering" width="200%" height="200%" />
 <p class="caption">
-Use of <a href="https://arxiv.org/pdf/0711.0189.pdf">spectral clustering</a> to separate data that K-means cannot. (a) Original data (b) Clustering using K-means (c) Spectral Clustering
+Use of <a href="https://arxiv.org/pdf/0711.0189.pdf">spectral
+clustering</a> to separate data that K-means cannot. (a) Original data
+(b) Clustering using K-means (c) Spectral Clustering
 </p>
 </div>
 <ul>
-<li>This is a collection of jupyter notebooks that were used to learn Data Science and ML as a part of ECE 365: Data Science &amp; Eng. course. This involved using modules and methods avaliable in the scikit-learn package for various ML tasks and comparing its output againt results obtained from codes written from scratch. The Ocatave repos are from the ML course by Andrew Ng.
+<li>This is a collection of jupyter notebooks that were used to learn
+Data Science and ML as a part of ECE 365: Data Science &amp; Eng.
+course. This involved using modules and methods avaliable in the
+scikit-learn package for various ML tasks and comparing its output
+againt results obtained from codes written from scratch. The Ocatave
+repos are from the ML course by Andrew Ng.
 <ul>
-<li><strong>Machine Learning</strong> <!-- - k-Nearest Neighbors, Bayes Classifiers, and Linear Discriminant Analysis. [[Jupyter Notebook Link]]() -->
+<li><strong>Machine Learning</strong>
+<!-- - k-Nearest Neighbors, Bayes Classifiers, and Linear Discriminant Analysis. [[Jupyter Notebook Link]]() -->
 <ul>
-<li>Naive Bayes, Logistic Regression, and Support Vector Machines. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab3_vvv/punit2_lab3.ipynb">[Jupyter Notebook Link]</a></li>
-<li>K-means clustering, Vector Quantization, Nearest Neighbors Classification, and Linear Regression. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab4_vvv/punit2_lab4.ipynb">[Jupyter Notebook Link]</a></li>
-<li>Eigen decomposition, Singular Value Decomposition, and Principal Component Analysis. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab5_vvv/punit2_lab5.ipynb">[Jupyter Notebook Link]</a></li>
-<li>Intro to Octave, Linear regression with one variable, Gradient Descent, and Linear regression with multiple variables.<a href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex1/ex1">[Octave ]</a></li>
-<li>Logistic Regression, Regularized logistic regression, and Plotting the decision boundary. <a href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex2/ex2">[Octave]</a></li>
-<li>Multi-class Classification/ One-vs-all Classification and Neural Networks. <a href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex3/ex3">[Octave]</a></li>
-<li>Neural Networks, Backpropagation, and Visualizing the hidden layer. <a href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex4/ex4">[Octave]</a></li>
-<li>Regularized Linear Regression, Bias-variance and learning curves, Polynomial regression, Adjusting the regularization parameter, Computing test set error, and visualization. <a href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex5/ex5">[Octave]</a></li>
-<li>Support Vector Machines and Spam Classification. <a href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex6/ex6">[Octave]</a></li>
-<li>K-means Clustering and Image compression with K-means. <a href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex7/ex7">[Octave]</a></li>
+<li>Naive Bayes, Logistic Regression, and Support Vector Machines. <a
+href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab3_vvv/punit2_lab3.ipynb">[Jupyter
+Notebook Link]</a></li>
+<li>K-means clustering, Vector Quantization, Nearest Neighbors
+Classification, and Linear Regression. <a
+href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab4_vvv/punit2_lab4.ipynb">[Jupyter
+Notebook Link]</a></li>
+<li>Eigen decomposition, Singular Value Decomposition, and Principal
+Component Analysis. <a
+href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Lab5_vvv/punit2_lab5.ipynb">[Jupyter
+Notebook Link]</a></li>
+<li>Intro to Octave, Linear regression with one variable, Gradient
+Descent, and Linear regression with multiple variables.<a
+href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex1/ex1">[Octave
+]</a></li>
+<li>Logistic Regression, Regularized logistic regression, and Plotting
+the decision boundary. <a
+href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex2/ex2">[Octave]</a></li>
+<li>Multi-class Classification/ One-vs-all Classification and Neural
+Networks. <a
+href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex3/ex3">[Octave]</a></li>
+<li>Neural Networks, Backpropagation, and Visualizing the hidden layer.
+<a
+href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex4/ex4">[Octave]</a></li>
+<li>Regularized Linear Regression, Bias-variance and learning curves,
+Polynomial regression, Adjusting the regularization parameter, Computing
+test set error, and visualization. <a
+href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex5/ex5">[Octave]</a></li>
+<li>Support Vector Machines and Spam Classification. <a
+href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex6/ex6">[Octave]</a></li>
+<li>K-means Clustering and Image compression with K-means. <a
+href="https://github.com/punitjha/Machine_Learning_Coursera/tree/master/machine-learning-ex7/ex7">[Octave]</a></li>
 </ul></li>
 <li><strong>Natural Language Processing</strong>
 <ul>
-<li>Text processing and regular expressions, word frequencies and language, manipulate corpora and plot insightful graphs. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab1/punit2/Lab1/punit2.ipynb">[Jupyter Notebook Link]</a></li>
-<li>Tokenization, bag-of-words representation, logistic regression classifier (discriminative model) using PyTorch. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab2/punit2/NLPLab2/Lab2_NLP.ipynb">[Jupyter Notebook Link]</a></li>
-<li>N-gram model, generate representative sentences, study of the effect of training data size, and language model complexity (n-gram size), on the modeling capacity of a language model. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab3/punit2/NLPLab3/NLPLab3.ipynb">[Jupyter Notebook Link]</a></li>
-<li>Count-Based Word Vectors, Co-occurrence_matrix, PCA, plot-embeddings, Word2Vec Word Embeddings, Cosine Similarity, Polysemous Words, Synonyms &amp; Antonyms, Solving Analogies with Word Vectors, Guided Analysis of Bias in Word Vectors, and Independent Analysis of Bias in Word Vectors. <a href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab4/punit2/Lab4/lab4.ipynb">[Jupyter Notebook Link]</a> <!--   - **Text Analysis** --> <!--       - Syntagmatic word association mining. --> <!-- [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-1/punit2_lab1.ipynb) --> <!--       - Sentiment analysis. --> <!-- [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-2/punit2_lab2.ipynb) --> <!--       - Document Clustering using TF-IDF vectorizer. --> <!-- [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-3/punit2_lab3.ipynb) --> <!--       - Topic Modelling: Use of Gensim library to create a LDA topic model. --> <!-- [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-4/punit2_lab4.ipynb) --></li>
+<li>Text processing and regular expressions, word frequencies and
+language, manipulate corpora and plot insightful graphs. <a
+href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab1/punit2/Lab1/punit2.ipynb">[Jupyter
+Notebook Link]</a></li>
+<li>Tokenization, bag-of-words representation, logistic regression
+classifier (discriminative model) using PyTorch. <a
+href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab2/punit2/NLPLab2/Lab2_NLP.ipynb">[Jupyter
+Notebook Link]</a></li>
+<li>N-gram model, generate representative sentences, study of the effect
+of training data size, and language model complexity (n-gram size), on
+the modeling capacity of a language model. <a
+href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab3/punit2/NLPLab3/NLPLab3.ipynb">[Jupyter
+Notebook Link]</a></li>
+<li>Count-Based Word Vectors, Co-occurrence_matrix, PCA,
+plot-embeddings, Word2Vec Word Embeddings, Cosine Similarity, Polysemous
+Words, Synonyms &amp; Antonyms, Solving Analogies with Word Vectors,
+Guided Analysis of Bias in Word Vectors, and Independent Analysis of
+Bias in Word Vectors. <a
+href="https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/NLP_Lab4/punit2/Lab4/lab4.ipynb">[Jupyter
+Notebook Link]</a> <!--   - **Text Analysis** -->
+<!--       - Syntagmatic word association mining. -->
+<!-- [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-1/punit2_lab1.ipynb) -->
+<!--       - Sentiment analysis. -->
+<!-- [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-2/punit2_lab2.ipynb) -->
+<!--       - Document Clustering using TF-IDF vectorizer. -->
+<!-- [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-3/punit2_lab3.ipynb) -->
+<!--       - Topic Modelling: Use of Gensim library to create a LDA topic model. -->
+<!-- [[Jupyter Notebook Link]](https://github.com/punitjha/ECE365-Data_Science_and_Engineering/blob/master/Text_Analysis_Lab-4/punit2_lab4.ipynb) --></li>
 </ul></li>
 </ul></li>
 </ul>
 <hr />
-</div>
 </div>
 <div id="programming-projects" class="section level2">
 <h2><strong>Programming Projects</strong></h2>
@@ -844,28 +986,44 @@ Use of <a href="https://arxiv.org/pdf/0711.0189.pdf">spectral clustering</a> to 
 </hr>
 <p><img src="parallel_1.png" width="80%" height="80%" style="display: block; margin: auto auto auto 0;" /></p>
 <ul>
-<li><strong>Design and Implementations of Parallel OpenMP and MPI LU factorization: Application to Finite Difference Method.</strong>
+<li><strong>Design and Implementations of Parallel OpenMP and MPI LU
+factorization: Application to Finite Difference Method.</strong>
 <ul>
-<li>In this project, I with my group presented six different OpenMP and MPI based parallel algorithms for the LU factorization of dense matrices.</li>
-<li>Please find the details <a href="https://drive.google.com/file/d/1I17RTZGtopQQOAkk9z2MUyQEGYWmYsRN/view?usp=sharing">here</a></li>
-<li>Codes <a href="https://github.com/punitjha/CS_420_Project">here</a></li>
+<li>In this project, I with my group presented six different OpenMP and
+MPI based parallel algorithms for the LU factorization of dense
+matrices.</li>
+<li>Please find the details <a
+href="https://drive.google.com/file/d/1I17RTZGtopQQOAkk9z2MUyQEGYWmYsRN/view?usp=sharing">here</a></li>
+<li>Codes <a
+href="https://github.com/punitjha/CS_420_Project">here</a></li>
 </ul></li>
-<li><strong>Optimization of a dense matrix-matrix multiplication routine and understanding its performance behavior.</strong>
+<li><strong>Optimization of a dense matrix-matrix multiplication routine
+and understanding its performance behavior.</strong>
 <ul>
-<li>Parallel programming machine project on dense matrix-matrix multiplication and cache performance.</li>
-<li>Please find the details <a href="https://drive.google.com/file/d/1IvqxqR6E6_CINKB8OunAmBpQvYcb_nPo/view?usp=sharing">here</a></li>
+<li>Parallel programming machine project on dense matrix-matrix
+multiplication and cache performance.</li>
+<li>Please find the details <a
+href="https://drive.google.com/file/d/1IvqxqR6E6_CINKB8OunAmBpQvYcb_nPo/view?usp=sharing">here</a></li>
 <li>Codes <a href="https://github.com/punitjha/CS_420_MPs">here</a></li>
 </ul></li>
-<li><strong>Utilization of multi-core CPU using OpenMP and MPI to implement a dense matrix-matrix multiply (MM) routine and understanding the performance behavior.</strong>
+<li><strong>Utilization of multi-core CPU using OpenMP and MPI to
+implement a dense matrix-matrix multiply (MM) routine and understanding
+the performance behavior.</strong>
 <ul>
-<li>Usage of PAPI to measure cache misses and to analyze the performance.</li>
-<li>Please find the details <a href="https://drive.google.com/file/d/1yYzdTwtnV8-4xoFCRmFnWe275Ny0dOx9/view?usp=sharing">here</a></li>
+<li>Usage of PAPI to measure cache misses and to analyze the
+performance.</li>
+<li>Please find the details <a
+href="https://drive.google.com/file/d/1yYzdTwtnV8-4xoFCRmFnWe275Ny0dOx9/view?usp=sharing">here</a></li>
 <li>Codes <a href="https://github.com/punitjha/CS_420_MPs">here</a></li>
 </ul></li>
-<li><strong>Utilization of multi-core CPU using OpenMP and a GPU using OpenACC to implement a matrix-multiply routine for multiplying a band matrix by a dense matrix.</strong>
+<li><strong>Utilization of multi-core CPU using OpenMP and a GPU using
+OpenACC to implement a matrix-multiply routine for multiplying a band
+matrix by a dense matrix.</strong>
 <ul>
-<li>Investigation of the performance impact of varying the band and matrix size.</li>
-<li>Please find the details <a href="https://drive.google.com/file/d/1Pb781ThU_9EG2uDTm1NB4uaETlWU7GH4/view?usp=sharing">here</a></li>
+<li>Investigation of the performance impact of varying the band and
+matrix size.</li>
+<li>Please find the details <a
+href="https://drive.google.com/file/d/1Pb781ThU_9EG2uDTm1NB4uaETlWU7GH4/view?usp=sharing">here</a></li>
 <li>Codes <a href="https://github.com/punitjha/CS_420_MPs">here</a></li>
 </ul></li>
 </ul>
@@ -879,30 +1037,40 @@ Use of <a href="https://arxiv.org/pdf/0711.0189.pdf">spectral clustering</a> to 
 <div class="figure" style="text-align: left">
 <img src="lol_ok.png" alt="Images taken from CS 400 UIUC and [GeeksForGeeks](https://www.geeksforgeeks.org/difference-between-general-tree-and-binary-tree/)" width="80%" height="80%" />
 <p class="caption">
-Images taken from CS 400 UIUC and <a href="https://www.geeksforgeeks.org/difference-between-general-tree-and-binary-tree/">GeeksForGeeks</a>
+Images taken from CS 400 UIUC and <a
+href="https://www.geeksforgeeks.org/difference-between-general-tree-and-binary-tree/">GeeksForGeeks</a>
 </p>
 </div>
 <ul>
 <li><strong>Image transformation </strong>
 <ul>
-<li>Intro to object oriented programming in C++. It involved constructions of classes, inheritance, memory management etc.</li>
-<li>Please find the details <a href="https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Image_Transformation/image-transform-instructions.pdf">here</a></li>
-<li>Codes <a href="https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Image_Transformation/image-transform-given-files">here</a></li>
+<li>Intro to object oriented programming in C++. It involved
+constructions of classes, inheritance, memory management etc.</li>
+<li>Please find the details <a
+href="https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Image_Transformation/image-transform-instructions.pdf">here</a></li>
+<li>Codes <a
+href="https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Image_Transformation/image-transform-given-files">here</a></li>
 </ul></li>
 <li><strong>Generic tree and tree traversal</strong>
 <ul>
-<li>Please find the details <a href="https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Generic_Tree_and_Tree_Traversal_Project/tree_traversal_project_instructions.pdf">here</a></li>
-<li>Codes <a href="https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Generic_Tree_and_Tree_Traversal_Project/GenericTree_starter_files/GenericTree">here</a></li>
+<li>Please find the details <a
+href="https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Generic_Tree_and_Tree_Traversal_Project/tree_traversal_project_instructions.pdf">here</a></li>
+<li>Codes <a
+href="https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Generic_Tree_and_Tree_Traversal_Project/GenericTree_starter_files/GenericTree">here</a></li>
 </ul></li>
 <li><strong>Unordered Maps</strong>
 <ul>
-<li>Please find the details <a href="https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Unordered_Maps/UnorderedMap_project_instructions.pdf">here</a></li>
-<li>Codes <a href="https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Unordered_Maps/UnorderedMap_starter_files/UnorderedMap">here</a></li>
+<li>Please find the details <a
+href="https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Unordered_Maps/UnorderedMap_project_instructions.pdf">here</a></li>
+<li>Codes <a
+href="https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Unordered_Maps/UnorderedMap_starter_files/UnorderedMap">here</a></li>
 </ul></li>
 <li><strong>Linked List and Merge Sort</strong>
 <ul>
-<li>Please find the details <a href="https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Linked_List_Merge_Sort/LinkedList_project_instructions.pdf">here</a></li>
-<li>Codes <a href="https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Linked_List_Merge_Sort/LinkedList_starter_files/LinkedList">here</a></li>
+<li>Please find the details <a
+href="https://github.com/punitjha/Data_Structures_Cplusplus/blob/master/Linked_List_Merge_Sort/LinkedList_project_instructions.pdf">here</a></li>
+<li>Codes <a
+href="https://github.com/punitjha/Data_Structures_Cplusplus/tree/master/Linked_List_Merge_Sort/LinkedList_starter_files/LinkedList">here</a></li>
 </ul></li>
 </ul>
 <hr style="border:2px solid gray">
@@ -931,39 +1099,64 @@ Images taken from CS 400 UIUC and <a href="https://www.geeksforgeeks.org/differe
 <ul>
 <li>Molecular Geometry Analysis.
 <ul>
-<li><a href="https://drive.google.com/file/d/1ucsnJL2St-DKmW5cs6o_3M0TKxbly09p/view?usp=sharing">Instructions</a> and <a href="https://github.com/punitjha/Crawdad_Project_4">Codes</a></li>
+<li><a
+href="https://drive.google.com/file/d/1ucsnJL2St-DKmW5cs6o_3M0TKxbly09p/view?usp=sharing">Instructions</a>
+and <a
+href="https://github.com/punitjha/Crawdad_Project_4">Codes</a></li>
 </ul></li>
 <li>Harmonic Vibrational Analysis.
 <ul>
-<li><a href="https://drive.google.com/file/d/1rTu-TCD8vZMX0CsE9NFp1brANDxAqt5x/view?usp=sharing">Instructions</a> and <a href="https://github.com/punitjha/Crawdad_Project_3">Codes</a></li>
+<li><a
+href="https://drive.google.com/file/d/1rTu-TCD8vZMX0CsE9NFp1brANDxAqt5x/view?usp=sharing">Instructions</a>
+and <a
+href="https://github.com/punitjha/Crawdad_Project_3">Codes</a></li>
 </ul></li>
 <li>The Hartree-Fock Self-Consistent Field Method.
 <ul>
-<li><a href="https://drive.google.com/file/d/1sIRmEjvBEmPc7N1bsYVXyuu1kVwnSsYz/view?usp=sharing">Instructions</a> and <a href="https://github.com/punitjha/Crawdad_Project_2">Codes</a></li>
+<li><a
+href="https://drive.google.com/file/d/1sIRmEjvBEmPc7N1bsYVXyuu1kVwnSsYz/view?usp=sharing">Instructions</a>
+and <a
+href="https://github.com/punitjha/Crawdad_Project_2">Codes</a></li>
 </ul></li>
 <li>The Second-Order Möller-Plesset Perturbation Theory (MP2) Energy.
 <ul>
-<li><a href="https://drive.google.com/file/d/1zDiOA2GHTFlNxmCZSjk4dJDEQ-xe4-4x/view?usp=sharing">Instructions</a> and <a href="https://github.com/punitjha/Crawdad_Project_1">Codes</a></li>
+<li><a
+href="https://drive.google.com/file/d/1zDiOA2GHTFlNxmCZSjk4dJDEQ-xe4-4x/view?usp=sharing">Instructions</a>
+and <a
+href="https://github.com/punitjha/Crawdad_Project_1">Codes</a></li>
 </ul></li>
-<li>Hückel and Su-Schrieffer-Heeger band structures for 1D and 2D solids.
+<li>Hückel and Su-Schrieffer-Heeger band structures for 1D and 2D
+solids.
 <ul>
-<li><a href="https://drive.google.com/file/d/13CjQVDkpwSTJEk4sAuKDva8kw8z89CHt/view?usp=sharing">Report</a> and <a href="https://github.com/punitjha/CHEM_548_Project_3">Codes</a></li>
+<li><a
+href="https://drive.google.com/file/d/13CjQVDkpwSTJEk4sAuKDva8kw8z89CHt/view?usp=sharing">Report</a>
+and <a
+href="https://github.com/punitjha/CHEM_548_Project_3">Codes</a></li>
 </ul></li>
-<li>Wave packet propagation, phase and group velocities, Ehrenfest theorem, convolution theorem, path integrals.
+<li>Wave packet propagation, phase and group velocities, Ehrenfest
+theorem, convolution theorem, path integrals.
 <ul>
-<li><a href="https://drive.google.com/file/d/1_XcSwoqlycy-i354jd4TW_kfLtEWTs8P/view?usp=sharing">Report</a> and <a href="https://github.com/punitjha/CHEM_548_Project_2">Codes</a></li>
+<li><a
+href="https://drive.google.com/file/d/1_XcSwoqlycy-i354jd4TW_kfLtEWTs8P/view?usp=sharing">Report</a>
+and <a
+href="https://github.com/punitjha/CHEM_548_Project_2">Codes</a></li>
 </ul></li>
 <li>Time-dependent perturbation theory and spectroscopy.
 <ul>
-<li><a href="https://drive.google.com/file/d/1zz3pD4KzFYVm5nen6yhf8u-hqnGXjfF5/view?usp=sharing">Report</a> and <a href="https://github.com/punitjha/CHEM_548_Project_1">Codes</a></li>
+<li><a
+href="https://drive.google.com/file/d/1zz3pD4KzFYVm5nen6yhf8u-hqnGXjfF5/view?usp=sharing">Report</a>
+and <a
+href="https://github.com/punitjha/CHEM_548_Project_1">Codes</a></li>
 </ul></li>
 </ul></li>
 </ul>
 <hr />
 </div>
 </div>
-<div id="chemistry-research-projects-and-summer-internships" class="section level2">
-<h2><strong>Chemistry Research Projects and Summer Internships</strong></h2>
+<div id="chemistry-research-projects-and-summer-internships"
+class="section level2">
+<h2><strong>Chemistry Research Projects and Summer
+Internships</strong></h2>
 <hr style="border:2px solid gray">
 </hr>
 <div id="ph.d.-research-project" class="section level3">
@@ -971,30 +1164,47 @@ Images taken from CS 400 UIUC and <a href="https://www.geeksforgeeks.org/differe
 <hr style="border:2px solid gray">
 </hr>
 <div class="figure" style="text-align: left">
-<img src="phd_image.PNG" alt="First order corrections to chemical potential, grand potential and internal energy at a finite-temperature in a grand canonical ensemble" width="80%" height="80%" />
+<img src="phd_image.png" alt="First order corrections to chemical potential, grand potential and internal energy at a finite-temperature in a grand canonical ensemble" width="80%" height="80%" />
 <p class="caption">
-First order corrections to chemical potential, grand potential and internal energy at a finite-temperature in a grand canonical ensemble
+First order corrections to chemical potential, grand potential and
+internal energy at a finite-temperature in a grand canonical ensemble
 </p>
 </div>
 <ul>
-<li><strong>University of Illinois at Urbana-Champaign, Urbana-Champaign, IL.</strong>
+<li><strong>University of Illinois at Urbana-Champaign,
+Urbana-Champaign, IL.</strong>
 <ul>
-<li><strong>Ph.D. Student and Teaching Assistant, Aug 2016 - Present</strong></li>
+<li><strong>Ph.D. Student and Teaching Assistant, Aug 2016 -
+Present</strong></li>
 <li><strong>Summary</strong>:
 <ul>
-<li><strong>Finite-temperature many-body perturbation theory (FT-MBPT)</strong>: FT-MBPT is a theory to calculate the thermodynamic parameters of the grand canonical system at a given temperature.</li>
-<li>I implemented the <span class="math inline">\(\lambda\)</span>-variation method to calculate the <span class="math inline">\(n\)</span>th-order corrections to grand potential and internal energy using the FT-MBPT formalism which showed it is mathematically inconsistent and does not conserve charge.</li>
-<li>Derived the correct analytic formulas for FT-MBPT using another ansatz wherein charge was conserved. Implemented the FT-MBPT in a canonical ensemble and derived semi-analytic formulas.</li>
+<li><strong>Finite-temperature many-body perturbation theory
+(FT-MBPT)</strong>: FT-MBPT is a theory to calculate the thermodynamic
+parameters of the grand canonical system at a given temperature.</li>
+<li>I implemented the <span
+class="math inline">\(\lambda\)</span>-variation method to calculate the
+<span class="math inline">\(n\)</span>th-order corrections to grand
+potential and internal energy using the FT-MBPT formalism which showed
+it is mathematically inconsistent and does not conserve charge.</li>
+<li>Derived the correct analytic formulas for FT-MBPT using another
+ansatz wherein charge was conserved. Implemented the FT-MBPT in a
+canonical ensemble and derived semi-analytic formulas.</li>
 </ul></li>
-<li><strong>Skills Acquired:</strong> Acquired knowledge of  and DFT electronic structure methods. Learned about machine learning algorithms. Learned to program in Python and enhanced my programming skills in C++ and FORTRAN.</li>
+<li><strong>Skills Acquired:</strong> Acquired knowledge of and DFT
+electronic structure methods. Learned about machine learning algorithms.
+Learned to program in Python and enhanced my programming skills in C++
+and FORTRAN.</li>
 </ul></li>
 </ul>
 <div id="detailed-summary" class="section level4">
 <h4><strong>Detailed Summary</strong></h4>
 <ul>
-<li>Please find the details of my Ph.D. project <a href="https://drive.google.com/file/d/1gYTqQoy4uCIJNqHBbMloC61JV3wZPn6w/view?usp=sharing">here</a>.</li>
+<li>Please find the details of my Ph.D. project <a
+href="https://drive.google.com/file/d/1gYTqQoy4uCIJNqHBbMloC61JV3wZPn6w/view?usp=sharing">here</a>.</li>
 </ul>
-<p><!-- - Research conducted at the University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present.  --> <!--    - **Topic**: Finite-temperature many-body perturbation theory. --> <!--    - More details [here](https://punitjha.github.io/phd_project.html). --></p>
+<p><!-- - Research conducted at the University of Illinois at Urbana-Champaign, Urbana-Champaign, IL, Aug 2016 - Present.  -->
+<!--    - **Topic**: Finite-temperature many-body perturbation theory. -->
+<!--    - More details [here](https://punitjha.github.io/phd_project.html). --></p>
 <hr style="border:2px solid gray">
 </hr>
 </div>
@@ -1004,10 +1214,13 @@ First order corrections to chemical potential, grand potential and internal ener
 <hr style="border:2px solid gray">
 </hr>
 <ul>
-<li>Research conducted at the National Institute of Science Education and Research, Bhubaneswar, India, Aug 2014 - June 2016.
+<li>Research conducted at the National Institute of Science Education
+and Research, Bhubaneswar, India, Aug 2014 - June 2016.
 <ul>
-<li><strong>Topic</strong>: Diagonal suppressed constant time Correlation Spectroscopy (COSY).</li>
-<li>More details <a href="https://punitjha.github.io/msc_project.html">here</a>.</li>
+<li><strong>Topic</strong>: Diagonal suppressed constant time
+Correlation Spectroscopy (COSY).</li>
+<li>More details <a
+href="https://punitjha.github.io/msc_project.html">here</a>.</li>
 </ul></li>
 </ul>
 <hr style="border:2px solid gray">
@@ -1020,37 +1233,60 @@ First order corrections to chemical potential, grand potential and internal ener
 <ol style="list-style-type: decimal">
 <li><strong>Undergraduate Summer Intern- 2015</strong>
 <ul>
-<li>Research conducted at the University of Calgary, Calgary, Canada, May 2015 - Aug 2015.
+<li>Research conducted at the University of Calgary, Calgary, Canada,
+May 2015 - Aug 2015.
 <ul>
 <li><strong>Topic</strong>: Dynamics of gas-hydrate nucleation.</li>
-<li>More details <a href="https://punitjha.github.io/calgary.html">here</a>.</li>
+<li>More details <a
+href="https://punitjha.github.io/calgary.html">here</a>.</li>
 </ul></li>
 </ul></li>
 <li><strong>Undergraduate Summer Intern- 2014</strong>
 <ul>
-<li>Research conducted at the Indian Institute of Technology- Bombay, Mumbai, India, May 2014 - Aug 2014.
+<li>Research conducted at the Indian Institute of Technology- Bombay,
+Mumbai, India, May 2014 - Aug 2014.
 <ul>
 <li><strong>Topic</strong>: Quantum reactive flux theory.</li>
-<li>More details <a href="https://punitjha.github.io/iit_b.html">here</a>.</li>
+<li>More details <a
+href="https://punitjha.github.io/iit_b.html">here</a>.</li>
 </ul></li>
 </ul></li>
 <li><strong>Undergraduate Summer Intern- 2013</strong>
 <ul>
-<li>Research conducted at the National Institute of Science Education and Research, Bhubaneswar, India, May 2013 - Aug 2013.
+<li>Research conducted at the National Institute of Science Education
+and Research, Bhubaneswar, India, May 2013 - Aug 2013.
 <ul>
-<li><strong>Topic</strong>: Reactive molecular dynamics of hydrocarbon dissociation on Ni surface.</li>
-<li>More details <a href="https://punitjha.github.io/niser_summer.html">here</a>.</li>
+<li><strong>Topic</strong>: Reactive molecular dynamics of hydrocarbon
+dissociation on Ni surface.</li>
+<li>More details <a
+href="https://punitjha.github.io/niser_summer.html">here</a>.</li>
 </ul></li>
 </ul></li>
 </ol>
 <hr />
-<p><!--   - Reactive molecular dynamics of hydrocarbon dissociation on Ni surface: Carried out reactive dynamics simulations of the adsorption and decomposition of CH\textsubscript{4} molecules interacting with a Ni(100) surface. Studied the temperature dependence of chemisorption of CH\textsubscript{4} by breakage of C-H bonds that leads to the formation of CH\textsubscript{3} and H radical on a Ni(100) surface. --> <!-- - **Skills Acquired:** --> <!--         Learned programming in FORTRAN 90 and how to carry out quantum mechanical simulations using ReaxFF. --></p>
+<p><!--   - Reactive molecular dynamics of hydrocarbon dissociation on Ni surface: Carried out reactive dynamics simulations of the adsorption and decomposition of CH\textsubscript{4} molecules interacting with a Ni(100) surface. Studied the temperature dependence of chemisorption of CH\textsubscript{4} by breakage of C-H bonds that leads to the formation of CH\textsubscript{3} and H radical on a Ni(100) surface. -->
+<!-- - **Skills Acquired:** -->
+<!--         Learned programming in FORTRAN 90 and how to carry out quantum mechanical simulations using ReaxFF. --></p>
 <!--     - Finite-temperature many-body perturbation theory (FT-MBPT): FT-MBPT is a theory to calculate the thermodynamic parameters of the grand canonical system at a given temperature.  -->
-<p><!--     - I implemented the $\lambda$-variation method to  calculate the $n$th-order corrections to grand potential and internal energy using the FT-MBPT formalism which showed it is mathematically inconsistent and does not conserve charge.  --> <!--     - Derived the correct analytic formulas for FT-MBPT using another ansatz wherein charge was conserved. --> <!--     Implemented the FT-MBPT in a canonical ensemble and derived semi-analytic formulas. --> <!-- - **Original Research Proposal (ORP)** --> <!--       - Developed an ORP on the problem of inclusion of long-range (electrostatic) interactions in machine learning algorithms. Analyzed different neural network schemes,            especially deep high-dimensional neural networks (HDNNs), and whether they can efficiently learn and predict molecular charges learned from various charge partitioning schemes. --> <!--     - Studied different charge partitioning schemes like Hirshfeld, Charge Model 5, Merz-Singh-Kollman, and Natural Bonding Orbital methods used in molecular dynamics              simulations. --> <!--     - Proposed modifications to mathematical formulation and structure of HDNNs to be able to better predict  molecular charges, computational cost for implementing the            project, potential  setbacks, and alternate plans for the project. --> <!-- - **Skills Acquired:** --> <!--         Acquired knowledge of \textit{ab initio} and DFT electronic structure methods. Learned about machine learning algorithms. Learned to program in Python and enhanced           my programming skills in C++ and FORTRAN. --></p>
+<p><!--     - I implemented the $\lambda$-variation method to  calculate the $n$th-order corrections to grand potential and internal energy using the FT-MBPT formalism which showed it is mathematically inconsistent and does not conserve charge.  -->
+<!--     - Derived the correct analytic formulas for FT-MBPT using another ansatz wherein charge was conserved. -->
+<!--     Implemented the FT-MBPT in a canonical ensemble and derived semi-analytic formulas. -->
+<!-- - **Original Research Proposal (ORP)** -->
+<!--       - Developed an ORP on the problem of inclusion of long-range (electrostatic) interactions in machine learning algorithms. Analyzed different neural network schemes,            especially deep high-dimensional neural networks (HDNNs), and whether they can efficiently learn and predict molecular charges learned from various charge partitioning schemes. -->
+<!--     - Studied different charge partitioning schemes like Hirshfeld, Charge Model 5, Merz-Singh-Kollman, and Natural Bonding Orbital methods used in molecular dynamics              simulations. -->
+<!--     - Proposed modifications to mathematical formulation and structure of HDNNs to be able to better predict  molecular charges, computational cost for implementing the            project, potential  setbacks, and alternate plans for the project. -->
+<!-- - **Skills Acquired:** -->
+<!--         Acquired knowledge of \textit{ab initio} and DFT electronic structure methods. Learned about machine learning algorithms. Learned to program in Python and enhanced           my programming skills in C++ and FORTRAN. --></p>
 <p><!-- ---     --></p>
-<p><!--   - Diagonal suppressed constant time Correlation Spectroscopy (COSY): Worked on a novel NMR pulse sequence to achieve diagonal suppressed COSY (correlation spectroscopy) spectra with high sensitivity and absorptive cross peak line-shapes.              --> <!--   - Carried out simulations and  product operator  calculations for 2, 3, and 4 spin systems using the novel NMR pulse sequence. --> <!--   - Implemented various optimization strategies for the pulse sequence that included the addition of water suppression module, removing axial and multiple quantum peaks by using gradient fields, etc.  --> <!-- - **Skills Acquired:** --> <!--         Acquired programming skills to program in the TopSpin 2.1 programming language and  learned to how to perform 1D, 2D NMR experiments on a 400 MHz spectrometer. --></p>
+<p><!--   - Diagonal suppressed constant time Correlation Spectroscopy (COSY): Worked on a novel NMR pulse sequence to achieve diagonal suppressed COSY (correlation spectroscopy) spectra with high sensitivity and absorptive cross peak line-shapes.              -->
+<!--   - Carried out simulations and  product operator  calculations for 2, 3, and 4 spin systems using the novel NMR pulse sequence. -->
+<!--   - Implemented various optimization strategies for the pulse sequence that included the addition of water suppression module, removing axial and multiple quantum peaks by using gradient fields, etc.  -->
+<!-- - **Skills Acquired:** -->
+<!--         Acquired programming skills to program in the TopSpin 2.1 programming language and  learned to how to perform 1D, 2D NMR experiments on a 400 MHz spectrometer. --></p>
 <p><!-- ---     --></p>
-<p><!-- - Quantum reactive flux theory: Studied the quantum analog of classical non-Markovian Kramers' equation and the phase space distribution function formulation of the method of reactive flux in the memory friction regime. Analyzed quantum Kramers' equation for energy diffusion and barrier crossing dynamics in the high-friction regime. --> <!--  - **Skills Acquired:** --> <!--        Acquired skills to use Mathematica for solving integrals and numerical analysis. Learned mathematical methods in physics. --></p>
+<p><!-- - Quantum reactive flux theory: Studied the quantum analog of classical non-Markovian Kramers' equation and the phase space distribution function formulation of the method of reactive flux in the memory friction regime. Analyzed quantum Kramers' equation for energy diffusion and barrier crossing dynamics in the high-friction regime. -->
+<!--  - **Skills Acquired:** -->
+<!--        Acquired skills to use Mathematica for solving integrals and numerical analysis. Learned mathematical methods in physics. --></p>
 <p><!--   ---   --></p>
 <!--      -->
 <!--       - Dynamics of gas-hydrate nucleation: Wrote C++  codes to study the probability distribution of lifetime of gas hydrate cages in the molecular dynamics simulation of  incipient hydrates starting from a CH\textsubscript{4}/H\textsubscript{2}S bubble in liquid H\textsubscript{2}O in a 3D box. -->
@@ -1061,11 +1297,12 @@ First order corrections to chemical potential, grand potential and internal ener
 <!--   ---   -->
 </div>
 </div>
-
-
-
 </div>
 </div>
+</div>
+
+
+
 
 </div>
 
@@ -1073,7 +1310,7 @@ First order corrections to chemical potential, grand potential and internal ener
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -1091,39 +1328,13 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

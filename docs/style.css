@@ -1,7 +1,72 @@
-img {
-  height: 350px;
-  width: 250px;
-  display: block;
-  margin: 20px;
-  float: right;
+
+/*----------------BODY BACKGROUND---------------*/
+body {
+    background-color: #f8f9fa; /* Light grayish-white background */
+    color: #212529; /* Standard dark text color for readability */
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
+    margin: 0;
+    padding: 0;
 }
+
+/* Navbar background */
+.navbar-default {
+    background-color: #343a40; /* Dark navbar to contrast light body */
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #adb5bd; /* Light gray hover effect for links */
+}
+
+/* Dropdown menu */
+.navbar-default .dropdown-menu {
+    background-color: #ffffff; /* White dropdown menu */
+    border: 1px solid #dee2e6; /* Subtle border for dropdown */
+}
+
+.navbar-default .dropdown-menu>li>a {
+    color: #212529; /* Dark link text in dropdown */
+}
+
+.navbar-default .dropdown-menu>li>a:hover {
+    background-color: #f8f9fa; /* Light gray hover effect */
+    color: #343a40;
+}
+
+/* Buttons */
+.btn {
+    background-color: #007bff; /* Primary blue button */
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: white;
+}
+
+a { 
+  color:#b82be2;
+}
+
+a:hover {
+ color:#b82be2; /* darker color when hovering */
+}
+body{
+  font-size: 11pt;
+}
+h1.title {
+  font-size: 30pt; /* Adjust size */
+  color: black;    /* Optional: customize title color */
+  text-align: left; /* Optional: align the title */
+}
+/* Headers */
+h2,h3,h4,h5,h6{
+  font-size: 16pt;
+}
+
+

@@ -13,25 +13,38 @@
 
 <title>Background</title>
 
-<script src="site_libs/header-attrs-2.1/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -44,33 +57,10 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 
 
@@ -79,10 +69,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -99,40 +85,16 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -160,7 +122,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -172,7 +134,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -182,11 +144,28 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.parent().addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -198,13 +177,12 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -212,16 +190,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -265,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -323,7 +294,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -333,45 +304,86 @@ $(document).ready(function () {
 
 
 <p><img src="award.jpg" style="width:30%; margin-right: 1px" align="right"></p>
-<p>I am a currently a fifth-year Ph.D candidate in <a href="https://chemistry.illinois.edu/">Chemistry</a> at the University of Illinois at Urbana-Champaign.</p>
-<p>I did my undergraduate and master’s in chemistry at the <a href="https://www.niser.ac.in/">National Institute of Science Education and Reserach</a>, Bhubaneswar, India. My M.Sc. research project on nuclear magnetic resonance spectroscopy (NMR), and I worked with 2D NMR experiments. For general details on my Ph.D. research and the projects that I have worked on please see the <a href="https://punitjha.github.io/projects.html">“Projects”</a> section of my website.</p>
-<p>You can checkout my Google Scholar profile <a href="https://scholar.google.com/citations?user=XmN4PKgAAAAJ&amp;hl=en">here</a> for details of my publications and citations.</p>
-<p>My full CV can be found <a href="https://drive.google.com/file/d/1Gyq1zCWfUF9YAU6aNaM-ztURMqosWVe-/view?usp=sharing">here</a>.</p>
+<p>I completed my PhD in Chemistry at the <a
+href="https://chemistry.illinois.edu/">University of Illinois at
+Urbana-Champaign</a> in 2021.</p>
+<p>I did my undergraduate and master’s in chemistry at the <a
+href="https://www.niser.ac.in/">National Institute of Science Education
+and Reserach</a>, Bhubaneswar, India. My M.Sc. research project on
+nuclear magnetic resonance spectroscopy (NMR), and I worked with 2D NMR
+experiments. For general details on my Ph.D. research and the projects
+that I have worked on please see the <a
+href="https://punitjha.github.io/projects.html">“Projects”</a> section
+of my website.</p>
+<p>You can checkout my Google Scholar profile <a
+href="https://scholar.google.com/citations?user=XmN4PKgAAAAJ&amp;hl=en">here</a>
+for details of my publications and citations.</p>
 <hr />
 <div id="education" class="section level3">
 <h3>Education</h3>
 <ul>
-<li><p>University of Illinois at Urbana-Champaign, Urbana-Champaign, IL.<br /> 5th Year Ph.D. Candidate, Department of Chemistry, Aug 2016 – Present.</p></li>
-<li><p>National Institute of Science Education and Research,Bhubaneswar, India.<br /> Integrated Master of Science (M. Sc.), School of Chemical Sciences, Aug 2011 – June 2016.</p></li>
+<li><p>University of Illinois at Urbana-Champaign, Urbana-Champaign,
+IL.<br /> 5th Year Ph.D. Candidate, Department of Chemistry, Aug 2016 –
+June 2021.</p></li>
+<li><p>National Institute of Science Education and Research,Bhubaneswar,
+India.<br /> Integrated Master of Science (M. Sc.), School of Chemical
+Sciences, Aug 2011 – June 2016.</p></li>
 </ul>
 <hr />
 </div>
 <div id="list-of-publications" class="section level3">
 <h3>List of Publications</h3>
 <ul>
-<li><strong>S. Hirata and Punit K. Jha</strong>, Finite-temperature many-body perturbation theory in the grand canonical ensemble, J. Chem. Phy., <strong>153</strong>, 014103, 2020. (<a href="https://arxiv.org/abs/2003.05540">arXiv</a>)</li>
-<li><strong>Punit K. Jha and S. Hirata</strong>, Finite-temperature many-body perturbation theory in the canonical ensemble, Phys. Rev. E, <strong>101</strong>, 022106, 2020.(<a href="https://arxiv.org/abs/1910.07628">arXiv</a>)</li>
-<li><strong>S. Hirata and Punit K. Jha</strong>, Converging finite-temperature many-body perturbation theory in the grand canonical ensemble that conserves the average number, Annu. Rep. Comput. Chem., <strong>15</strong>, 17-37, 2019.(<a href="https://arxiv.org/abs/1812.07088">arXiv</a>)</li>
-<li><strong>Punit K. Jha and S. Hirata</strong>, Numerical evidence invalidating finite-temperature many-body perturbation theory, Annu. Rep. Comput. Chem., <strong>15</strong>, 3-15, 2019.(<a href="https://arxiv.org/abs/1809.10316">arXiv</a>)</li>
+<li><strong>S. Hirata and Punit K. Jha</strong>, Finite-temperature
+many-body perturbation theory in the grand canonical ensemble, J. Chem.
+Phy., <strong>153</strong>, 014103, 2020. (<a
+href="https://arxiv.org/abs/2003.05540">arXiv</a>)</li>
+<li><strong>Punit K. Jha and S. Hirata</strong>, Finite-temperature
+many-body perturbation theory in the canonical ensemble, Phys. Rev. E,
+<strong>101</strong>, 022106, 2020.(<a
+href="https://arxiv.org/abs/1910.07628">arXiv</a>)</li>
+<li><strong>S. Hirata and Punit K. Jha</strong>, Converging
+finite-temperature many-body perturbation theory in the grand canonical
+ensemble that conserves the average number, Annu. Rep. Comput. Chem.,
+<strong>15</strong>, 17-37, 2019.(<a
+href="https://arxiv.org/abs/1812.07088">arXiv</a>)</li>
+<li><strong>Punit K. Jha and S. Hirata</strong>, Numerical evidence
+invalidating finite-temperature many-body perturbation theory, Annu.
+Rep. Comput. Chem., <strong>15</strong>, 3-15, 2019.(<a
+href="https://arxiv.org/abs/1809.10316">arXiv</a>)</li>
 </ul>
 <hr />
 </div>
 <div id="presentations" class="section level3">
 <h3>Presentations</h3>
 <ul>
-<li><strong>“Numerical Evidence Invalidating Finite-Temperature Many-Body Perturbation Theory”</strong>, 59th Sanibel Symposium, 2019, talk.</li>
-<li><strong>“Advancing Moore’s Law Through Multi-Gated Transistors”</strong>, Physical Chemistry Lit. Seminars, at the Department of Chemistry, UIUC, 2017, talk.</li>
-<li><strong>“Research at the School of Chemical Sciences, NISER, Bhubaneswar”</strong>, Inauguration Day of new NISER campus by the Honorable Prime Minister of India Shree Narendra Modi, 2016, poster.</li>
-<li><strong>How does Magnetic Resonance Imaging Work?</strong>, Departmental Seminar of the School of Chemical Sciences, NISER, Bhubaneswar , 2015, talk.</li>
-<li><strong>“Diagonal Suppressed Correlation Spectroscopy (COSY)”</strong>, M. Sc. research presentation in the 7th, 8th, 9th and 10th semesters at Departmental Seminar of the School of Chemical Sciences, NISER, Bhubaneswar, 2015-16, talk.</li>
+<li><strong>“Numerical Evidence Invalidating Finite-Temperature
+Many-Body Perturbation Theory”</strong>, 59th Sanibel Symposium, 2019,
+talk.</li>
+<li><strong>“Advancing Moore’s Law Through Multi-Gated
+Transistors”</strong>, Physical Chemistry Lit. Seminars, at the
+Department of Chemistry, UIUC, 2017, talk.</li>
+<li><strong>“Research at the School of Chemical Sciences, NISER,
+Bhubaneswar”</strong>, Inauguration Day of new NISER campus by the
+Honorable Prime Minister of India Shree Narendra Modi, 2016,
+poster.</li>
+<li><strong>How does Magnetic Resonance Imaging Work?</strong>,
+Departmental Seminar of the School of Chemical Sciences, NISER,
+Bhubaneswar , 2015, talk.</li>
+<li><strong>“Diagonal Suppressed Correlation Spectroscopy
+(COSY)”</strong>, M. Sc. research presentation in the 7th, 8th, 9th and
+10th semesters at Departmental Seminar of the School of Chemical
+Sciences, NISER, Bhubaneswar, 2015-16, talk.</li>
 </ul>
 <hr />
 </div>
 <div id="courses-taken" class="section level3">
 <h3>Courses Taken</h3>
-<p>Here is list of relevant courses that I have done at the University of Illinois and NISER, India.</p>
-<div id="univeristy-of-illinios" class="section level4">
-<h4><a href="https://chemistry.illinois.edu/"><strong>Univeristy of Illinios:</strong></a></h4>
+<p>Here is list of relevant courses that I have done at the University
+of Illinois and NISER, India.</p>
+<div id="univeristy-of-illinois" class="section level4">
+<h4><a href="https://chemistry.illinois.edu/"><strong>Univeristy of
+Illinois:</strong></a></h4>
 <ul>
 <li>ECE 365: Data Science &amp; Eng.</li>
 <li>CS 420: Parallel Programming</li>
@@ -387,7 +399,8 @@ $(document).ready(function () {
 </ul>
 </div>
 <div id="niser" class="section level4">
-<h4><a href="https://stat.illinois.edu/"><strong>NISER:</strong></a></h4>
+<h4><a
+href="https://stat.illinois.edu/"><strong>NISER:</strong></a></h4>
 <ul>
 <li>Probability Theory</li>
 <li>Algebra - II</li>
@@ -412,23 +425,28 @@ $(document).ready(function () {
 <ul>
 <li>Fall 2016, CHEM 445/447 - Physical Principles Lab
 <ul>
-<li>Responsibilities included conducting the FTIR lab experiment and grading lab reports.</li>
+<li>Responsibilities included conducting the FTIR lab experiment and
+grading lab reports.</li>
 </ul></li>
 <li>Fall 2016, CHEM 440 - Physical Chemistry Principles
 <ul>
-<li>Responsibilities included holding office hours, conducting exams and grading.</li>
+<li>Responsibilities included holding office hours, conducting exams and
+grading.</li>
 </ul></li>
 <li>Spring 2017, CHEM 104 - General Chemistry II
 <ul>
-<li>Responsibilities included teaching, holding office hours, conducting exams and grading.</li>
+<li>Responsibilities included teaching, holding office hours, conducting
+exams and grading.</li>
 </ul></li>
 <li>Fall 2017, CHEM 440 - Physical Chemistry Principles
 <ul>
-<li>Responsibilities included holding office hours, conducting exams and grading.</li>
+<li>Responsibilities included holding office hours, conducting exams and
+grading.</li>
 </ul></li>
 <li>Spring 2018, CHEM 445/447 - Physical Principles Lab
 <ul>
-<li>Responsibilities included conducting the FTIR and XRD lab experiments and grading lab reports.</li>
+<li>Responsibilities included conducting the FTIR and XRD lab
+experiments and grading lab reports.</li>
 </ul></li>
 </ul>
 <hr />
@@ -437,18 +455,32 @@ $(document).ready(function () {
 <h3>Honors and Awards</h3>
 <ul>
 <li>2019, CATMS Travel Award by the Department of Chemistry, UIUC.</li>
-<li>2019, Drickamer Research Fellowship by the Department of Chemistry, UIUC.</li>
-<li>2019, IBM-Zerner Graduate Student Award by the University of Florida at the 59th Sanibel Symposium.</li>
-<li>2018, J. C. Martin Memorial Student Travel Award by the Department of Chemistry, UIUC.</li>
-<li>2017, Sloan Chemical Prize by the Department of Chemistry, UIUC.</li>
+<li>2019, Drickamer Research Fellowship by the Department of Chemistry,
+UIUC.</li>
+<li>2019, IBM-Zerner Graduate Student Award by the University of Florida
+at the 59th Sanibel Symposium.</li>
+<li>2018, J. C. Martin Memorial Student Travel Award by the Department
+of Chemistry, UIUC.</li>
+<li>2017, Sloan Chemical Prize by the Department of Chemistry,
+UIUC.</li>
 <li>2016, Hannum Fellowship by the Department of Chemistry, UIUC.</li>
-<li>2016, Virginia Bartow Scholarship for admission to Department of Chemistry, UIUC.</li>
-<li>2016, Dornsife Fellowship for admission to Department of Chemistry, University of Southern California.</li>
-<li>2016, Saryu Doshi Post Graduate Fellowships in Liberal Arts &amp; Sciences by the Saryu Doshi Foundation for excellent academic performance in my M. Sc thesis.</li>
-<li>2014, MITACS Globalink Scholarship for undergoing summer research internship at the University of Calgary, Alberta, Canada.</li>
-<li>2013, Academic Excellence Award for securing the highest S.G.P.A of 9.92/10 in the 4th semester at NISER, Bhubaneswar, India.</li>
-<li>2011, Innovation in Science Pursuit for Inspired Research (INSPIRE)- 2011 scholarship by the Department of Science and Technology, Government of India for securing an All India Rank of 109 out of 50,000 candidates in the National Entrance Screening Test.</li>
-<li>Ranked as one of the top 3% students in the All India Biology Olympiad. (out of 8500 students)</li>
+<li>2016, Virginia Bartow Scholarship for admission to Department of
+Chemistry, UIUC.</li>
+<li>2016, Dornsife Fellowship for admission to Department of Chemistry,
+University of Southern California.</li>
+<li>2016, Saryu Doshi Post Graduate Fellowships in Liberal Arts &amp;
+Sciences by the Saryu Doshi Foundation for excellent academic
+performance in my M. Sc thesis.</li>
+<li>2014, MITACS Globalink Scholarship for undergoing summer research
+internship at the University of Calgary, Alberta, Canada.</li>
+<li>2013, Academic Excellence Award for securing the highest S.G.P.A of
+9.92/10 in the 4th semester at NISER, Bhubaneswar, India.</li>
+<li>2011, Innovation in Science Pursuit for Inspired Research (INSPIRE)-
+2011 scholarship by the Department of Science and Technology, Government
+of India for securing an All India Rank of 109 out of 50,000 candidates
+in the National Entrance Screening Test.</li>
+<li>Ranked as one of the top 3% students in the All India Biology
+Olympiad. (out of 8500 students)</li>
 </ul>
 <hr />
 </div>
@@ -457,7 +489,8 @@ $(document).ready(function () {
 <ul>
 <li><strong>Programming Languages</strong>
 <ul>
-<li>C++, Python, FORTRAN, Mathematica, GNU Octave, Shell, TopSpin, LaTeX, Matlab.</li>
+<li>C++, Python, FORTRAN, Mathematica, GNU Octave, Shell, TopSpin,
+LaTeX, Matlab.</li>
 </ul></li>
 <li><strong>Software Packages</strong>
 <ul>
@@ -480,7 +513,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -498,7 +531,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

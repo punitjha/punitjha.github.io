@@ -1,0 +1,82 @@
+
+/*
+img {
+  height: 230px;
+  width: 200px;
+  display: block;
+  margin: 20px;
+  float: right;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Tenor+Sans&display=swap');
+body{
+  font-family: Sans-Serif;
+  font-size: 12pt;
+}
+/* Headers */
+h1,h2,h3,h4,h5,h6{
+  font-size: 18pt;
+}
+h3 {
+  color: blue; 
+}
+h1 {
+  color: blue;
+}       
+p {
+  color: black;
+}
+
+/* links */
+a { 
+  color:#b82be2;
+}
+
+a:hover {
+ color:#b82be2; /* darker color when hovering */
+}
+
+/*----------------NAVBAR ---------------*/
+.navbar-default {
+    background-color: #141c25f2;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white; /* Navigation text color */
+}
+
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.active>a, 
+a.dropdown-toggle:hover {
+    background-color: #141c25 !important;
+    color: white !important; /* Active or hovered link text color */
+}
+
+/* Dropdown menu color */
+.navbar-default .dropdown-menu {
+    background-color: #141c25;
+}
+
+.navbar-default .dropdown-menu>li>a {
+    color: white; /* Dropdown text color */
+}
+
+/* Dropdown menu hover color */
+.navbar-default .dropdown-menu>li>a:hover {
+    background-color: #202831f2;
+    color: white !important; /* Hovered dropdown text color */
+}
+
+/* Navbar Links when hovered */
+.navbar-default .dropdown-menu>.active>a,
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav:hover, 
+.navbar-default .navbar-nav>li>a:hover, 
+a.navbar-brand:hover {
+    color: white !important;
+    background-color: #141c25;
+}
+*/

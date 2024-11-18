@@ -6,19 +6,19 @@ output: html_document
 title: "Background"
 ---
 <img src="award.jpg" style="width:30%; margin-right: 1px" align="right">
-  
-I am a currently a fifth-year Ph.D candidate in [Chemistry](https://chemistry.illinois.edu/) at the University of Illinois at Urbana-Champaign. 
+
+
+I completed my PhD in  Chemistry at the [University of Illinois at Urbana-Champaign](https://chemistry.illinois.edu/) in 2021.
   
 I did my undergraduate and master's in chemistry at the [National Institute of Science Education and Reserach](https://www.niser.ac.in/), Bhubaneswar, India. My M.Sc. research project on nuclear magnetic resonance spectroscopy (NMR), and I worked with 2D NMR experiments. For general details on my Ph.D. research and the projects that I have worked on please see the ["Projects"](https://punitjha.github.io/projects.html) section of my website. 
 
 You can checkout my Google Scholar profile [here](https://scholar.google.com/citations?user=XmN4PKgAAAAJ&hl=en) for details of my publications and citations. 
 
-My full CV can be found [here](https://drive.google.com/file/d/1Gyq1zCWfUF9YAU6aNaM-ztURMqosWVe-/view?usp=sharing).
 
 ***  
 ### Education
 - University of Illinois at Urbana-Champaign, Urbana-Champaign, IL.<br />
- 5th Year Ph.D. Candidate, Department of Chemistry, Aug 2016 -- Present.
+ 5th Year Ph.D. Candidate, Department of Chemistry, Aug 2016 -- June 2021.
  
 - National Institute of Science Education and Research,Bhubaneswar, India.<br />
  Integrated Master of Science (M. Sc.), School of Chemical Sciences, Aug 2011 -- June 2016.
@@ -50,7 +50,7 @@ My full CV can be found [here](https://drive.google.com/file/d/1Gyq1zCWfUF9YAU6a
   
 Here is list of relevant courses that I have done at the University of Illinois and NISER, India.
 
-#### [**Univeristy of Illinios:**](https://chemistry.illinois.edu/)
+#### [**Univeristy of Illinois:**](https://chemistry.illinois.edu/)
 -  ECE 365: Data Science \& Eng. 
 -  CS 420: Parallel Programming
 -  CS 446: Machine Learning: Theory 
