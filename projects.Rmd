@@ -8,6 +8,30 @@ output:
 ---
 
 ***
+<hr style="border:2px solid gray"> </hr>
+## **AI based protein co-folding models**
+<hr style="border:2px solid gray"> </hr>
+
+### AlphaFold 3
+### AlphaFold 2
+### The protein folding problem
+
+
+***
+<hr style="border:2px solid gray"> </hr>
+## **Useful Scripts**
+<hr style="border:2px solid gray"> </hr>
+
+### Conversion for SMILES string to sdf file
+
+### Obabel conversion from pdb to sdf file
+
+
+
+
+
+
+***
 ## **Machine Learning**
 
 <hr style="border:2px solid gray"> </hr>
